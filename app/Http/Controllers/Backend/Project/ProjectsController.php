@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Responses\RedirectResponse;
 use App\Http\Responses\ViewResponse;
+use App\Http\Responses\Backend\Project\ShowResponse;
 use App\Http\Responses\Backend\Project\CreateResponse;
 use App\Http\Responses\Backend\Project\EditResponse;
 use App\Repositories\Backend\Project\ProjectRepository;
@@ -15,6 +16,7 @@ use App\Http\Requests\Backend\Project\CreateProjectRequest;
 use App\Http\Requests\Backend\Project\StoreProjectRequest;
 use App\Http\Requests\Backend\Project\EditProjectRequest;
 use App\Http\Requests\Backend\Project\UpdateProjectRequest;
+use App\Http\Requests\Backend\Project\ShowProjectRequest;
 use App\Http\Requests\Backend\Project\DeleteProjectRequest;
 
 /**
@@ -27,6 +29,7 @@ class ProjectsController extends Controller
      * @var ProjectRepository
      */
     protected $repository;
+    protected $project;
 
     /**
      * contructor to initialize repository object
@@ -72,6 +75,7 @@ class ProjectsController extends Controller
         //return with successfull message
         return new RedirectResponse(route('admin.projects.index'), ['flash_success' => trans('alerts.backend.projects.created')]);
     }
+   
     /**
      * Show the form for editing the specified resource.
      *
@@ -81,7 +85,8 @@ class ProjectsController extends Controller
      */
     public function edit(Project $project, EditProjectRequest $request)
     {
-        return new EditResponse($project);
+       return new EditResponse($project);
+       
     }
     /**
      * Update the specified resource in storage.
@@ -92,6 +97,8 @@ class ProjectsController extends Controller
      */
     public function update(UpdateProjectRequest $request, Project $project)
     {
+        //var_dump($project);
+        
         //Input received from the request
         $input = $request->except(['_token']);
         //Update the model using repository update method

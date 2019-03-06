@@ -31,7 +31,9 @@ class Technology extends Model
      * @var array
      */
     protected $fillable = [
-
+        'tech_name',
+        'created_by',
+        'updated_by',
     ];
 
     /**

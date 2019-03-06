@@ -29,7 +29,8 @@ class TechnologyRepository extends BaseRepository
     {
         return $this->query()
             ->select([
-                config('module.technologies.table').'.id',
+                config('module.technologies.table').'.tech_id',
+                config('module.technologies.table').'.tech_name',
                 config('module.technologies.table').'.created_at',
                 config('module.technologies.table').'.updated_at',
             ]);

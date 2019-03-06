@@ -190,6 +190,16 @@ return [
                 'meta_description' => 'Meta Description',
                 'status'           => 'Status',
             ],
+            'projects' => [
+                'project_name'     => 'Project Name',
+                'project_details'  => 'Project Details',
+                'file'             => 'File',
+                'tech_id'          => 'Technology Id',
+               ],
+               'technologies' => [
+                'tech_name'     => 'Technology Name',
+                
+               ],
 
             'settings' => [
                 'sitelogo'        => 'Site Logo',

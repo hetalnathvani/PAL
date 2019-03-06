@@ -37,7 +37,7 @@ class TechnologiesTableController extends Controller
     public function __invoke(ManageTechnologyRequest $request)
     {
         return Datatables::of($this->technology->getForDataTable())
-            ->escapeColumns(['id'])
+            ->escapeColumns(['tech_id'])
             ->addColumn('created_at', function ($technology) {
                 return Carbon::parse($technology->created_at)->toDateString();
             })

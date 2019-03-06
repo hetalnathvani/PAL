@@ -33,7 +33,7 @@
                 </a>
             </li>
         @endauth
-        @permission( 'edit-project' )
+       {{-- @permission( 'edit-project' )
             <li>
                 <a href="{{ route( 'admin.projects.edit' ) }}">
                     <i class="fa fa-plus"></i> {{ trans( 'menus.backend.projects.edit' ) }}
@@ -46,7 +46,7 @@
                     <i class="fa fa-trash"></i> {{ trans( 'menus.backend.projects.delete' ) }}
                 </a>
             </li>
-        @endauth
+        @endauth--}}
     </ul>
 </div>
 <div class="clearfix"></div>

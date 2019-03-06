@@ -241,8 +241,15 @@ return [
 	"edit" => "Edit Project",
 	"management" => "Project Management",
 	"title" => "Projects",
+	"project_name"=>"Project Name",
+	"project_details"=>"Project Details",
+	"file"=>"File",
+
 	"table" => [
 	"id" => "Id",
+	"project_name"=>"Project Name",
+	"project_details"=>"Project Details",
+	"file"=>"File",
 	"createdat" => "Created At",
 	],
 	],
@@ -251,8 +258,10 @@ return [
 	"edit" => "Edit Technology",
 	"management" => "Technology Management",
 	"title" => "Technologies",
+	"tech_name"=>"Technology Name",
 	"table" => [
-	"id" => "Id",
+	"tech_id" => "Tech Id",
+	"tech_name"=>"Technology Name",
 	"createdat" => "Created At",
 	],
 	],

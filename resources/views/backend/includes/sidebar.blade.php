@@ -64,12 +64,12 @@
                 </a>
             </li>
             @endauth
-            <li class="{{ active_class(Active::checkUriPattern('admin/modules*')) }}">
+            <!--<li class="{{ active_class(Active::checkUriPattern('admin/modules*')) }}">
                 <a href="{{ route('admin.modules.index') }}">
                     <i class="fa fa-gear"></i>
                     <span>{{ trans('generator::menus.modules.management') }}</span>
                 </a>
-            </li>
+            </li>-->
             @permission('view-blog')
             <li class="{{ active_class(Active::checkUriPattern('admin/blog*')) }} treeview">
                 <a href="#">

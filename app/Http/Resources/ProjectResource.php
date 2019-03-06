@@ -18,13 +18,8 @@ class UserResource extends Resource
         return [
             'id'              => $this->id,
             'project_name'      => $this->project_name,
-            'last_name'       => $this->last_name,
-            'email'           => $this->email,
-            'picture'         => $this->getPicture(),
-            'confirmed'       => $this->confirmed,
-            'role'            => optional($this->roles()->first())->name,
-            'permissions'     => $this->permissions()->get(),
-            'status'          => $this->status,
+            'project_details'       => $this->project_details,
+            'file'           => $this->getfile(),
             'created_at'      => $this->created_at->toIso8601String(),
             'updated_at'      => $this->updated_at->toIso8601String(),
         ];
