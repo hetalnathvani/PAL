@@ -259,6 +259,7 @@ return [
 	"management" => "Technology Management",
 	"title" => "Technologies",
 	"tech_name"=>"Technology Name",
+	"tech_id"=>"Technology Id",
 	"table" => [
 	"tech_id" => "Tech Id",
 	"tech_name"=>"Technology Name",

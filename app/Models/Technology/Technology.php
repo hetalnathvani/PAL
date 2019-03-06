@@ -31,6 +31,7 @@ class Technology extends Model
      * @var array
      */
     protected $fillable = [
+       // 'tech_id'
         'tech_name',
         'created_by',
         'updated_by',
@@ -50,15 +51,16 @@ class Technology extends Model
      */
     protected $dates = [
         'created_at',
-        'updated_at'
+        'updated_at',
+        'deleted_at'
     ];
 
     /**
      * Guarded fields of model
      * @var array
      */
-    protected $guarded = [
-        'id'
+   protected $guarded = [
+    'tech_id'     
     ];
 
     /**

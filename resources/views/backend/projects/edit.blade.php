@@ -48,7 +48,7 @@
                     {{ Form::label('name','file', ['class' => 'col-lg-2 control-label required']) }}
 
                     <div class="col-lg-10">
-                        {{ Form::file('project_name', null, ['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.backend.projects.file'), 'required' => 'required']) }}
+                        {{ Form::file('file', null, ['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.backend.projects.file'), 'required' => 'required']) }}
                     </div><!--col-lg-10-->
                 </div><!--form control-->
 

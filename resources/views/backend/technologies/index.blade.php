@@ -1,4 +1,3 @@
-
 @extends ('backend.layouts.app')
 
 @section ('title', trans('labels.backend.technologies.management'))
@@ -22,10 +21,10 @@
                 <table id="technologies-table" class="table table-condensed table-hover table-bordered">
                     <thead>
                         <tr>
-
-
                             <th>{{ trans('labels.backend.technologies.table.tech_id') }}</th>
                             <th>{{ trans('labels.backend.technologies.table.tech_name') }}</th>
+                            
+                            
                             <th>{{ trans('labels.backend.technologies.table.createdat') }}</th>
                             <th>{{ trans('labels.general.actions') }}</th>
                         </tr>

@@ -12,7 +12,8 @@ class EditResponse implements Responsable
     protected $projects;
 
     /**
-     * @param App\Models\Project\Project $projects
+     * @param App
+     p\Models\Project\Project $projects
      */
     public function __construct($projects)
     {

@@ -27,6 +27,7 @@ class TechnologiesController extends Controller
      * @var TechnologyRepository
      */
     protected $repository;
+    protected $primaryKey = 'tech_id';
 
     /**
      * contructor to initialize repository object
@@ -81,6 +82,7 @@ class TechnologiesController extends Controller
      */
     public function edit(Technology $technology, EditTechnologyRequest $request)
     {
+        //var_dump($technology);
         return new EditResponse($technology);
     }
     /**

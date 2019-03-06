@@ -22,9 +22,23 @@
             </div><!--box-header with-border-->
 
             <div class="box-body">
-                <div class="form-group">
                     {{-- Including Form blade file --}}
-                    @include("backend.technologies.form")
+                    
+                <div class="form-group">
+                    {{ Form::label('name','tech_name', ['class' => 'col-lg-2 control-label required']) }}
+
+                    <div class="col-lg-10">
+                        {{ Form::text('tech_name', null, ['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.backend.technologies.tech_name'), 'required' => 'required']) }}
+                    </div><!--col-lg-10-->
+                </div><!--form control-->
+                    <div class="form-group">
+                    {{ Form::label('name','tech_id', ['class' => 'col-lg-2 control-label required']) }}
+
+                    <div class="col-lg-10">
+                        {{ Form::text('tech_id', null, ['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.backend.technologies.tech_id'), 'required' => 'required']) }}
+                    </div><!--col-lg-10-->
+                </div><!--form control-->
+                 
                     <div class="edit-form-btn">
                         {{ link_to_route('admin.technologies.index', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }}
                         {{ Form::submit(trans('buttons.general.crud.create'), ['class' => 'btn btn-primary btn-md']) }}
