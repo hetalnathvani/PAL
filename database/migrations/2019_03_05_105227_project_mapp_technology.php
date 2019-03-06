@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Rate extends Migration
+class ProjectMappTechnology extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class Rate extends Migration
      */
     public function up()
     {
-         Schema::create('Rate', function (Blueprint $table) {
-            $table->integer('user_id')->unsigned()->index('rate_id_foreign');
-            $table->integer('Proj_id')->unsigned()->index('rate_Proj_id_foreign');
-            $table->float('Rate', 5)->default(1);
+        Schema::create('Project_mapp_technology', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('tech_id')->unsigned()->index('project_mapp_technology_tech_id_foreign');
+            $table->integer('Proj_id')->unsigned()->index('project_mapp_technology_Proj_id_foreign');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -29,6 +29,6 @@ class Rate extends Migration
      */
     public function down()
     {
-          Schema::drop('Rate');
+        Schema::drop('Project_mapp_technology');
     }
 }

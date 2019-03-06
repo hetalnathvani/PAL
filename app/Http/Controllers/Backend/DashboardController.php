@@ -41,6 +41,17 @@ class DashboardController extends Controller
      *
      * @return view
      */
+    public function store(request $request)
+    {
+        $path=$request->file('userfile')->store('upload');
+        //echo $path;
+        return view('download');
+    }
+    public function show($id)
+    {
+        $d1=file::find($id);
+        return storage::upload($d1->path,$d1->title);
+    }
     public function updateProfile(Request $request)
     {
         $input = $request->all();

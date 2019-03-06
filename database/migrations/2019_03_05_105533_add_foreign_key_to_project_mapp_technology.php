@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddForeignKeyToCommentTable extends Migration
+class AddForeignKeyToProjectMappTechnology extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class AddForeignKeyToCommentTable extends Migration
      */
     public function up()
     {
-        Schema::table('comment', function (Blueprint $table) {
-            $table->foreign('user_id')->references('id')->on('users')->onUpdate('RESTRICT')->onDelete('CASCADE');
+        Schema::table('project_mapp_technology', function (Blueprint $table) {
             $table->foreign('proj_id')->references('id')->on('project')->onUpdate('RESTRICT')->onDelete('CASCADE');
+            $table->foreign('tech_id')->references('id')->on('technology')->onUpdate('RESTRICT')->onDelete('CASCADE');
         });
     }
 
@@ -26,9 +26,9 @@ class AddForeignKeyToCommentTable extends Migration
      */
     public function down()
     {
-        Schema::table('comment', function (Blueprint $table) {
-            $table->dropForeign('comment_id_foreign');
-            $table->dropForeign('comment_proj_id_foreign');
+        Schema::table('project_mapp_technology', function (Blueprint $table) {
+            $table->dropForeign('project_mapp_technology_proj_id_foreign');
+            $table->dropForeign('project_mapp_technology_tech_id_foreign');
         });
     }
 }

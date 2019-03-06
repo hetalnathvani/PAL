@@ -14,7 +14,7 @@ class Technology extends Migration
     public function up()
     {
         Schema::create('Technology', function (Blueprint $table) {
-            $table->increments('tech_id');
+            $table->increments('id');
             $table->string('tech_name', 30);
             $table->timestamps();
             $table->softDeletes();

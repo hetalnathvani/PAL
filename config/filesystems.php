@@ -63,6 +63,22 @@ return [
             'bucket' => env('AWS_BUCKET'),
         ],
 
+        'sftp' => [
+            'driver' => 'sftp',
+            'host' => 'digitalocean.com',
+            'username' => 'zest2019trainee033',
+            'password' => '19hetal97',
+
+            // Settings for SSH key based authentication...
+            // 'privateKey' => '/path/to/privateKey',
+            // 'password' => 'encryption-password',
+
+            // Optional SFTP Settings...
+            // 'port' => 22,
+            // 'root' => '',
+            // 'timeout' => 30,
+        ],
+
     ],
 
 ];
