@@ -22,39 +22,46 @@
             </div><!--box-header with-border-->
 
             <div class="box-body">
-                {{-- Branch Name --}}
+
                 <div class="form-group">
-                    {{ Form::label('name','project_name', ['class' => 'col-lg-2 control-label required']) }}
+                     {{ Form::label('project_name', trans('labels.backend.projects.project_name'), ['class' => 'col-lg-2 control-label required']) }} 
 
-                    <div class="col-lg-10">
-                        {{ Form::text('project_name', null, ['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.backend.projects.project_name'), 'required' => 'required']) }}
-                    </div><!--col-lg-10-->
-                </div><!--form control-->
+                        <div class="col-lg-10">
+                            <!-- Create Your Input Field Here -->
+                            <!-- Look Below Example for reference -->
+                             {{ Form::text('project_name', null, ['class' => 'form-control box-size', 'placeholder' => trans('labels.backend.projects.project_name'), 'required' => 'required']) }} 
+                        </div><!--col-lg-10-->
+                    </div><!--form-group-->
+
                 <div class="form-group">
-                    {{ Form::label('name','project_details', ['class' => 'col-lg-2 control-label required']) }}
+                     {{ Form::label('project_details', trans('labels.backend.projects.project_details'), ['class' => 'col-lg-2 control-label required']) }} 
 
-                    <div class="col-lg-10">
-                        {{ Form::text('project_details', null, ['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.backend.projects.project_details'), 'required' => 'required']) }}
-                    </div><!--col-lg-10-->
-                </div><!--form control-->
+                        <div class="col-lg-10">
+                            <!-- Create Your Input Field Here -->
+                            <!-- Look Below Example for reference -->
+                             {{ Form::text('project_details', null, ['class' => 'form-control box-size', 'placeholder' => trans('labels.backend.projects.project_details'), 'required' => 'required']) }} 
+                        </div><!--col-lg-10-->
+                    </div><!--form-group-->
+
                 <div class="form-group">
-                    {{ Form::label('name','tech_id', ['class' => 'col-lg-2 control-label required']) }}
+                     {{ Form::label('tech_id', trans('labels.backend.projects.tech_id'), ['class' => 'col-lg-2 control-label required']) }} 
 
-                    <div class="col-lg-10">
-                        {{ Form::text('tech_id', null, ['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.backend.projects.tech_id'), 'required' => 'required']) }}
-                    </div><!--col-lg-10-->
-                </div><!--form control-->
+                        <div class="col-lg-10">
+                            <!-- Create Your Input Field Here -->
+                            <!-- Look Below Example for reference -->
+                             {{ Form::text('tech_id', null, ['class' => 'form-control box-size', 'placeholder' => trans('labels.backend.projects.tech_id'), 'required' => 'required']) }} 
+                        </div><!--col-lg-10-->
+                    </div><!--form-group-->
+
                 <div class="form-group">
-                    {{ Form::label('name','file', ['class' => 'col-lg-2 control-label required']) }}
+                     {{ Form::label('file', trans('labels.backend.projects.file'), ['class' => 'col-lg-2 control-label required']) }} 
 
-                    <div class="col-lg-10">
-                        {{ Form::file('file', null, ['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.backend.projects.file'), 'required' => 'required']) }}
-                    </div><!--col-lg-10-->
-                </div><!--form control-->
-
-                
-                    {{-- Including Form blade file --}}
-            
+                        <div class="col-lg-10">
+                            <!-- Create Your Input Field Here -->
+                            <!-- Look Below Example for reference -->
+                             {{ Form::file('file', null, ['class' => 'form-control box-size', 'placeholder' => trans('labels.backend.projects.file'), 'required' => 'required']) }} 
+                        </div><!--col-lg-10-->
+                    </div><!--form-group-->
                     <div class="edit-form-btn">
                         {{ link_to_route('admin.projects.index', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }}
                         {{ Form::submit(trans('buttons.general.crud.update'), ['class' => 'btn btn-primary btn-md']) }}

@@ -21,10 +21,7 @@
                 <table id="technologies-table" class="table table-condensed table-hover table-bordered">
                     <thead>
                         <tr>
-                            <th>{{ trans('labels.backend.technologies.table.tech_id') }}</th>
-                            <th>{{ trans('labels.backend.technologies.table.tech_name') }}</th>
-                            
-                            
+                            <th>{{ trans('labels.backend.technologies.table.id') }}</th>
                             <th>{{ trans('labels.backend.technologies.table.createdat') }}</th>
                             <th>{{ trans('labels.general.actions') }}</th>
                         </tr>
@@ -57,8 +54,7 @@
                     type: 'post'
                 },
                 columns: [
-                    {data: 'tech_id', name: '{{config('module.technologies.table')}}.tech_id'},
-                    {data: 'tech_name', name: '{{config('module.technologies.table')}}.tech_name'},
+                    {data: 'id', name: '{{config('module.technologies.table')}}.id'},
                     {data: 'created_at', name: '{{config('module.technologies.table')}}.created_at'},
                     {data: 'actions', name: 'actions', searchable: false, sortable: false}
                 ],

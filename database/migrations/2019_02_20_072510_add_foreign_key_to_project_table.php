@@ -14,8 +14,8 @@ class AddForeignKeyToProjectTable extends Migration
     public function up()
     {
         Schema::table('project', function (Blueprint $table) {
-            $table->foreign('id')->references('id')->on('users')->onUpdate('RESTRICT')->onDelete('CASCADE');
-            $table->foreign('tech_id')->references('tech_id')->on('technology')->onUpdate('RESTRICT')->onDelete('CASCADE');
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('RESTRICT')->onDelete('CASCADE');
+            $table->foreign('tech_id')->references('id')->on('technology')->onUpdate('RESTRICT')->onDelete('CASCADE');
 
         });
     }
@@ -28,7 +28,7 @@ class AddForeignKeyToProjectTable extends Migration
     public function down()
     {
         Schema::table('project', function (Blueprint $table) {
-            $table->dropForeign('project_id_foreign');
+            $table->dropForeign('project_user_id_foreign');
             $table->dropForeign('project_tech_id_foreign');
         });
     }

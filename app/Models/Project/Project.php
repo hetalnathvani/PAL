@@ -31,11 +31,6 @@ class Project extends Model
      * @var array
      */
     protected $fillable = [
-        'project_name',
-        'project_details',
-        'file',
-        'created_by',
-        'updated_by',
 
     ];
 
@@ -53,8 +48,7 @@ class Project extends Model
      */
     protected $dates = [
         'created_at',
-        'updated_at',
-        'deleted_at'
+        'updated_at'
     ];
 
     /**

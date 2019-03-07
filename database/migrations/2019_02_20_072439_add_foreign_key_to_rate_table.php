@@ -14,8 +14,8 @@ class AddForeignKeyToRateTable extends Migration
     public function up()
     {
         Schema::table('rate', function (Blueprint $table) {
-            $table->foreign('id')->references('id')->on('users')->onUpdate('RESTRICT')->onDelete('CASCADE');
-            $table->foreign('proj_id')->references('proj_id')->on('project')->onUpdate('RESTRICT')->onDelete('CASCADE');
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('RESTRICT')->onDelete('CASCADE');
+            $table->foreign('proj_id')->references('id')->on('project')->onUpdate('RESTRICT')->onDelete('CASCADE');
         });
     }
 

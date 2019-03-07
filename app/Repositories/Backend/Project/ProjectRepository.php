@@ -64,7 +64,7 @@ class ProjectRepository extends BaseRepository
      */
     public function update(Project $project, array $input)
     {
-    	if ($project->update($input))
+        if ($project->update($input))
             return true;
 
         throw new GeneralException(trans('exceptions.backend.projects.update_error'));

@@ -55,8 +55,5 @@ Route::group(['namespace' => 'Api\V1', 'prefix' => 'v1', 'as' => 'v1.'], functio
 
         // Blogs
         Route::resource('blogs', 'BlogsController', ['except' => ['create', 'edit']]);
-        /*project
-         Route::resource('projects', 'ProjectsController', ['except' => ['create', 'edit']]);
-        Route::post('projects/delete-all', 'ProjectsController@delete');*/
     });
 });

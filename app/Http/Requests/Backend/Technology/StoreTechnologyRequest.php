@@ -27,10 +27,8 @@ class StoreTechnologyRequest extends FormRequest
             //Put your rules for the request in here
             //For Example : 'title' => 'required'
             //Further, see the documentation : https://laravel.com/docs/5.4/validation#creating-form-requests
-            'tech_name'=>'required|max(255)'
         ];
     }
-    
 
     public function messages()
     {

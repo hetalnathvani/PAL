@@ -14,8 +14,8 @@ class Project extends Migration
     public function up()
     {
         Schema::create('Project', function (Blueprint $table) {
-            $table->increments('Proj_id');
-            $table->integer('id')->unsigned()->index('project_id_foreign');
+            $table->increments('id');
+            $table->integer('user_id')->unsigned()->index('project_id_foreign');
             $table->integer('tech_id')->unsigned()->index('project_tech_id_foreign');
             $table->string('project_name', 250);
             $table->text('project_details', 250);
