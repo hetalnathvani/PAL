@@ -20,6 +20,10 @@
   			flex: 1;
   			padding: 16px;
 		}
+		.opacity{
+			opacity: 0.5;
+  			filter: alpha(opacity=50)
+		}
 		.border{
 			border-bottom:2px solid white;
 		}
@@ -29,6 +33,18 @@
   			text-align: center;
  		 	color: white;
  		 	font-size: 30px;
+		}
+		.imag{
+			position: relative;
+  			text-align: center;
+ 		 	color: 	#0000FF;
+ 		 	font-size: 25px;
+		}
+		.imeg{
+			position: relative;
+  			text-align: center;
+ 		 	color: 	white;
+ 		 	font-size: 25px;
 		}
 		.overlay {
   			position: absolute;
@@ -50,7 +66,15 @@
   			position: absolute;
   			left: 0;
     		text-align:center;
+    		padding-bottom: 250px;
     		top: 130px;
+    		width: 100%
+		}
+		.centered1 {
+  			position: absolute;
+  			left: 0;
+    		text-align:center;
+    		top: 70px;
     		width: 100%
 		}
 		.fa {

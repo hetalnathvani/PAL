@@ -99,21 +99,65 @@
                                 <div class="col-container">
 
                                     <div class="col">
-                                        <div class="img">
-                                        <a href="Technology_Specific"><img src="{{asset('/img/frontend/box.png')}}" height="340" width="340"></a>
-                                        <div class="centered">Technology<br>Specific </div></div>
+                                        <div class="imag"><div class="opacity">
+                                        <a href="Technology_Specific"><img src="{{asset('/img/frontend/box.png')}}" height="170" width="270"></a></div>
+                                        <div class="centered1">PHP </div></div>
                                     </div>
 
                                     <div class="col">
-                                        <div class="img">
-                                        <a href="upload"><img src="{{asset('/img/frontend/box.png')}}" height="340" width="340"></a>
-                                        <div class="centered">New<br>Arrivals </div></div>
+                                        <div class="imeg">
+                                        <a href="upload"><img src="{{asset('/img/frontend/box.png')}}" height="170" width="270"></a>
+                                        <div class="centered1">.NET </div></div>
                                     </div>
 
                                     <div class="col">
-                                        <div class="img">
-                                        <a href="upload"><img src="{{asset('/img/frontend/box.png')}}" height="340" width="340"></a>
-                                        <div class="centered">Most<br> Popular </div></div>
+                                        <div class="imag"><div class="opacity">
+                                        <a href="upload"><img src="{{asset('/img/frontend/box.png')}}" height="170" width="270"></a></div>
+                                        <div class="centered1">JAVA </div></div>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="col-container">
+
+                                    <div class="col">
+                                        <div class="imeg">
+                                        <a href="Technology_Specific"><img src="{{asset('/img/frontend/box.png')}}" height="170" width="270"></a>
+                                        <div class="centered1">AI </div></div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="imag"><div class="opacity">
+                                        <a href="upload"><img src="{{asset('/img/frontend/box.png')}}" height="170" width="270"></a></div>
+                                        <div class="centered1">Mobile</div></div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="imeg">
+                                        <a href="upload"><img src="{{asset('/img/frontend/box.png')}}" height="170" width="270"></a>
+                                        <div class="centered1">AR </div></div>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="col-container">
+
+                                    <div class="col">
+                                        <div class="imag"><div class="opacity"> 
+                                        <a href="Technology_Specific"><img src="{{asset('/img/frontend/box.png')}}" height="170" width="270"></a></div>
+                                        <div class="centered1">Blockchain</div></div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="imeg">
+                                        <a href="upload"><img src="{{asset('/img/frontend/box.png')}}" height="170" width="270"></a>
+                                        <div class="centered1">IOT </div></div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="imag"><div class="opacity">
+                                        <a href="upload"><img src="{{asset('/img/frontend/box.png')}}" height="170" width="270"></a></div>
+                                        <div class="centered1">Cloud </div></div>
                                     </div>
                                     
                                 </div>

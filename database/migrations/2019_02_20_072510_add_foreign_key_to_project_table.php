@@ -28,7 +28,7 @@ class AddForeignKeyToProjectTable extends Migration
     public function down()
     {
         Schema::table('project', function (Blueprint $table) {
-            $table->dropForeign('project_id_foreign');
+            $table->dropForeign('project_user_id_foreign');
             $table->dropForeign('project_tech_id_foreign');
         });
     }

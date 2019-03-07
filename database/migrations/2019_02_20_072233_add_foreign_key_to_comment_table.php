@@ -27,7 +27,7 @@ class AddForeignKeyToCommentTable extends Migration
     public function down()
     {
         Schema::table('comment', function (Blueprint $table) {
-            $table->dropForeign('comment_id_foreign');
+            $table->dropForeign('comment_user_id_foreign');
             $table->dropForeign('comment_proj_id_foreign');
         });
     }

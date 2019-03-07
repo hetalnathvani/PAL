@@ -14,7 +14,7 @@ class Rate extends Migration
     public function up()
     {
          Schema::create('Rate', function (Blueprint $table) {
-            $table->integer('user_id')->unsigned()->index('rate_id_foreign');
+            $table->integer('user_id')->unsigned()->index('rate_user_id_foreign');
             $table->integer('Proj_id')->unsigned()->index('rate_Proj_id_foreign');
             $table->float('Rate', 5)->default(1);
             $table->timestamps();

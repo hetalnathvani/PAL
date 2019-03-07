@@ -14,7 +14,7 @@ class Comment extends Migration
     public function up()
     {
         Schema::create('comment', function (Blueprint $table) {
-            $table->integer('user_id')->unsigned()->index('comment_id_foreign');
+            $table->integer('user_id')->unsigned()->index('comment_user_id_foreign');
             $table->integer('Proj_id')->unsigned()->index('comment_Proj_id_foreign');
             $table->text('comment', 500);
             $table->timestamps();

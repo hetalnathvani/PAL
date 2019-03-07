@@ -27,7 +27,7 @@ class AddForeignKeyToRateTable extends Migration
     public function down()
     {
         Schema::table('rate', function (Blueprint $table) {
-            $table->dropForeign('rate_id_foreign');
+            $table->dropForeign('rate_user_id_foreign');
             $table->dropForeign('rate_proj_id_foreign');
         });
     }

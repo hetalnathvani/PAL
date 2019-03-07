@@ -14,8 +14,8 @@ class AddForeignKeyToProjectMappTechnology extends Migration
     public function up()
     {
         Schema::table('project_mapp_technology', function (Blueprint $table) {
-            $table->foreign('proj_id')->references('id')->on('project')->onUpdate('RESTRICT')->onDelete('CASCADE');
             $table->foreign('tech_id')->references('id')->on('technology')->onUpdate('RESTRICT')->onDelete('CASCADE');
+            $table->foreign('proj_id')->references('id')->on('project')->onUpdate('RESTRICT')->onDelete('CASCADE');
         });
     }
 

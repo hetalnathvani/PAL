@@ -22,6 +22,53 @@
             </div><!--box-header with-border-->
 
             <div class="box-body">
+
+               <!-- {{-- Project Id --}}
+                <div class="form-group">
+                    {{ Form::label('name', 'Project Id', ['class' => 'col-lg-2 control-label required']) }}
+
+                    <div class="col-lg-10">
+                        {{ Form::text('id', null, ['class' => 'form-control box-size', 'placeholder' => 'Enter Project Id', 'required' => 'required']) }}
+                    </div>--><!--col-lg-10-->
+                </div><!--form control-->
+                
+                 {{-- Project Name --}}
+                <div class="form-group">
+                    {{ Form::label('name', 'Project Name', ['class' => 'col-lg-2 control-label required']) }}
+
+                    <div class="col-lg-10">
+                        {{ Form::text('project_name', null, ['class' => 'form-control box-size', 'placeholder' => 'Enter Project Name', 'required' => 'required']) }}
+                    </div><!--col-lg-10-->
+                </div><!--form control-->
+
+                  {{-- Project Details --}}
+                <div class="form-group">
+                    {{ Form::label('name', 'Project details', ['class' => 'col-lg-2 control-label required']) }}
+
+                    <div class="col-lg-10">
+                        {{ Form::text('project_details', null, ['class' => 'form-control box-size', 'placeholder' => 'Enter Project details', 'required' => 'required']) }}
+                    </div><!--col-lg-10-->
+                </div><!--form control-->
+
+                {{-- Technology Id --}}
+                <div class="form-group">
+                    {{ Form::label('name', 'Technology Id', ['class' => 'col-lg-2 control-label required']) }}
+
+                    <div class="col-lg-10">
+                        {{ Form::text('tech_id', null, ['class' => 'form-control box-size', 'placeholder' => 'Enter Project Name', 'required' => 'required']) }}
+                    </div><!--col-lg-10-->
+                </div><!--form control-->
+
+                {{-- File --}}
+                <div class="form-group">
+                    {{ Form::label('name', 'File', ['class' => 'col-lg-2 control-label required']) }}
+
+                    <div class="col-lg-10">
+                        {{ Form::file('file', null, ['class' => 'form-control box-size', 'placeholder' => 'Enter the file', 'required' => 'required']) }}
+                    </div><!--col-lg-10-->
+                </div><!--form control-->
+
+
                 <div class="form-group">
                     {{-- Including Form blade file --}}
                     @include("backend.projects.form")
