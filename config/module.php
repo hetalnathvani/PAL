@@ -21,9 +21,9 @@ return [
 	"table" => "faqs",
 	],
 	"projects" => [
-	"table" => "project",
+	"table" => "projects",
 	],
 	"technologies" => [
-	"table" => "technology",
+	"table" => "technologies",
 	],
 ];

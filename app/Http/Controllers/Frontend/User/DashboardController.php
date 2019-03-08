@@ -17,8 +17,4 @@ class DashboardController extends Controller
     {
         return view('frontend.user.dashboard');
     }
-     public function aboutus(DashboardViewRequest $request)
-    {
-        return view('frontend.auth.aboutus');
-    }
 }

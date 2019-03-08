@@ -13,9 +13,9 @@ class Comment extends Migration
      */
     public function up()
     {
-        Schema::create('comment', function (Blueprint $table) {
-            $table->integer('user_id')->unsigned()->index('comment_user_id_foreign');
-            $table->integer('Proj_id')->unsigned()->index('comment_Proj_id_foreign');
+        Schema::create('comments', function (Blueprint $table) {
+            $table->integer('user_id')->unsigned()->index('comments_user_id_foreign');
+            $table->integer('project_id')->unsigned()->index('comments_project_id_foreign');
             $table->text('comment', 500);
             $table->timestamps();
             $table->softDeletes();
@@ -29,6 +29,6 @@ class Comment extends Migration
      */
     public function down()
     {
-        Schema::drop('comment');
+        Schema::drop('comments');
     }
 }

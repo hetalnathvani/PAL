@@ -13,9 +13,9 @@ class AddForeignKeyToProjectMappTechnology extends Migration
      */
     public function up()
     {
-        Schema::table('project_mapp_technology', function (Blueprint $table) {
-            $table->foreign('tech_id')->references('id')->on('technology')->onUpdate('RESTRICT')->onDelete('CASCADE');
-            $table->foreign('proj_id')->references('id')->on('project')->onUpdate('RESTRICT')->onDelete('CASCADE');
+        Schema::table('projects_map_technologies', function (Blueprint $table) {
+            $table->foreign('technology_id')->references('id')->on('technologies')->onUpdate('RESTRICT')->onDelete('CASCADE');
+            $table->foreign('project_id')->references('id')->on('projects')->onUpdate('RESTRICT')->onDelete('CASCADE');
         });
     }
 
@@ -26,9 +26,9 @@ class AddForeignKeyToProjectMappTechnology extends Migration
      */
     public function down()
     {
-        Schema::table('project_mapp_technology', function (Blueprint $table) {
-            $table->dropForeign('project_mapp_technology_proj_id_foreign');
-            $table->dropForeign('project_mapp_technology_tech_id_foreign');
+        Schema::table('projects_map_technologies', function (Blueprint $table) {
+            $table->dropForeign('projects_map_technologies_project_id_foreign');
+            $table->dropForeign('projects_map_technologies_technology_id_foreign');
         });
     }
 }

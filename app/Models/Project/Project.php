@@ -24,7 +24,7 @@ class Project extends Model
      * The database table used by the model.
      * @var string
      */
-    protected $table = 'project';
+    protected $table = 'projects';
 
     /**
      * Mass Assignable fields of model

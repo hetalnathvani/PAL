@@ -22,6 +22,7 @@
                     <thead>
                         <tr>
                             <th>{{ trans('labels.backend.technologies.table.id') }}</th>
+                            <th>{{ trans('labels.backend.technologies.table.id') }}</th>
                             <th>{{ trans('labels.backend.technologies.table.createdat') }}</th>
                             <th>{{ trans('labels.general.actions') }}</th>
                         </tr>

@@ -13,9 +13,9 @@ class AddForeignKeyToRateTable extends Migration
      */
     public function up()
     {
-        Schema::table('rate', function (Blueprint $table) {
+        Schema::table('rates', function (Blueprint $table) {
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('RESTRICT')->onDelete('CASCADE');
-            $table->foreign('proj_id')->references('id')->on('project')->onUpdate('RESTRICT')->onDelete('CASCADE');
+            $table->foreign('project_id')->references('id')->on('projects')->onUpdate('RESTRICT')->onDelete('CASCADE');
         });
     }
 
@@ -26,9 +26,9 @@ class AddForeignKeyToRateTable extends Migration
      */
     public function down()
     {
-        Schema::table('rate', function (Blueprint $table) {
-            $table->dropForeign('rate_user_id_foreign');
-            $table->dropForeign('rate_proj_id_foreign');
+        Schema::table('rates', function (Blueprint $table) {
+            $table->dropForeign('rates_user_id_foreign');
+            $table->dropForeign('rates_project_id_foreign');
         });
     }
 }

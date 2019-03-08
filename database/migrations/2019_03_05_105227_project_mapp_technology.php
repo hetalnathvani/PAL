@@ -13,10 +13,10 @@ class ProjectMappTechnology extends Migration
      */
     public function up()
     {
-        Schema::create('Project_mapp_technology', function (Blueprint $table) {
+        Schema::create('projects_map_technologies', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('tech_id')->unsigned()->index('project_mapp_technology_tech_id_foreign');
-            $table->integer('Proj_id')->unsigned()->index('project_mapp_technology_Proj_id_foreign');
+            $table->integer('technology_id')->unsigned()->index('projects_map_technologies_technology_id_foreign');
+            $table->integer('project_id')->unsigned()->index('projects_map_technologies_project_id_foreign');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -29,6 +29,6 @@ class ProjectMappTechnology extends Migration
      */
     public function down()
     {
-        Schema::drop('Project_mapp_technology');
+        Schema::drop('project_map_technologies');
     }
 }

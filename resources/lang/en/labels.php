@@ -236,13 +236,22 @@ return [
 	"event" => "Event Name",
 	],
 	],
-	"projects" => [
+		"projects" => [
 	"create" => "Create Project",
 	"edit" => "Edit Project",
 	"management" => "Project Management",
-	"title" => "Projects",
+	"project_name" => "Project Name",
+	"project_details"=>"Project Details",
+	"tech_id"		=>"Technology Name",
+	"file"=>"File",
+	"link"=>"Link",
+
 	"table" => [
 	"id" => "Id",
+	"project_name" => "Project Name",
+	"project_details"=>"Project Details",
+	"tech_id"		=>"Technology Name",
+	"file"=>"File",
 	"createdat" => "Created At",
 	],
 	],
