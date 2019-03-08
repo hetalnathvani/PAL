@@ -22,9 +22,17 @@
             </div><!--box-header with-border-->
 
             <div class="box-body">
-                <div class="form-group">
-                    {{-- Including Form blade file --}}
-                    @include("backend.technologies.form")
+              <div class="form-group">
+                    <!-- Create Your Field Label Here -->
+                    <!-- Look Below Example for reference -->
+                    {{-- {{ Form::label('name', trans('labels.backend.blogs.title'), ['class' => 'col-lg-2 control-label required']) }} --}}
+
+                   <div class="col-lg-10">
+                    <!-- Create Your Input Field Here -->
+                     <!-- Look Below Example for reference -->
+                     {{-- {{ Form::text('name', null, ['class' => 'form-control box-size', 'placeholder' => trans('labels.backend.blogs.title'), 'required' => 'required']) }} --}}
+        </div><!--col-lg-10-->
+    </div><!--form-group-->
                     <div class="edit-form-btn">
                         {{ link_to_route('admin.technologies.index', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }}
                         {{ Form::submit(trans('buttons.general.crud.create'), ['class' => 'btn btn-primary btn-md']) }}
