@@ -87,8 +87,29 @@
                                         </div><!--panel-body-->
                                     </div><!--panel-->
                                 </div><!--col-md-6-->
+                     
+                                <div class="col-container">
 
-                                <div class="col-md-6">
+                                    <div class="col">
+                                        <div class="img">
+                                        <a href="Technology_Specific"><img src="{{asset('/img/frontend/box.png')}}" height="340" width="340"></a>
+                                        <div class="centered">Technology<br>Specific </div></div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="img">
+                                        <a href="upload"><img src="{{asset('/img/frontend/box.png')}}" height="340" width="340"></a>
+                                        <div class="centered">New<br>Arrivals </div></div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="img">
+                                        <a href="upload"><img src="{{asset('/img/frontend/box.png')}}" height="340" width="340"></a>
+                                        <div class="centered">Most<br> Popular </div></div>
+                                    </div>
+                                    
+                                </div>
+                               <!-- <div class="col-md-6">
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
                                             <h4>Item</h4>
@@ -153,7 +174,9 @@
                     </div>
 
                     <div class="col">
-                       <p> Hello</p>
+                    <h2>Technologies</h2>
+                            JAVA<br>Microsoft<br>Blockchain<br>AI<br>
+                            Android<br>IOS<br>SAP<br>PHP<br>Python<br>Bigdata<br>AR<br>VR
                     </div>
 
                     <div class="col">

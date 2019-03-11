@@ -6,6 +6,9 @@
  */
 
 // Switch between the included languages
+Route::view('/upload',"upload");
+Route::post('/store',"backend\DashboardController@store");
+Route::get('/store/{id}','backend\DashboardController@show')->name('downloadfile');
 Route::get('lang/{lang}', 'LanguageController@swap');
 
 /* ----------------------------------------------------------------------- */

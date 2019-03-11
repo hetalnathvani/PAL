@@ -13,10 +13,10 @@ class Project extends Migration
      */
     public function up()
     {
-        Schema::create('Project', function (Blueprint $table) {
+        Schema::create('Projects', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->unsigned()->index('project_id_foreign');
-            $table->integer('tech_id')->unsigned()->index('project_tech_id_foreign');
+            $table->integer('user_id')->unsigned()->index('projects_users_id_foreign');
+            $table->integer('technology_id')->unsigned()->index('projects_technology_id_foreign');
             $table->string('project_name', 250);
             $table->text('project_details', 250);
             $table->string('file', 65535);
@@ -32,6 +32,6 @@ class Project extends Migration
      */
     public function down()
     {
-        Schema::drop('project');
+        Schema::drop('projects');
     }
 }

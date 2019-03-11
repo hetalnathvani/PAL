@@ -27,18 +27,23 @@ class ProjectRepository extends BaseRepository
      */
     public function getForDataTable()
     {
-        return $this->query()
+         $dataTableQuery = $this->query()
+            ->leftJoin('projects_map_technologies', 'projects_map_technologies.project_id', '=', 'projects.id')
+            ->leftJoin('technologies', 'projects_map_technologies.technology_id', '=', 'technologies.id')
             ->select([
                 config('module.projects.table').'.id',
                 config('module.projects.table').'.project_name',
                 config('module.projects.table').'.project_details',
-                config('module.projects.table').'.tech_id',
+                config('module.projects.table').'.technology_id',
                 config('module.projects.table').'.file',
                 config('module.projects.table').'.created_at',
                 config('module.projects.table').'.updated_at',
-            ]);
+                config('access.users_table').'.deleted_at',
+                DB::raw('GROUP_CONCAT(technologies.technology_name) as technology'),
+            ])
+             ->groupBy('projects.id');
     }
-
+ 
     /**
      * For Creating the respective model in storage
      *

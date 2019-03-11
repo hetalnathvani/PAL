@@ -6,7 +6,7 @@ use App\Models\ModelTrait;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Project\Traits\ProjectAttribute;
 use App\Models\Project\Traits\ProjectRelationship;
-
+use Tymon\JWTAuth\Contracts\JWTSubject;
 class Project extends Model
 {
     use ModelTrait,
@@ -24,7 +24,7 @@ class Project extends Model
      * The database table used by the model.
      * @var string
      */
-    protected $table = 'project';
+    protected $table = 'projects';
 
     /**
      * Mass Assignable fields of model
@@ -67,4 +67,5 @@ class Project extends Model
     {
         parent::__construct($attributes);
     }
+    
 }

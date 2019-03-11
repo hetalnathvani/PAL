@@ -85,7 +85,55 @@ return [
      */
     'menus_table'      => 'menus',
     'menu_items_table' => 'menu_items',
+ /*
+     * Role model used by Access to create correct relations. Update the role if it is in a different namespace.
+    */
+    'technology' => Technology::class,
 
+
+
+    'technologies_table' => 'technologies',
+
+    'projects_table' => 'projects',
+     /*
+     * role_user table used by Access to save assigned roles to the database.
+     */
+    'project_technology' => 'projects_map_technologies',
+
+    
+
+    /*
+     * Permission model used by Access to create correct relations.
+     * Update the permission if it is in a different namespace.
+     */
+    'permission' => Permission::class,
+
+    /*
+     * Permissions table used by Access to save permissions to the database.
+     */
+    'permissions_table' => 'permissions',
+
+    /*
+     * permission_role table used by Access to save relationship between permissions and roles to the database.
+     */
+    'permission_role_table' => 'permission_role',
+
+    /*
+     * permission_user table used by Access to save relationship between permissions and users to the database.
+     */
+    'permission_user_table' => 'permission_user',
+
+    /*
+     * role_user table used by Access to save assigned roles to the database.
+     */
+    'role_user_table' => 'role_user',
+
+    /*
+     * countries table used to store countries
+     */
+    'countries_table' => 'countries',
+
+    /*
     /*
      * Configurations for the user
      */

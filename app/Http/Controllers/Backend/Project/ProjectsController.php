@@ -10,6 +10,9 @@ use App\Http\Responses\ViewResponse;
 use App\Http\Responses\Backend\Project\CreateResponse;
 use App\Http\Responses\Backend\Project\EditResponse;
 use App\Repositories\Backend\Project\ProjectRepository;
+use App\Repositories\Backend\Technology\TechnologyRepository;
+
+//use App\Models\Technology\Traits\TechnologyRelationship;
 use App\Http\Requests\Backend\Project\ManageProjectRequest;
 use App\Http\Requests\Backend\Project\CreateProjectRequest;
 use App\Http\Requests\Backend\Project\StoreProjectRequest;
@@ -27,14 +30,17 @@ class ProjectsController extends Controller
      * @var ProjectRepository
      */
     protected $repository;
+    protected $technologylist;
 
     /**
      * contructor to initialize repository object
      * @param ProjectRepository $repository;
      */
-    public function __construct(ProjectRepository $repository)
+    public function __construct(ProjectRepository $repository,TechnologyRepository $technologylist)
     {
         $this->repository = $repository;
+
+        $this->technologylist = $technologylist;
     }
 
     /**
@@ -53,9 +59,19 @@ class ProjectsController extends Controller
      * @param  CreateProjectRequestNamespace  $request
      * @return \App\Http\Responses\Backend\Project\CreateResponse
      */
+    
     public function create(CreateProjectRequest $request)
     {
-        return new CreateResponse('backend.projects.create');
+        //dd($technologylist);
+        $technologylist=\DB::table('technologies')->pluck('id','technology_name');
+        $technologylist=['0'=>'select technology']+collect($technologylist)->toarray();
+      //   $technologies = Technology::pluck('technology_name');
+    //return view('create',compact('technologies'));
+       // $request = $this->technologies->getAll();
+       // $technologies = $this->technologies->getAll();
+
+        //return new CreateResponse($roles);
+        return new CreateResponse('backend.projects.create',compact('technologylist'));
     }
     /**
      * Store a newly created resource in storage.
@@ -69,6 +85,9 @@ class ProjectsController extends Controller
         $input = $request->except(['_token']);
         //Create the model using repository create method
         $this->repository->create($input);
+        //for dropdown
+         $repository->technologies()->attach($request->get('technology_id'));
+
         //return with successfull message
         return new RedirectResponse(route('admin.projects.index'), ['flash_success' => trans('alerts.backend.projects.created')]);
     }

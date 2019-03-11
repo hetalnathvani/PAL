@@ -22,6 +22,18 @@
             </div><!--box-header with-border-->
 
             <div class="box-body">
+
+               <!-- {{-- Project Id --}}
+                <div class="form-group">
+                    {{ Form::label('name', 'Project Id', ['class' => 'col-lg-2 control-label required']) }}
+
+                    <div class="col-lg-10">
+                        {{ Form::text('id', null, ['class' => 'form-control box-size', 'placeholder' => 'Enter Project Id', 'required' => 'required']) }}
+                    </div>--><!--col-lg-10-->
+                </div><!--form control-->
+                
+
+
                 <div class="form-group">
                      {{ Form::label('project_name', trans('labels.backend.projects.project_name'), ['class' => 'col-lg-2 control-label required']) }} 
 
@@ -41,14 +53,28 @@
                              {{ Form::text('project_details', null, ['class' => 'form-control box-size', 'placeholder' => trans('labels.backend.projects.project_details'), 'required' => 'required']) }} 
                         </div><!--col-lg-10-->
                     </div><!--form-group-->
-
-                <div class="form-group">
-                     {{ Form::label('tech_id', trans('labels.backend.projects.tech_id'), ['class' => 'col-lg-2 control-label required']) }} 
+                   {{--     <select name="technologies_id" multiple>
+        @foreach ($technologies as $technology)
+            <option value="{{ $technology->id }}">{{ $technology->name }}</option>
+        @endforeach
+    </select>
+                 <div class="form-group">
+                     {{ Form::label('technology_name', trans('labels.backend.projects.technology_name'), ['class' => 'col-lg-2 control-label required']) }} 
 
                         <div class="col-lg-10">
                             <!-- Create Your Input Field Here -->
                             <!-- Look Below Example for reference -->
-                             {{ Form::text('tech_id', null, ['class' => 'form-control box-size', 'placeholder' => trans('labels.backend.projects.tech_id'), 'required' => 'required']) }} 
+                             {{ Form::select('technology_name',$technologylist, null, ['class' => 'form-control box-size', 'placeholder' => trans('labels.backend.projects.project_details'), 'required' => 'required']) }} 
+                        </div><!--col-lg-10-->
+                    </div><!--form-group-->--}}
+                
+                <div class="form-group">
+                     {{ Form::label('technology_id', trans('labels.backend.projects.technology_id'), ['class' => 'col-lg-2 control-label required']) }} 
+
+                        <div class="col-lg-10">
+                            <!-- Create Your Input Field Here -->
+                            <!-- Look Below Example for reference -->
+                             {{ Form::text('technology_id',$technologylist, null, ['class' => 'span11', 'placeholder' => trans('labels.backend.projects.technology_id'), 'required' => 'required']) }} 
                         </div><!--col-lg-10-->
                     </div><!--form-group-->
                

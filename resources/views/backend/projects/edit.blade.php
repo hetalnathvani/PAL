@@ -44,12 +44,12 @@
                     </div><!--form-group-->
 
                 <div class="form-group">
-                     {{ Form::label('tech_id', trans('labels.backend.projects.tech_id'), ['class' => 'col-lg-2 control-label required']) }} 
+                     {{ Form::label('technology_id', trans('labels.backend.projects.technology_id'), ['class' => 'col-lg-2 control-label required']) }} 
 
                         <div class="col-lg-10">
                             <!-- Create Your Input Field Here -->
                             <!-- Look Below Example for reference -->
-                             {{ Form::text('tech_id', null, ['class' => 'form-control box-size', 'placeholder' => trans('labels.backend.projects.tech_id'), 'required' => 'required']) }} 
+                             {{ Form::text('technology_id', null, ['class' => 'form-control box-size', 'placeholder' => trans('labels.backend.projects.technology_id'), 'required' => 'required']) }} 
                         </div><!--col-lg-10-->
                     </div><!--form-group-->
 

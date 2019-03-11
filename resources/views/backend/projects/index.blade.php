@@ -24,7 +24,7 @@
                             <th>{{ trans('labels.backend.projects.table.id') }}</th>
                              <th>{{ trans('labels.backend.projects.table.project_name') }}</th>
                               <th>{{ trans('labels.backend.projects.table.project_details') }}</th>
-                               <th>{{ trans('labels.backend.projects.table.tech_id') }}</th>
+                               <th>{{ trans('labels.backend.projects.table.technology_id') }}</th>
 
                                <th>{{ trans('labels.backend.projects.table.file') }}</th>
                             <th>{{ trans('labels.backend.projects.table.createdat') }}</th>
@@ -62,8 +62,8 @@
                     {data: 'id', name: '{{config('module.projects.table')}}.id'},
                     {data: 'project_name', name: '{{config('module.projects.table')}}.project_name'},
                     {data: 'project_details', name: '{{config('module.projects.table')}}.project_details'},
-                    {data: 'tech_id', name: '{{config('module.projects.table')}}.tech_id'},
-
+                    
+                     {data: 'technology', name: '{{config('access.technologies.table')}}.technology_name'}
                     {data: 'file', name: '{{config('module.projects.table')}}.file'},
                     {data: 'created_at', name: '{{config('module.projects.table')}}.created_at'},
                     {data: 'actions', name: 'actions', searchable: false, sortable: false}

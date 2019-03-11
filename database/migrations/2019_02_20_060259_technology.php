@@ -13,9 +13,9 @@ class Technology extends Migration
      */
     public function up()
     {
-        Schema::create('Technology', function (Blueprint $table) {
+        Schema::create('Technologies', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('tech_name', 30);
+            $table->string('technology_name', 30);
             $table->timestamps();
             $table->softDeletes();
         });
@@ -28,6 +28,6 @@ class Technology extends Migration
      */
     public function down()
     {
-        Schema::drop('Technology');
+        Schema::drop('Technologies');
     }
 }

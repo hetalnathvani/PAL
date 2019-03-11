@@ -13,9 +13,9 @@ class AddForeignKeyToCommentTable extends Migration
      */
     public function up()
     {
-        Schema::table('comment', function (Blueprint $table) {
+        Schema::table('comments', function (Blueprint $table) {
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('RESTRICT')->onDelete('CASCADE');
-            $table->foreign('proj_id')->references('id')->on('project')->onUpdate('RESTRICT')->onDelete('CASCADE');
+            $table->foreign('project_id')->references('id')->on('projects')->onUpdate('RESTRICT')->onDelete('CASCADE');
         });
     }
 
@@ -26,9 +26,9 @@ class AddForeignKeyToCommentTable extends Migration
      */
     public function down()
     {
-        Schema::table('comment', function (Blueprint $table) {
-            $table->dropForeign('comment_id_foreign');
-            $table->dropForeign('comment_proj_id_foreign');
+        Schema::table('comments', function (Blueprint $table) {
+            $table->dropForeign('comments_user_id_foreign');
+            $table->dropForeign('comments_project_id_foreign');
         });
     }
 }

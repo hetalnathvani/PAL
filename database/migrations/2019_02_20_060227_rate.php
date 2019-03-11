@@ -13,9 +13,9 @@ class Rate extends Migration
      */
     public function up()
     {
-         Schema::create('Rate', function (Blueprint $table) {
-            $table->integer('user_id')->unsigned()->index('rate_id_foreign');
-            $table->integer('Proj_id')->unsigned()->index('rate_Proj_id_foreign');
+         Schema::create('Rates', function (Blueprint $table) {
+            $table->integer('user_id')->unsigned()->index('rates_user_id_foreign');
+            $table->integer('project_id')->unsigned()->index('rates_project_id_foreign');
             $table->float('Rate', 5)->default(1);
             $table->timestamps();
             $table->softDeletes();
@@ -29,6 +29,6 @@ class Rate extends Migration
      */
     public function down()
     {
-          Schema::drop('Rate');
+          Schema::drop('Rates');
     }
 }
