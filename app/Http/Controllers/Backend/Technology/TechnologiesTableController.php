@@ -46,4 +46,4 @@ class TechnologiesTableController extends Controller
             })
             ->make(true);
     }
-}
+} 

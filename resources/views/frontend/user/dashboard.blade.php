@@ -39,54 +39,7 @@
                                 </li><!--media-->
                             </ul><!--media-list-->
 
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4>Sidebar Item</h4>
-                                </div><!--panel-heading-->
-
-                                <div class="panel-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non qui facilis deleniti expedita fuga ipsum numquam aperiam itaque cum maxime.
-                                </div><!--panel-body-->
-                            </div><!--panel-->
-
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4>Sidebar Item</h4>
-                                </div><!--panel-heading-->
-
-                                <div class="panel-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non qui facilis deleniti expedita fuga ipsum numquam aperiam itaque cum maxime.
-                                </div><!--panel-body-->
-                            </div><!--panel-->
                         </div><!--col-md-4-->
-
-                        <div class="col-md-8 col-md-pull-4">
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h4>Item</h4>
-                                        </div><!--panel-heading-->
-
-                                        <div class="panel-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non qui facilis deleniti expedita fuga ipsum numquam aperiam itaque cum maxime.</p>
-                                        </div><!--panel-body-->
-                                    </div><!--panel-->
-                                </div><!--col-xs-12-->
-                            </div><!--row-->
-
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h4>Item</h4>
-                                        </div><!--panel-heading-->
-
-                                        <div class="panel-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non qui facilis deleniti expedita fuga ipsum numquam aperiam itaque cum maxime.</p>
-                                        </div><!--panel-body-->
-                                    </div><!--panel-->
-                                </div><!--col-md-6-->
                      
                                 <div class="col-container">
 
@@ -114,36 +67,6 @@
                                         <div class="panel-heading">
                                             <h4>Item</h4>
                                         </div><!--panel-heading-->
-
-                                        <div class="panel-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non qui facilis deleniti expedita fuga ipsum numquam aperiam itaque cum maxime.</p>
-                                        </div><!--panel-body-->
-                                    </div><!--panel-->
-                                </div><!--col-md-6-->
-
-                                <div class="col-md-6">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h4>Item</h4>
-                                        </div><!--panel-heading-->
-
-                                        <div class="panel-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non qui facilis deleniti expedita fuga ipsum numquam aperiam itaque cum maxime.</p>
-                                        </div><!--panel-body-->
-                                    </div><!--panel-->
-                                </div><!--col-md-6-->
-
-                                <div class="col-md-6">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h4>Item</h4>
-                                        </div><!--panel-heading-->
-
-                                        <div class="panel-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non qui facilis deleniti expedita fuga ipsum numquam aperiam itaque cum maxime.</p>
-                                        </div><!--panel-body-->
-                                    </div><!--panel-->
-                                </div><!--col-md-6-->
 
                                 <!--<div class = "footer">
                                     <h2>Footer</h2>
@@ -180,8 +103,30 @@
                     </div>
 
                     <div class="col">
-                       <p> Hello </p>
-                    </div>
+                    <h2>Contact Us</h2>
+                        <table> 
+                        <tr>
+                            <td><i class="fa fa-map-marker" style="font-size : 24px;color: red;"></i> </td>
+                            <td>
+                            <div class="address">
+                            Cygnet Infotech Pvt. Ltd.<br>
+                            16-Swastik Society,<br>
+                            Nr. AMCO Bank, Stadium Circle,<br>
+                            Navrangpura, Ahmedabad 380009    
+                            </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-phone"style="font-size : 24px;"></td>
+                            <td><div class="address">+91-79-67124000</div></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-envelope"style="font-size: 24px;padding-top: -25px"></td>
+                            <td><div class="address"style="padding-top: -100px">inquiry@cygnetinfotech.com</div></td>
+                        </tr>
+                        </table>
+                        
+                    </div>                    
                     </div>
             </div><!-- panel -->
 

@@ -260,8 +260,11 @@ return [
 	"edit" => "Edit Technology",
 	"management" => "Technology Management",
 	"title" => "Technologies",
+	"id" => "Id",
+	"technology_name"=>"Tchnology Name",
 	"table" => [
 	"id" => "Id",
+	"technology_name"=>"Tchnology Name",
 	"createdat" => "Created At",
 	],
 	],

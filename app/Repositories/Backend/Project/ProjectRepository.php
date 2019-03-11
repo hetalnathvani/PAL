@@ -53,7 +53,7 @@ class ProjectRepository extends BaseRepository
         }
         throw new GeneralException(trans('exceptions.backend.projects.create_error'));
     }
-
+ 
     /**
      * For updating the respective Model in storage
      *

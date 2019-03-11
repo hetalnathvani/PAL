@@ -23,17 +23,14 @@
 
             <div class="box-body">
 
+            {{-- Technology Name --}}
                 <div class="form-group">
-                    <!-- Create Your Field Label Here -->
-                        <!-- Look Below Example for reference -->
-                        {{ Form::label('technology_name', trans('labels.backend.technologies.technology_name'), ['class' => 'col-lg-2 control-label required']) }} 
+                    {{ Form::label('name', 'Technology Name', ['class' => 'col-lg-2 control-label required']) }}
 
-                        <div class="col-lg-10">
-                            <!-- Create Your Input Field Here -->
-                            <!-- Look Below Example for reference -->
-                         {{ Form::text('technology_name', null, ['class' => 'form-control box-size', 'placeholder' => trans('labels.backend.technologies.technology_name'), 'required' => 'required']) }} 
-                        </div><!--col-lg-10-->
-                </div><!--form-group-->
+                    <div class="col-lg-10">
+                        {{ Form::text('technology_name', null, ['class' => 'form-control box-size', 'placeholder' => 'Enter Technology Name', 'required' => 'required']) }}
+                    </div><!--col-lg-10-->
+                </div><!--form control-->
                 
                     <div class="edit-form-btn">
                         {{ link_to_route('admin.technologies.index', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }}

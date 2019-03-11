@@ -5,7 +5,7 @@
 @section('page-header')
     <h1>{{ trans('labels.backend.technologies.management') }}</h1>
 @endsection
-
+ 
 @section('content')
     <div class="box box-info">
         <div class="box-header with-border">
@@ -15,14 +15,14 @@
                 @include('backend.technologies.partials.technologies-header-buttons')
             </div>
         </div><!--box-header with-border-->
-
+    
         <div class="box-body">
             <div class="table-responsive data-table-wrapper">
                 <table id="technologies-table" class="table table-condensed table-hover table-bordered">
                     <thead>
                         <tr>
                             <th>{{ trans('labels.backend.technologies.table.id') }}</th>
-                            <th>{{ trans('labels.backend.technologies.table.id') }}</th>
+                            <th>{{ trans('labels.backend.technologies.table.technology_name') }}</th>
                             <th>{{ trans('labels.backend.technologies.table.createdat') }}</th>
                             <th>{{ trans('labels.general.actions') }}</th>
                         </tr>
@@ -55,7 +55,9 @@
                     type: 'post'
                 },
                 columns: [
+                    
                     {data: 'id', name: '{{config('module.technologies.table')}}.id'},
+                    {data: 'technology_name', name: '{{config('module.technologies.table')}}.technology_name'},
                     {data: 'created_at', name: '{{config('module.technologies.table')}}.created_at'},
                     {data: 'actions', name: 'actions', searchable: false, sortable: false}
                 ],
