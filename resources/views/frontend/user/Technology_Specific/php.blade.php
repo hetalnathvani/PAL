@@ -41,11 +41,11 @@
 
                         </div><!--col-md-4-->
                      
-                                <div class="col-container">
+                              <!--  <div class="col-container">
 
                                     <div class="col">
                                         <div class="img">
-                                        <a href="TechnologySpecific"><img src="{{asset('/img/frontend/box.png')}}" height="340" width="340"></a>
+                                        <a href="Technology_Specific"><img src="{{asset('/img/frontend/box.png')}}" height="340" width="340"></a>
                                         <div class="centered">Technology<br>Specific </div></div>
                                     </div>
 
@@ -61,7 +61,7 @@
                                         <div class="centered">Most<br> Popular </div></div>
                                     </div>
                                     
-                                </div>
+                                </div>-->
                                <!-- <div class="col-md-6">
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
@@ -78,7 +78,7 @@
 
                     </div><!--row-->
 
-
+                        <h1>{{$tech}}</h1>
                 </div><!--panel body-->
                 <div class="footer">
                     <div class="col-container">

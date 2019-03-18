@@ -7,7 +7,7 @@ use App\Http\Requests\Request;
 /**
  * Class DashboardViewRequest.
  */
-class Technology_SpecificViewRequest extends Request
+class TechnologySpecificViewRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.

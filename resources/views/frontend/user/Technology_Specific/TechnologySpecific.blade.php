@@ -27,7 +27,7 @@
                                                 {{ $logged_in_user->email }}<br/>
                                                 Joined {{ $logged_in_user->created_at->format('F jS, Y') }}
                                             </small>
-                                        </h4>
+                                        </h4> 
 
                                         {{ link_to_route('frontend.user.account', trans('navs.frontend.user.account'), [], ['class' => 'btn btn-info btn-xs']) }}
 
@@ -40,26 +40,12 @@
 
                             
                             <div class="panel panel-default">
-                                <!--<div class="panel-heading">
-                                    <h4>Sidebar Item</h4>
-                                </div>--><!--panel-heading-->
-
-                                <!--<div class="panel-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non qui facilis deleniti expedita fuga ipsum numquam aperiam itaque cum maxime.
-                                </div>--><!--panel-body-->
+            
                             </div><!--panel-->
                             <label>
                                 Search : <input type="text" placeholder="Search.." autocomplete="off"size="35">
                             </label>
-                            <!--<div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4>Sidebar Item</h4>
-                                </div>--><!--panel-heading-->
-
-                                <!--<div class="panel-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non qui facilis deleniti expedita fuga ipsum numquam aperiam itaque cum maxime.
-                                </div>--><!--panel-body-->
-                            <!--</div>--><!--panel-->
+                          
                         </div><!--col-md-4-->
 
 
@@ -68,13 +54,7 @@
                             <div class="row">
                                 <div class="col-xs-12">
                                     <div class="panel panel-default">
-                                       <!-- <div class="panel-heading">
-                                            <h4>Item</h4>
-                                        </div>--><!--panel-heading-->
-
-                                        <!--<div class="panel-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non qui facilis deleniti expedita fuga ipsum numquam aperiam itaque cum maxime.</p>
-                                        </div>--><!--panel-body-->
+                                      
                                     </div><!--panel-->
                                 </div><!--col-xs-12-->
                             </div><!--row-->
@@ -82,65 +62,72 @@
 
 
                             <div class="row">
-                               <!-- <div class="col-md-6">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h4>Item</h4>
-                                        </div>--><!--panel-heading-->
-
-                                       <!-- <div class="panel-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non qui facilis deleniti expedita fuga ipsum numquam aperiam itaque cum maxime.</p>
-                                        </div>--><!--panel-body-->
+                             
                                     </div><!--panel-->
                                 </div><!--col-md-6-->
 
                                                            
-
+                                @foreach($technologies as $project)
                                 <div class="col-container">
 
                                     <div class="col">
                                         <div class="imag"><div class="opacity">
-                                        <a href="Technology_Specific"><img src="{{asset('/img/frontend/box.png')}}" height="170" width="270"></a></div>
-                                        <div class="centered1">PHP </div></div>
+                                        <a href="/TechnologySpecific/{{ $project->id }}"><img src="{{asset('/img/frontend/box.png')}}" height="170" width="270"></a></div>
+                                        <div class="centered1"> {{ $project->technology_name }} </div></div>
                                     </div>
-
-                                    <div class="col">
+                            
+                                 <!--   <div class="col">
                                         <div class="imeg">
-                                        <a href="upload"><img src="{{asset('/img/frontend/box.png')}}" height="170" width="270"></a>
-                                        <div class="centered1">.NET </div></div>
+                                        <a href="https://accounts.logme.in/login.aspx"><img src="{{asset('/img/frontend/box.png')}}" height="170" width="270"></a>
+                                        <div class="centered1"> {{ $project->technology_name }} </div></div>
                                     </div>
 
                                     <div class="col">
                                         <div class="imag"><div class="opacity">
                                         <a href="upload"><img src="{{asset('/img/frontend/box.png')}}" height="170" width="270"></a></div>
-                                        <div class="centered1">JAVA </div></div>
-                                    </div>
+                                        <div class="centered1"> {{ $project->technology_name }} </div></div>
+                                    </div>-->
                                     
                                 </div>
+                                @endforeach
 
-                                <div class="col-container">
+                               <!--@foreach($technologies as $project)
+                              <table>
+                               @foreach($technologies as $project)
+                               
+                               <td>{{ $project->technology_name }}</td>
+                               
+                                @endforeach
+                                </table>
+                                @endforeach-->
+
+
+
+                               <!-- <div class="col-container">
 
                                     <div class="col">
                                         <div class="imeg">
                                         <a href="Technology_Specific"><img src="{{asset('/img/frontend/box.png')}}" height="170" width="270"></a>
-                                        <div class="centered1">AI </div></div>
+                                        <div class="centered1"> {{ $project->technology_name }} </div></div>
                                     </div>
 
                                     <div class="col">
                                         <div class="imag"><div class="opacity">
                                         <a href="upload"><img src="{{asset('/img/frontend/box.png')}}" height="170" width="270"></a></div>
-                                        <div class="centered1">Mobile</div></div>
+                                        <div class="centered1"> {{ $project->technology_name }}</div></div>
                                     </div>
 
                                     <div class="col">
                                         <div class="imeg">
                                         <a href="upload"><img src="{{asset('/img/frontend/box.png')}}" height="170" width="270"></a>
-                                        <div class="centered1">AR </div></div>
+                                        <div class="centered1"> {{ $project->technology_name }} </div></div>
                                     </div>
                                     
-                                </div>
+                                </div>-->
 
-                                <div class="col-container">
+                                
+
+                                <!--<div class="col-container">
 
                                     <div class="col">
                                         <div class="imag"><div class="opacity"> 
@@ -160,60 +147,25 @@
                                         <div class="centered1">Cloud </div></div>
                                     </div>
                                     
-                                </div>
-                               <!-- <div class="col-md-6">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h4>Item</h4>
-                                        </div>--><!--panel-heading-->
-
-                                        <!--<div class="panel-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non qui facilis deleniti expedita fuga ipsum numquam aperiam itaque cum maxime.</p>
-                                        </div>--><!--panel-body-->
+                                </div>-->
+                              
                                     </div><!--panel-->
                                 </div><!--col-md-6-->
 
-                                <!--<div class="col-md-6">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h4>Item</h4>
-                                        </div>--><!--panel-heading-->
-
-                                       <!-- <div class="panel-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non qui facilis deleniti expedita fuga ipsum numquam aperiam itaque cum maxime.</p>
-                                        </div>--><!--panel-body-->
-                                    <!--</div>--><!--panel-->
-                                <!--s</div>--><!--col-md-6-->
-
-                               <!-- <div class="col-md-6">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h4>Item</h4>
-                                        </div>--><!--panel-heading-->
-
-                                      <!--  <div class="panel-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non qui facilis deleniti expedita fuga ipsum numquam aperiam itaque cum maxime.</p>
-                                        </div>--><!--panel-body-->
-                                    <!--</div>--><!--panel-->
-                                <!--</div>--><!--col-md-6-->
-
-                                <!--<div class = "footer">
-                                    <h2>Footer</h2>
-                                
-                                </div>
-                            </div><--row-->
-
                         </div><!--col-md-8-->
 
-                    </div><!--row-->
-
+                    </div><!--row--> 
+                      
 
                 </div><!--panel body-->
                 <div class="footer">
                     <div class="col-container">
                     <div class="col">
                         <h2>About Us</h2>
-                       <p> PAL is simply Process Assets Library where all projects done by Cygnet Infotech Company is saved here, which is accessible to Cygnet Employees only. The purpose of this website is to provide Secured code to the Cygnetians to save the time and increase the performance. </p>
+                       <p> PAL is simply Process Assets Library where all projects done by Cygnet Infotech 
+                       Company is saved here, which is accessible to Cygnet Employees only. The purpose of 
+                       this website is to provide Secured code to the Cygnetians to save the time and increase
+                        the performance. </p>
                        <p class="border"></p>
                        <h2>Follow Us</h2>
                         <a href="#" class="fa fa-facebook"></a>

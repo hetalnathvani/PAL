@@ -3,11 +3,12 @@
 namespace App\Models\Project;
 
 use App\Models\ModelTrait;
+use App\Models\BaseModel;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Project\Traits\ProjectAttribute;
 use App\Models\Project\Traits\ProjectRelationship;
 
-class Project extends Model
+class Project extends BaseModel
 {
     use ModelTrait,
         ProjectAttribute,
@@ -24,6 +25,7 @@ class Project extends Model
      * The database table used by the model.
      * @var string
      */
+
     protected $table = 'projects';
 
     /**
@@ -33,7 +35,6 @@ class Project extends Model
     protected $fillable = [
 
     ];
-
     /**
      * Default values for model fields
      * @var array

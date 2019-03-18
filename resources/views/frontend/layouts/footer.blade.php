@@ -3,6 +3,63 @@
 <head>
 	<title></title>
 	<style type="text/css">
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		.flip-box {
+			background-color: transparent;
+			width: 300px;
+			height: 200px;
+			border: 1px solid #f1f1f1;
+			perspective: 1000px;
+		}
+
+		.flip-box-inner {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			transition: transform 0.8s;
+			transform-style: preserve-3d;
+		}
+
+		.flip-box:hover .flip-box-inner {
+			transform: rotateY(180deg);
+		}
+
+		.flip-box-front, .flip-box-back {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			backface-visibility: hidden;
+		}
+
+		.flip-box-front {
+			background-color: dodgerblue;
+			color: white;
+		}
+
+		.flip-box-back {
+			background-color: #ADD8E6;
+			color: black;
+			transform: rotateY(180deg);
+		}
+		.button {
+			background-color: #4CAF50; /* Green */
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 20px;
+			margin: 4px 2px;
+			cursor: pointer;
+		}
+		.button:hover {
+  			box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+		}
 		.footer{
 			padding: 20px;
             text-align: center;
@@ -17,7 +74,6 @@
   			flex: 1;
   			padding: 16px;
 		}
-<<<<<<< HEAD
 		.opacity{
 			opacity: 0.5;
   			filter: alpha(opacity=50)
@@ -135,10 +191,6 @@
 		.address{
 			text-align: left;
 			padding-left: 45px;
-=======
-		.icon{
-			padding: 100px;
->>>>>>> 8ee6789586da030d541bedf7994926c7e785ef06
 		}
 	</style>
 </head>

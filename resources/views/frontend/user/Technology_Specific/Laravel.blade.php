@@ -41,11 +41,11 @@
 
                         </div><!--col-md-4-->
                      
-                                <div class="col-container">
+                              <!--  <div class="col-container">
 
                                     <div class="col">
                                         <div class="img">
-                                        <a href="TechnologySpecific"><img src="{{asset('/img/frontend/box.png')}}" height="340" width="340"></a>
+                                        <a href="Technology_Specific"><img src="{{asset('/img/frontend/box.png')}}" height="340" width="340"></a>
                                         <div class="centered">Technology<br>Specific </div></div>
                                     </div>
 
@@ -61,7 +61,7 @@
                                         <div class="centered">Most<br> Popular </div></div>
                                     </div>
                                     
-                                </div>
+                                </div>-->
                                <!-- <div class="col-md-6">
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
@@ -78,6 +78,27 @@
 
                     </div><!--row-->
 
+                    @foreach($projects as $value) 
+                    <div class="col-container">
+                        <div class="col">
+                            <div class="flip-box">
+                                <div class="flip-box-inner">
+                                    <div class="flip-box-front">
+                                        <h2>{{$value->id}}</h2>
+                                        <h2>{{$value->project_name}}</h2>
+                                    </div>
+                                    
+                                    <div class="flip-box-back">
+                                        <h2>{{$value->project_name}}</h2>
+                                        <h5>{{$value->project_details}}</h5>
+                                        <h5>Technology ID : {{$value->technology_id}}</h5>
+                                        <button class="button">Download</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                    @endforeach
 
                 </div><!--panel body-->
                 <div class="footer">

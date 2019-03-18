@@ -20,7 +20,6 @@
                     @include('backend.projects.partials.projects-header-buttons')
                 </div><!--box-tools pull-right-->
             </div><!--box-header with-border-->
-
             <div class="box-body">
 
                <!-- {{-- Project Id --}}
@@ -59,6 +58,7 @@
                     </div><!--col-lg-10-->
                 </div><!--form control-->
 
+               
                 <div class="form-group">
                      {{ Form::label('file', trans('labels.backend.projects.file'), ['class' => 'col-lg-2 control-label required']) }} {{--Auth::user()--}}
 
@@ -66,6 +66,11 @@
                             <!-- Create Your Input Field Here -->
                             <!-- Look Below Example for reference -->
                               {{ Form::text('file', null, ['class' => 'form-control box-size', 'placeholder' => trans('labels.backend.projects.link'), 'required' => 'required']) }} 
+                              <form class="" action="{{URL::to('/store')}}" method="POST" enctype="multipart/form-data">
+                                <input type="file" value=""><br><br>
+                                <input type="hidden" name="_token" value="{{ csrf_token()}}">
+                                <input type="submit" value="upload"/>
+                              </form>
                         </div><!--col-lg-10-->
                     </div><!--form-group-->
                     <div class="edit-form-btn">
