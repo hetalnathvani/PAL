@@ -3,23 +3,31 @@
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#frontend-navbar-collapse">
                 <span class="sr-only">{{ trans('labels.general.toggle_navigation') }}</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+                <span class="icon-bar">hmm</span>
+                <span class="icon-bar">jsffjsfdjbsmfjkhkmdffjkajskashdkhdja</span>
                 <span class="icon-bar"></span>
             </button>
 
            {{--   @if(settings()->logo)
             <a href="{{ route('frontend.index') }}" class="logo"><img height="48" width="226" class="navbar-brand" src="{{route('frontend.index')}}/img/site_logo/{{settings()->logo}}"></a>
+
             @else --}}
-             {{ link_to_route('frontend.index',app_name(), [], ['class' => 'navbar-brand']) }}
+            <div>
+               <img src="{{asset('/img/frontend/logo/Cygnet-Infotech-Logo.png')}}" height="82" width="280">
+           
+             {{ link_to_route('frontend.index','', [], ['class' => 'navbar-brand']) }}
+
            {{--  @endif --}}
-        </div><!--navbar-header-->
+           </div>
+        </div><!--navbar-headersad-->
 
         <div class="collapse navbar-collapse" id="frontend-navbar-collapse">
             {{-- <ul class="nav navbar-nav">
                 <li></li>
             </ul> --}}
             <ul class="nav navbar-nav navbar-right">
+                <li>Contact Us</li>
+                
                 @if (config('locale.status') && count(config('locale.languages')) > 1)
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -35,6 +43,9 @@
                     <li>{{ link_to_route('frontend.user.dashboard', trans('navs.frontend.dashboard')) }}</li>
                 @endif
 
+                @if (@logged_in_user)
+                    <li>About Us</li>
+                @endif
                 @if (! $logged_in_user)
                     <li>{{ link_to_route('frontend.auth.login', trans('navs.frontend.login')) }}</li>
 

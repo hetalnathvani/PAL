@@ -62,8 +62,8 @@
                     {data: 'id', name: '{{config('module.projects.table')}}.id'},
                     {data: 'project_name', name: '{{config('module.projects.table')}}.project_name'},
                     {data: 'project_details', name: '{{config('module.projects.table')}}.project_details'},
-                    
-                     {data: 'technology', name: '{{config('access.technologies.table')}}.technology_name'}
+                    {data: 'technology', name: '{{config('module.technologies.table')}}.technology_name'},
+
                     {data: 'file', name: '{{config('module.projects.table')}}.file'},
                     {data: 'created_at', name: '{{config('module.projects.table')}}.created_at'},
                     {data: 'actions', name: 'actions', searchable: false, sortable: false}

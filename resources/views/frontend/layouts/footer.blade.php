@@ -2,12 +2,15 @@
 <html>
 <head>
 	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<style type="text/css">
 		.footer{
 			padding: 20px;
             text-align: center;
             background: black;
             margin-top: 20px;
+            color:	#C0C0C0;
 		}
 		.col-container {
   			display: flex;
@@ -16,11 +19,6 @@
 		.col {
   			flex: 1;
   			padding: 16px;
-		}
-<<<<<<< HEAD
-		.opacity{
-			opacity: 0.5;
-  			filter: alpha(opacity=50)
 		}
 		.border{
 			border-bottom:2px solid white;
@@ -31,18 +29,6 @@
   			text-align: center;
  		 	color: white;
  		 	font-size: 30px;
-		}
-		.imag{
-			position: relative;
-  			text-align: center;
- 		 	color: 	#0000FF;
- 		 	font-size: 25px;
-		}
-		.imeg{
-			position: relative;
-  			text-align: center;
- 		 	color: 	white;
- 		 	font-size: 25px;
 		}
 		.overlay {
   			position: absolute;
@@ -64,15 +50,7 @@
   			position: absolute;
   			left: 0;
     		text-align:center;
-    		padding-bottom: 250px;
     		top: 130px;
-    		width: 100%
-		}
-		.centered1 {
-  			position: absolute;
-  			left: 0;
-    		text-align:center;
-    		top: 70px;
     		width: 100%
 		}
 		.fa {
@@ -135,10 +113,6 @@
 		.address{
 			text-align: left;
 			padding-left: 45px;
-=======
-		.icon{
-			padding: 100px;
->>>>>>> 8ee6789586da030d541bedf7994926c7e785ef06
 		}
 	</style>
 </head>

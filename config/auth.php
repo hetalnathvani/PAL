@@ -71,10 +71,7 @@ return [
             'driver' => 'eloquent',
             'model'  => User::class,
         ],
-    'projects' => [
-            'driver' => 'eloquent',
-            'model'  => Project::class,
-        ],
+
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',

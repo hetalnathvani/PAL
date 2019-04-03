@@ -3,11 +3,12 @@
 namespace App\Models\Project;
 
 use App\Models\ModelTrait;
+use App\Models\BaseModel;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Project\Traits\ProjectAttribute;
 use App\Models\Project\Traits\ProjectRelationship;
-use Tymon\JWTAuth\Contracts\JWTSubject;
-class Project extends Model
+
+class Project extends BaseModel
 {
     use ModelTrait,
         ProjectAttribute,
@@ -67,5 +68,4 @@ class Project extends Model
     {
         parent::__construct($attributes);
     }
-    
 }

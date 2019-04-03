@@ -19,9 +19,9 @@ trait ProjectRelationship
         $this->belongsTo(User::class);
     }
      */
-      public function technologies()
+    public function technologies()
     {
-        return $this->belongsToMany(config('access.technology'), config('access.project_technology'),  'project_id','id');
+        return $this->belongsToMany(config('access.technology'), config('access.technologies'), 'id', 'technology_id');
     }
-}
 
+}

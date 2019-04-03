@@ -49,7 +49,7 @@
                         <div class="col-lg-10">
                             <!-- Create Your Input Field Here -->
                             <!-- Look Below Example for reference -->
-                             {{ Form::text('technology_id', null, ['class' => 'form-control box-size', 'placeholder' => trans('labels.backend.projects.technology_id'), 'required' => 'required']) }} 
+                             {{ Form::select('technology_id',$technology, null, ['class' => 'form-control box-size', 'placeholder' => trans('labels.backend.projects.technology_id'), 'required' => 'required']) }} 
                         </div><!--col-lg-10-->
                     </div><!--form-group-->
 
