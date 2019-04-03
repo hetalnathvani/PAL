@@ -42,10 +42,10 @@
                             <div class="panel panel-default">
             
                             </div><!--panel-->
-                            <label>
+                            <!-- <label>
                                 Search : <input type="text" placeholder="Search.." autocomplete="off"size="35">
                             </label>
-                          
+                           -->
                         </div><!--col-md-4-->
 
 
@@ -72,7 +72,7 @@
 
                                     <div class="col">
                                         <div class="imag"><div class="opacity">
-                                        <a href="/TechnologySpecific/{{ $project->id }}"><img src="{{asset('/img/frontend/box.png')}}" height="170" width="270"></a></div>
+                                        <a href="/dashboard/TechnologySpecific/{{ $project->id }}"><img src="{{asset('/img/frontend/box.png')}}" height="170" width="270"></a></div>
                                         <div class="centered1"> {{ $project->technology_name }} </div></div>
                                     </div>
                             
@@ -146,7 +146,7 @@
                                         <a href="upload"><img src="{{asset('/img/frontend/box.png')}}" height="170" width="270"></a></div>
                                         <div class="centered1">Cloud </div></div>
                                     </div>
-                                    
+                                     
                                 </div>-->
                               
                                     </div><!--panel-->

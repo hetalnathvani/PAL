@@ -26,7 +26,7 @@ class TechnologySpecificController extends Controller
     }
      public function show(TechnologySpecificViewRequest $request)
     {
-        return view('frontend.user.Technology_Specific.PHP')->with('project',$project);
+        return view('frontend.user.Technology_Specific.laravel')->with('project',$project);
     }
     /*public function get()
     {

@@ -92,7 +92,12 @@
                                         <h2>{{$value->project_name}}</h2>
                                         <h5>{{$value->project_details}}</h5>
                                         <h5>Technology ID : {{$value->technology_id}}</h5>
-                                        <button class="button">Download</button>
+                                       
+                                            <button class = "button">
+                                            Download
+                                            <span class = "glyphicon glyphicon-download"></span>
+                                            </button>
+                                      
                                     </div>
                                 </div>
                             </div>

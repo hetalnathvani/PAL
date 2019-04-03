@@ -9,7 +9,9 @@
 Route::view('/upload',"upload");
 Route::post('/store',"backend\DashboardController@store");
 Route::get('/store/{id}','backend\DashboardController@show')->name('downloadfile');
+Route::get('/show','LaravelController@show')->name('laravel');
 Route::get('lang/{lang}', 'LanguageController@swap');
+
 
 /* ----------------------------------------------------------------------- */
 

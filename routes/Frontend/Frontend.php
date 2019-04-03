@@ -17,8 +17,9 @@ Route::group(['middleware' => 'auth'], function () {
         /*
          * User Dashboard Specific
          */
-        Route::get('dashboard', 'DashboardController@index')->name('dashboard');
+        Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
         //Route::get('PHP_Technology', 'PHP_TechnologyController@index')->name('PHP_Technology');
+        Route::post('/dashboard','FindController@search')->name('search');
 
 
         /*Route::get('Technology_Specific', function () {
@@ -48,10 +49,10 @@ Route::group(['middleware' => 'auth'], function () {
         /*
          * User Dashboard Specific
          */
-        Route::get('TechnologySpecific', 'TechnologySpecificController@index')->name('TechnologySpecific');
-        Route::get('{id}', 'TechnologySpecificController@show')->name('TechnologySpecific');
+        Route::get('/dashboard/TechnologySpecific', 'TechnologySpecificController@index')->name('TechnologySpecific');
+        Route::get('/dashboard/TechnologySpecific/{id}', 'TechnologySpecificController@show')->name('laravel');
 
-
+        
         //File Upload & Download Functionalities
         Route::post('File', 'FilesController@store'); 
         Route::get('File', 'FileController@index')->name('File');
@@ -59,8 +60,8 @@ Route::group(['middleware' => 'auth'], function () {
 
 
         Route::get('Laravel', 'LaravelController@index')->name('Laravel');
-        Route::get('/TechnologySpecific/{id}', 'LaravelController@index')->name('Laravel');
-        // Route::get('/TechnologySpecific/{id}', 'LaravelController@index ')->name('Laravel');
+
+        Route::get('/dashboard/TechnologySpecific/{id}', 'LaravelController@index')->name('Laravel');
 
 
 
