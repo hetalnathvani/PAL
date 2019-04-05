@@ -21,10 +21,4 @@ class LaravelController extends Controller
         $projects = DB::table('projects')->select('id','technology_id','project_name','project_details','file')->where('technology_id','=' ,$id)->get();
         return view('frontend.user.Technology_Specific.Laravel')->with('projects',$projects);
     }
-    public function show(LaravelViewRequest $request)
-    {
-        $url = $request->file;
-        $url = Storage::disk('public')->url("ch1.pdf");
-        return response()->download(storage_path('app/public/ch1.pdf'));
-    }
 }

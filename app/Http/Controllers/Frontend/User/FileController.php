@@ -20,9 +20,8 @@ class FileController extends Controller
 
     public function download($file)
     {
-      $url = Storage::url($file);
-
-
+      
+        $url = Storage::url($file);
         $download=DB::table('files')->get();
         return Storage::download($url);
         // view("files.download", compact('$download'));

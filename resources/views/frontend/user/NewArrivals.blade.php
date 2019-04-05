@@ -1,3 +1,4 @@
+
 @extends('frontend.layouts.app')
 <!--@extends('frontend.layouts.footer')-->
 
@@ -39,42 +40,9 @@
                                 </li><!--media-->
                             </ul><!--media-list-->
 
-                         <div class="pannel-body">
-                            <form action = "dashboard" method="POST" role="search">
-                            {{ csrf_field() }}
-                            <div class="input-group">
-                                <input type = "text" class="form-control" name="q" placeholder="Search Projects">
-                                <span class="input-group-btn">
-                                    <button type = "submit" class = "btn btn-default">
-                                        <span class = "glyphicon glyphicon-search"></span>
-                                    </button>
-                                </span>
-                            </div>
-                            </form>
-                         </div>
+                        
                          </div><!--col-md-4-->
                     
-                                <div class="col-container">
-
-                                    <div class="col">
-                                        <div class="img">
-                                        <a href="dashboard/TechnologySpecific"><img src="{{asset('/img/frontend/box.png')}}" height="340" width="340"></a>
-                                        <div class="centered">Technology<br>Specific </div></div>
-                                    </div>
-
-                                    <div class="col">
-                                        <div class="img">
-                                        <a href="dashboard/NewArrivals"><img src="{{asset('/img/frontend/box.png')}}" height="340" width="340"></a>
-                                        <div class="centered">New<br>Arrivals </div></div>
-                                    </div>
-
-                                    <div class="col">
-                                        <div class="img">
-                                        <a href="upload"><img src="{{asset('/img/frontend/box.png')}}" height="340" width="340"></a>
-                                        <div class="centered">Most<br> Popular </div></div>
-                                    </div>
-                                    
-                                </div>
                                <!-- <div class="col-md-6">
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
@@ -89,7 +57,34 @@
                         
                         </div><!--col-md-8-->
 
-                    
+                    @foreach($results as $result)
+                    <div class="col-container">
+                        <div class="col">
+                            <div class="flip-box">
+                                <div class="flip-box-inner">
+                                    <div class="flip-box-front">
+                                        <h2>{{$result->id}}</h2>
+                                        <h2>{{$result->project_name}}</h2>
+                                    </div>
+                                    
+                                    <div class="flip-box-back">
+                                        <h2>{{$result->project_name}}</h2>
+                                        <h5>{{$result->project_details}}</h5>
+                                        <h5>Technology ID : {{$result->technology_id}}</h5>
+                                          
+                                            <a href='/dashboard/NewArrivals/{{$result->id}}'>
+                                                <button type = "submit" class = "button">
+                                                    Download
+                                                    <span class = "glyphicon glyphicon-download"></span>
+                                                </button>
+                                            </a> 
+                                           
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                    @endforeach
 
                     </div><!--row-->
 
@@ -147,24 +142,5 @@
             </div><!-- panel -->
 
         </div><!-- col-md-10 -->
-        @if(isset($project))
-                               <table class = "table table-striped">
-                                <thead>
-                                       <th>Projects ID</th>
-                                       <th>Projects Name</th>
-                                       <th>Projects Details</th>
-                                    
-                                </thead>
-                                <tbody>
-                                    @foreach($project as $projects)
-                                    <tr>
-                                        <td>{{ $projects->id }} </td>
-                                        <td>{{ $projects->project_name }} </td>
-                                        <td>{{ $projects->project_details }} </td>
-                                    </tr>
-                                    @endforeach
-                                    </tbody>
-        @endif
-
     </div><!-- row -->
 @endsection

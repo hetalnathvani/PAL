@@ -20,7 +20,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
         //Route::get('PHP_Technology', 'PHP_TechnologyController@index')->name('PHP_Technology');
         Route::post('/dashboard','FindController@search')->name('search');
-
+        
 
         /*Route::get('Technology_Specific', function () {
             $users = DB::table('projects')->select('id','technology_id','project_name','project_details','file')->get();
@@ -52,27 +52,26 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/dashboard/TechnologySpecific', 'TechnologySpecificController@index')->name('TechnologySpecific');
         Route::get('/dashboard/TechnologySpecific/{id}', 'TechnologySpecificController@show')->name('laravel');
 
+        Route::get('/dashboard/NewArrivals', 'NewArrivalsController@index')->name('NewArrivals');
+
+        Route::get('/dashboard/NewArrivals/{project_id}', 'DownloadController@download')->name('NewArrivals');
+
+
         
-        //File Upload & Download Functionalities
-        Route::post('File', 'FilesController@store'); 
-        Route::get('File', 'FileController@index')->name('File');
-        Route::get('File/download/{file}', 'FilesController@download');
+        // //File Upload & Download Functionalities
+        // Route::post('/File', 'FilesController@store'); 
+        // Route::get('/File', 'FileController@index')->name('File');
+        // Route::get('/File/download/{file}', 'FileController@download');
 
 
         Route::get('Laravel', 'LaravelController@index')->name('Laravel');
 
         Route::get('/dashboard/TechnologySpecific/{id}', 'LaravelController@index')->name('Laravel');
 
+        Route::get('/dashboard/TechnologySpecific/{id}/{project_id}/download', 'DownloadController@download')->name('Laravel');
 
 
-
-
-        /*Route::get('Technology_Specific', function () {
-            $users = DB::table('projects')->select('id','technology_id','project_name','project_details','file')->get();
-            return view('frontend.user.Technology_Specific')->with('projects', $projects);
-
-        });*/
-
+        
 
         /*
          * User Account Specific

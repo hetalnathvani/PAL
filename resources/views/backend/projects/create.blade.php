@@ -65,13 +65,13 @@
                         <div class="col-lg-10">
                             <!-- Create Your Input Field Here -->
                             <!-- Look Below Example for reference -->
-                              {{ Form::text('file', null, ['class' => 'form-control box-size', 'placeholder' => trans('labels.backend.projects.link'), 'required' => 'required']) }} 
+                              <!-- {{ Form::text('file', null, ['class' => 'form-control box-size', 'placeholder' => trans('labels.backend.projects.link'), 'required' => 'required']) }}  -->
                               <form class="" action="{{URL::to('/store')}}" method="POST" enctype="multipart/form-data">
-                                <input type="file" value=""><br><br>
+                                <input type="file" name="file[]" value=""><br><br>
                                 <input type="hidden" name="_token" value="{{ csrf_token()}}">
                                 <input type="submit" value="upload"/>
                               </form>
-                        </div><!--col-lg-10-->
+                        </div><!--col-lg-10--> 
                     </div><!--form-group-->
                     <div class="edit-form-btn">
                         {{ link_to_route('admin.projects.index', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }}

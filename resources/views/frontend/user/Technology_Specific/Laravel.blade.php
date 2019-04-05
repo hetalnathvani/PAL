@@ -92,12 +92,14 @@
                                         <h2>{{$value->project_name}}</h2>
                                         <h5>{{$value->project_details}}</h5>
                                         <h5>Technology ID : {{$value->technology_id}}</h5>
-                                       
-                                            <button class = "button">
-                                            Download
-                                            <span class = "glyphicon glyphicon-download"></span>
-                                            </button>
-                                      
+                                          
+                                            <a href='/dashboard/TechnologySpecific/{id}/{{$value->id}}'>
+                                                <button type = "submit" class = "button">
+                                                    Download
+                                                    <span class = "glyphicon glyphicon-download"></span>
+                                                </button>
+                                            </a> 
+                                           
                                     </div>
                                 </div>
                             </div>

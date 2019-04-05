@@ -70,6 +70,20 @@ class ProjectsController extends Controller
         //Create the model using repository create method
         $this->repository->create($input);
         //return with successfull message
+
+        if($request->hasfile('file'))
+        {
+            foreach($request->file('file') as $files)
+            {
+                $name = $files->getClientOriginalName();
+                $files = move(public_path().'/app/public/',$name);
+                $data[] = $name;
+            }
+        }
+
+        $form = new Project();
+            $form->file=json_encode($data);
+            $form->save(); 
         return new RedirectResponse(route('admin.projects.index'), ['flash_success' => trans('alerts.backend.projects.created')]);
     }
     /**
@@ -112,6 +126,5 @@ class ProjectsController extends Controller
         $this->repository->delete($project);
         //returning with successfull message
         return new RedirectResponse(route('admin.projects.index'), ['flash_success' => trans('alerts.backend.projects.deleted')]);
-    }
-    
+    }    
 }

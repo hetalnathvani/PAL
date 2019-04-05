@@ -43,7 +43,7 @@ class DashboardController extends Controller
      */
     public function store(request $request)
     {
-        $path=$request->file('userfile')->store('upload');
+        $path=$request->file('userfile')->store('public');
         echo $path;
         return view('download');
     }
