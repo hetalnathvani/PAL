@@ -19,4 +19,10 @@ trait TechnologyRelationship
         $this->belongsTo(User::class);
     }
      */
+    
+    public function projects()
+    {
+        return $this->belongsToMany(config('auth.providers.projects.model'), config('access.projects'), 'id','technology_name');
+    }
+
 }

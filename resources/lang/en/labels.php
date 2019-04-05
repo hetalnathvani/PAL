@@ -236,13 +236,13 @@ return [
 	"event" => "Event Name",
 	],
 	],
-		"projects" => [
+	"projects" => [
 	"create" => "Create Project",
 	"edit" => "Edit Project",
 	"management" => "Project Management",
 	"project_name" => "Project Name",
 	"project_details"=>"Project Details",
-	"tech_id"		=>"Technology Name",
+	"technology_id"		=>"Technology Name",
 	"file"=>"File",
 	"link"=>"Link",
 
@@ -250,7 +250,7 @@ return [
 	"id" => "Id",
 	"project_name" => "Project Name",
 	"project_details"=>"Project Details",
-	"tech_id"		=>"Technology Name",
+	"technology_id"		=>"Technology Name",
 	"file"=>"File",
 	"createdat" => "Created At",
 	],
@@ -260,11 +260,8 @@ return [
 	"edit" => "Edit Technology",
 	"management" => "Technology Management",
 	"title" => "Technologies",
-	"id" => "Id",
-	"technology_name"=>"Tchnology Name",
 	"table" => [
 	"id" => "Id",
-	"technology_name"=>"Tchnology Name",
 	"createdat" => "Created At",
 	],
 	],

@@ -10,13 +10,15 @@ class EditResponse implements Responsable
      * @var App\Models\Project\Project
      */
     protected $projects;
-
+    protected $technology;
     /**
      * @param App\Models\Project\Project $projects
      */
-    public function __construct($projects)
+    public function __construct($projects,$technology)
     {
         $this->projects = $projects;
+         $this->technology = $technology;
+
     }
 
     /**
@@ -29,7 +31,9 @@ class EditResponse implements Responsable
     public function toResponse($request)
     {
         return view('backend.projects.edit')->with([
-            'projects' => $this->projects
+            'projects' => $this->projects,
+           'technology' => $this->technology
+
         ]);
     }
 }

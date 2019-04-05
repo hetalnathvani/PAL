@@ -10,10 +10,10 @@ use Illuminate\Support\Facades\Storage;
 class DownloadController extends Controller
 {
     //
-    // public function index(LaravelViewRequest $request)
-    // {
-    //     return view('frontend.user.Technology_Specific.Laravel'); 
-    // }
+    public function index(LaravelViewRequest $request)
+    {
+        return view('frontend.user.Technology_Specific.Laravel');
+    }
     public function download(LaravelViewRequest $request)
     {
         $url = $request->file;
@@ -21,4 +21,3 @@ class DownloadController extends Controller
         return response()->download(storage_path('app/public/ch1.pdf'));
     }
 }
- 

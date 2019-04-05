@@ -3,11 +3,12 @@
 namespace App\Models\Technology;
 
 use App\Models\ModelTrait;
+use App\Models\BaseModel;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Technology\Traits\TechnologyAttribute;
 use App\Models\Technology\Traits\TechnologyRelationship;
 
-class Technology extends Model
+class Technology extends BaseModel
 {
     use ModelTrait,
         TechnologyAttribute,
@@ -31,7 +32,7 @@ class Technology extends Model
      * @var array
      */
     protected $fillable = [
-        'id', 'technology_name',
+
     ];
 
     /**

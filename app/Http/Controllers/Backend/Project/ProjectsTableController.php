@@ -38,6 +38,9 @@ class ProjectsTableController extends Controller
     {
         return Datatables::of($this->project->getForDataTable())
             ->escapeColumns(['id'])
+            ->addColumn('technology_id', function ($project) {
+                return Carbon::parse($project->technology_id)->toDateString();
+            })
             ->addColumn('created_at', function ($project) {
                 return Carbon::parse($project->created_at)->toDateString();
             })

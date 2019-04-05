@@ -20,47 +20,40 @@
                     @include('backend.projects.partials.projects-header-buttons')
                 </div><!--box-tools pull-right-->
             </div><!--box-header with-border-->
+
             <div class="box-body">
-
-               <!-- {{-- Project Id --}}
                 <div class="form-group">
-                    {{ Form::label('name', 'Project Id', ['class' => 'col-lg-2 control-label required']) }}
+                     {{ Form::label('project_name', trans('labels.backend.projects.project_name'), ['class' => 'col-lg-2 control-label required']) }} 
 
-                    <div class="col-lg-10">
-                        {{ Form::text('id', null, ['class' => 'form-control box-size', 'placeholder' => 'Enter Project Id', 'required' => 'required']) }}
-                    </div>--><!--col-lg-10-->
-                </div><!--form control-->
-                
-                 {{-- Project Name --}}
+                        <div class="col-lg-10">
+                            <!-- Create Your Input Field Here -->
+                            <!-- Look Below Example for reference -->
+                             {{ Form::text('project_name',null, ['class' => 'form-control box-size', 'placeholder' => trans('labels.backend.projects.project_name'), 'required' => 'required']) }} 
+                        </div><!--col-lg-10-->
+                    </div><!--form-group-->
+
                 <div class="form-group">
-                    {{ Form::label('name', 'Project Name', ['class' => 'col-lg-2 control-label required']) }}
+                     {{ Form::label('project_details', trans('labels.backend.projects.project_details'), ['class' => 'col-lg-2 control-label required']) }} 
 
-                    <div class="col-lg-10">
-                        {{ Form::text('project_name', null, ['class' => 'form-control box-size', 'placeholder' => 'Enter Project Name', 'required' => 'required']) }}
-                    </div><!--col-lg-10-->
-                </div><!--form control-->
+                        <div class="col-lg-10">
+                            <!-- Create Your Input Field Here -->
+                            <!-- Look Below Example for reference -->
+                             {{ Form::text('project_details', null, ['class' => 'form-control box-size', 'placeholder' => trans('labels.backend.projects.project_details'), 'required' => 'required']) }} 
+                        </div><!--col-lg-10-->
+                    </div><!--form-group-->
 
-                  {{-- Project Details --}}
                 <div class="form-group">
-                    {{ Form::label('name', 'Project details', ['class' => 'col-lg-2 control-label required']) }}
+                     {{ Form::label('technology_id', trans('labels.backend.projects.technology_id'), ['class' => 'col-lg-2 control-label required']) }} 
 
-                    <div class="col-lg-10">
-                        {{ Form::text('project_details', null, ['class' => 'form-control box-size', 'placeholder' => 'Enter Project details', 'required' => 'required']) }}
-                    </div><!--col-lg-10-->
-                </div><!--form control-->
-
-                {{-- Technology Id --}}
-                <div class="form-group">
-                    {{ Form::label('name', 'Technology Id', ['class' => 'col-lg-2 control-label required']) }}
-
-                    <div class="col-lg-10">
-                        {{ Form::text('technology_id', null, ['class' => 'form-control box-size', 'placeholder' => 'Enter Project Name', 'required' => 'required']) }}
-                    </div><!--col-lg-10-->
-                </div><!--form control-->
-
+                        <div class="col-lg-10">
+                            <!-- Create Your Input Field Here -->
+                            <!-- Look Below Example for reference -->
+                             {{ Form::select('technology_id',$technology, null, ['class' => 'form-control box-size', 'placeholder' => trans('labels.backend.projects.technology_id'), 'required' => 'required']) }} 
+                        </div><!--col-lg-10-->
+                    </div><!--form-group-->
                
                 <div class="form-group">
-                     {{ Form::label('file', trans('labels.backend.projects.file'), ['class' => 'col-lg-2 control-label required']) }} {{--Auth::user()--}}
+                     {{ Form::label('file', trans('labels.backend.projects.file'), ['class' => 'col-lg-2 control-label required']) }} 
 
                         <div class="col-lg-10">
                             <!-- Create Your Input Field Here -->

@@ -4,8 +4,6 @@ namespace App\Http\Controllers\Frontend\User;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Frontend\User\DashboardViewRequest;
-use Illuminate\Support\Facades\Input;
-
 
 /**
  * Class DashboardController.

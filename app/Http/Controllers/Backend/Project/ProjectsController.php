@@ -10,13 +10,16 @@ use App\Http\Responses\ViewResponse;
 use App\Http\Responses\Backend\Project\CreateResponse;
 use App\Http\Responses\Backend\Project\EditResponse;
 use App\Repositories\Backend\Project\ProjectRepository;
+use App\Repositories\Backend\Technology\TechnologyRepository;
+use App\Models\Technology\Technology;
 use App\Http\Requests\Backend\Project\ManageProjectRequest;
 use App\Http\Requests\Backend\Project\CreateProjectRequest;
 use App\Http\Requests\Backend\Project\StoreProjectRequest;
 use App\Http\Requests\Backend\Project\EditProjectRequest;
 use App\Http\Requests\Backend\Project\UpdateProjectRequest;
 use App\Http\Requests\Backend\Project\DeleteProjectRequest;
-
+use Illuminate\Support\Facades\Auth;
+use DB;
 /**
  * ProjectsController
  */
@@ -27,6 +30,8 @@ class ProjectsController extends Controller
      * @var ProjectRepository
      */
     protected $repository;
+    protected $technology;
+
 
     /**
      * contructor to initialize repository object
@@ -35,6 +40,8 @@ class ProjectsController extends Controller
     public function __construct(ProjectRepository $repository)
     {
         $this->repository = $repository;
+        $this->technology = new TechnologyRepository;
+
     }
 
     /**
@@ -55,7 +62,9 @@ class ProjectsController extends Controller
      */
     public function create(CreateProjectRequest $request)
     {
-        return new CreateResponse('backend.projects.create');
+    //    $technology['technology']=DB::table('technologies')->get();
+    $technology['technology']=Technology::getSelectData('technology_name');
+        return view('backend.projects.create',$technology);
     }
     /**
      * Store a newly created resource in storage.
@@ -68,6 +77,8 @@ class ProjectsController extends Controller
         //Input received from the request
         $input = $request->except(['_token']);
         //Create the model using repository create method
+        
+        //$input['']
         $this->repository->create($input);
         //return with successfull message
 
@@ -95,7 +106,11 @@ class ProjectsController extends Controller
      */
     public function edit(Project $project, EditProjectRequest $request)
     {
-        return new EditResponse($project);
+        
+    $technology['technology']=Technology::getSelectData('technology_name');
+        //$technology = $this->technology->getAll();
+       // dd($technology);
+        return new EditResponse($project,$technology);
     }
     /**
      * Update the specified resource in storage.

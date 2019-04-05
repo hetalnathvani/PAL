@@ -33,6 +33,7 @@ class TechnologyRepository extends BaseRepository
                 config('module.technologies.table').'.technology_name',
                 config('module.technologies.table').'.created_at',
                 config('module.technologies.table').'.updated_at',
+                
             ]);
     }
 

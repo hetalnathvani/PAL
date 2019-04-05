@@ -25,7 +25,6 @@ class Project extends BaseModel
      * The database table used by the model.
      * @var string
      */
-
     protected $table = 'projects';
 
     /**
@@ -35,6 +34,7 @@ class Project extends BaseModel
     protected $fillable = [
 
     ];
+
     /**
      * Default values for model fields
      * @var array

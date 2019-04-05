@@ -28,15 +28,22 @@ class ProjectRepository extends BaseRepository
     public function getForDataTable()
     {
         return $this->query()
+        ->leftJoin('technologies', 'projects.technology_id', '=', 'technologies.id')
             ->select([
                 config('module.projects.table').'.id',
                 config('module.projects.table').'.project_name',
                 config('module.projects.table').'.project_details',
-                config('module.projects.table').'.technology_id',
+                // config('module.projects.table').'.tech_id',
+                
+               
+                
                 config('module.projects.table').'.file',
                 config('module.projects.table').'.created_at',
                 config('module.projects.table').'.updated_at',
-            ]);
+                DB::raw('GROUP_CONCAT(technologies.technology_name) as technology'),
+            ])
+            ->groupBy('projects.id');
+
     }
 
     /**
@@ -53,7 +60,7 @@ class ProjectRepository extends BaseRepository
         }
         throw new GeneralException(trans('exceptions.backend.projects.create_error'));
     }
- 
+
     /**
      * For updating the respective Model in storage
      *
@@ -64,7 +71,7 @@ class ProjectRepository extends BaseRepository
      */
     public function update(Project $project, array $input)
     {
-        if ($project->update($input))
+    	if ($project->update($input))
             return true;
 
         throw new GeneralException(trans('exceptions.backend.projects.update_error'));
