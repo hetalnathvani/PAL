@@ -8,7 +8,7 @@
             <input type="file" name="userfile" value=""><br><br>
             <input type="hidden" name="_token" value="{{ csrf_token()}}">
             <input type="submit" value="upload"/>
-            <a href="{{ route'download',$file->id}}" class="btn btn-primary">Download</a>
+            
 
         </form>
     </body>

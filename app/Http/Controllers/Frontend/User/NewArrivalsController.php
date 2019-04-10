@@ -13,7 +13,7 @@ class NewArrivalsController extends Controller
     protected $results;
     public function index(NewArrivalsViewRequest $request)
     {
-        $results = Project::latest('created_at')->take(5)->get();
+        $results = Project::latest('created_at')->take(10)->get();
         return view('frontend.user.NewArrivals',array('results'=>$results));
     }
 }

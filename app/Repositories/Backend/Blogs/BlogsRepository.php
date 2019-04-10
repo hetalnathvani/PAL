@@ -128,7 +128,7 @@ class BlogsRepository extends BaseRepository
                     $blog->categories()->sync($categoriesArray);
                 }
 
-                // Updating associated tag's id in mapper table
+                // Updating associated tag's id in mapper table 
                 if (count($tagsArray)) {
                     $blog->tags()->sync($tagsArray);
                 }
@@ -229,7 +229,7 @@ class BlogsRepository extends BaseRepository
 
         if (isset($input['featured_image']) && !empty($input['featured_image'])) {
             $fileName = time().$avatar->getClientOriginalName();
-
+            //dd($fileName);
             $this->storage->put($this->upload_path.$fileName, file_get_contents($avatar->getRealPath()));
 
             $input = array_merge($input, ['featured_image' => $fileName]);

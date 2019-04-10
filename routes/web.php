@@ -9,6 +9,10 @@
 Route::view('/upload',"upload");
 Route::post('/store',"backend\DashboardController@store");
 Route::get('/store/{id}','backend\DashboardController@show')->name('downloadfile');
+
+Route::get('/admin/projects/create','ProjectsController@create');
+Route::post('/admin/projects/','ProjectsController@store');
+
 Route::get('lang/{lang}', 'LanguageController@swap');
 
 /* ----------------------------------------------------------------------- */

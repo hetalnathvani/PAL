@@ -43,7 +43,7 @@ class BlogTagsRepository extends BaseRepository
      * @throws \App\Exceptions\GeneralException
      *
      * @return bool
-     */
+     */ 
     public function create(array $input)
     {
         if ($this->query()->where('name', $input['name'])->first()) {

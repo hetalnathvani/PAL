@@ -10,8 +10,25 @@
 @endsection
 
 @section('content')
-    {{ Form::open(['route' => 'admin.projects.store', 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'post', 'id' => 'create-project']) }}
+    {{ Form::open(['route' => 'admin.projects.store', 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'post', 'id' => 'create-project','enctype'=>'multipart/form-data']) }}
 
+
+    @if (count($errors) > 0)
+      <div class="alert alert-danger">
+        <strong>Whoops!</strong> There were some problems with your input.<br><br>
+        <ul>
+          @foreach ($errors->all() as $error)
+              <li>{{ $error }}</li>
+          @endforeach
+        </ul>
+      </div>
+      @endif
+
+        @if(session('success'))
+        <div class="alert alert-success">
+          {{ session('success') }}
+        </div> 
+        @endif
         <div class="box box-info">
             <div class="box-header with-border">
                 <h3 class="box-title">{{ trans('labels.backend.projects.create') }}</h3>
@@ -21,7 +38,7 @@
                 </div><!--box-tools pull-right-->
             </div><!--box-header with-border-->
 
-            <div class="box-body">
+            <div class="box-body"> 
                 <div class="form-group">
                      {{ Form::label('project_name', trans('labels.backend.projects.project_name'), ['class' => 'col-lg-2 control-label required']) }} 
 
@@ -51,7 +68,7 @@
                              {{ Form::select('technology_id',$technology, null, ['class' => 'form-control box-size', 'placeholder' => trans('labels.backend.projects.technology_id'), 'required' => 'required']) }} 
                         </div><!--col-lg-10-->
                     </div><!--form-group-->
-               
+            
                 <div class="form-group">
                      {{ Form::label('file', trans('labels.backend.projects.file'), ['class' => 'col-lg-2 control-label required']) }} 
 
@@ -59,12 +76,21 @@
                             <!-- Create Your Input Field Here -->
                             <!-- Look Below Example for reference -->
                               <!-- {{ Form::text('file', null, ['class' => 'form-control box-size', 'placeholder' => trans('labels.backend.projects.link'), 'required' => 'required']) }}  -->
-                              <form class="" action="{{URL::to('/store')}}" method="POST" enctype="multipart/form-data">
-                                <input type="file" name="file[]" value=""><br><br>
+                                <!-- <input type="file" name="file[]" value=""><br><br>
                                 <input type="hidden" name="_token" value="{{ csrf_token()}}">
                                 <input type="submit" value="upload"/>
-                              </form>
-                        </div><!--col-lg-10--> 
+                               --> 
+
+                             <div class="custom-file-input">
+                                {{ Form::file('file',array('class'=>'form-control inputfile inputfile-1'))}}
+                                <label for="file">
+                                    <i class = "fa fa-upload"></i>
+                                    <span> Choose a File</span>
+                                </label>
+                        </div>
+
+                    
+ 
                     </div><!--form-group-->
                     <div class="edit-form-btn">
                         {{ link_to_route('admin.projects.index', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }}
@@ -76,3 +102,4 @@
         </div><!--box box-success-->
     {{ Form::close() }}
 @endsection
+

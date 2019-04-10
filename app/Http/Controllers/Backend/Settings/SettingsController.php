@@ -33,7 +33,7 @@ class SettingsController extends Controller
      */
     public function edit(Setting $setting, ManageSettingsRequest $request)
     {
-        return new EditResponse($setting);
+        return new EditResponse($setting); 
     }
 
     /**

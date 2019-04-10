@@ -1,6 +1,5 @@
-
 @extends('frontend.layouts.app')
-<!--@extends('frontend.layouts.footer')-->
+@extends('frontend.layouts.footer')
 
 @section('content')
     <div class="row">
@@ -39,9 +38,8 @@
                                     </div><!--media-body-->
                                 </li><!--media-->
                             </ul><!--media-list-->
-
                         
-                         </div><!--col-md-4-->
+
                     
                                <!-- <div class="col-md-6">
                                     <div class="panel panel-default">
@@ -57,38 +55,25 @@
                         
                         </div><!--col-md-8-->
 
-                    @foreach($results as $result)
-                    <div class="col-container">
-                        <div class="col">
-                            <div class="flip-box">
-                                <div class="flip-box-inner">
-                                    <div class="flip-box-front">
-                                        <h2>{{$result->id}}</h2>
-                                        <h2>{{$result->project_name}}</h2>
-                                    </div>
-                                    
-                                    <div class="flip-box-back">
-                                        <h2>{{$result->project_name}}</h2>
-                                        <h5>{{$result->project_details}}</h5>
-                                        <h5>Technology ID : {{$result->technology_id}}</h5>
-                                          
-                                            <a href='/dashboard/NewArrivals/{{ $result->id }}'>
-                                                <button type = "submit" class = "button">
-                                                    Download
-                                                    <span class = "glyphicon glyphicon-download"></span>
-                                                </button>
-                                            </a> 
-                                           
-                                    </div>
-                                </div>
-                            </div>
-                        </div>    
-                    </div>
-                    @endforeach
+                    
 
                     </div><!--row-->
 
-                
+                    
+                    @foreach($pageproject as $value) 
+                            <h1>{{$value->project_name}}</h1>
+                            <h2>Project ID : {{$value->id}}</h2>
+                            <h2>Project Name : {{$value->project_name}}</h2>
+                            <h5>Project Details : {{$value->project_details}}</h5>
+                            <h5>Technology ID : {{$value->technology_id}}</h5>
+                            
+                                <a href='/dashboard/TechnologySpecific/{{ $value->technology_id }}/{{ $value->id }}/download'>
+                                    <button type = "submit" class = "button">
+                                        Download
+                                        <span class = "glyphicon glyphicon-download"></span>
+                                    </button>
+                                </a> 
+                    @endforeach
                 </div><!--panel body-->
             
                 <div class="footer">
@@ -142,5 +127,24 @@
             </div><!-- panel -->
 
         </div><!-- col-md-10 -->
+        @if(isset($project))
+                               <table class = "table table-striped">
+                                <thead>
+                                       <th>Projects ID</th>
+                                       <th>Projects Name</th>
+                                       <th>Projects Details</th>
+                                    
+                                </thead>
+                                <tbody>
+                                    @foreach($project as $projects)
+                                    <tr>
+                                        <td>{{ $projects->id }} </td>
+                                        <td>{{ $projects->project_name }} </td>
+                                        <td>{{ $projects->project_details }} </td>
+                                    </tr>
+                                    @endforeach
+                                    </tbody>
+        @endif
+
     </div><!-- row -->
 @endsection

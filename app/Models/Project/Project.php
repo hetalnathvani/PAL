@@ -32,7 +32,11 @@ class Project extends BaseModel
      * @var array
      */
     protected $fillable = [
-
+        'project_name',
+        'project_details',
+        'file',
+        'technology_id',
+        'user_id'
     ];
 
     /**

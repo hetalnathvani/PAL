@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers\Backend\Project;
 
+use DB;
 use App\Models\Project\Project;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Responses\RedirectResponse;
 use App\Http\Responses\ViewResponse;
 use App\Http\Responses\Backend\Project\CreateResponse;
+use App\Http\Controllers\Backend\Project\ProjectsController;
 use App\Http\Responses\Backend\Project\EditResponse;
 use App\Repositories\Backend\Project\ProjectRepository;
 use App\Repositories\Backend\Technology\TechnologyRepository;
@@ -19,7 +21,7 @@ use App\Http\Requests\Backend\Project\EditProjectRequest;
 use App\Http\Requests\Backend\Project\UpdateProjectRequest;
 use App\Http\Requests\Backend\Project\DeleteProjectRequest;
 use Illuminate\Support\Facades\Auth;
-use DB;
+use App\Repositories\Backend\Project\ProjectsRepository;
 /**
  * ProjectsController
  */
@@ -63,7 +65,7 @@ class ProjectsController extends Controller
     public function create(CreateProjectRequest $request)
     {
     //    $technology['technology']=DB::table('technologies')->get();
-    $technology['technology']=Technology::getSelectData('technology_name');
+        $technology['technology']=Technology::getSelectData('technology_name');
         return view('backend.projects.create',$technology);
     }
     /**
@@ -76,25 +78,7 @@ class ProjectsController extends Controller
     {
         //Input received from the request
         $input = $request->except(['_token']);
-        //Create the model using repository create method
-        
-        //$input['']
         $this->repository->create($input);
-        //return with successfull message
-
-        if($request->hasfile('file'))
-        {
-            foreach($request->file('file') as $files)
-            {
-                $name = $files->getClientOriginalName();
-                $files = move(public_path().'/app/public/',$name);
-                $data[] = $name;
-            }
-        }
-
-        $form = new Project();
-            $form->file=json_encode($data);
-            $form->save(); 
         return new RedirectResponse(route('admin.projects.index'), ['flash_success' => trans('alerts.backend.projects.created')]);
     }
     /**

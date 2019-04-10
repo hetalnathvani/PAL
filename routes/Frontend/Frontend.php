@@ -52,22 +52,17 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/dashboard/TechnologySpecific', 'TechnologySpecificController@index')->name('TechnologySpecific');
         Route::get('/dashboard/TechnologySpecific/{id}', 'TechnologySpecificController@show')->name('laravel');
 
+        Route::get('/dashboard/NewArrivals/{id}','NAProjectsController@index')->name('PageProject');
         Route::get('/dashboard/NewArrivals', 'NewArrivalsController@index')->name('NewArrivals');
 
-        Route::get('/dashboard/NewArrivals/{project_id}', 'DownloadController@download')->name('NewArrivals');
 
-
-        
-        // //File Upload & Download Functionalities
-        // Route::post('/File', 'FilesController@store'); 
-        // Route::get('/File', 'FileController@index')->name('File');
-        // Route::get('/File/download/{file}', 'FileController@download');
+        Route::get('/dashboard/TechnologySpecific/{{ $value->technology_id }}/{{ $value->id }}/download', 'DownloadController@download')->name('PageProject');
+        Route::get('/dashboard/TechnologySpecific/{id}/{project_id}','PageProjectController@index')->name('PageProject');
 
 
         Route::get('Laravel', 'LaravelController@index')->name('Laravel');
 
         Route::get('/dashboard/TechnologySpecific/{id}', 'LaravelController@index')->name('Laravel');
-
         Route::get('/dashboard/TechnologySpecific/{id}/{project_id}/download', 'DownloadController@download')->name('Laravel');
 
 
