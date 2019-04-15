@@ -49,24 +49,19 @@ Route::group(['middleware' => 'auth'], function () {
         /*
          * User Dashboard Specific
          */
-        Route::get('/dashboard/TechnologySpecific', 'TechnologySpecificController@index')->name('TechnologySpecific');
-        Route::get('/dashboard/TechnologySpecific/{id}', 'TechnologySpecificController@show')->name('laravel');
+        Route::get('/dashboard/technology-specific', 'TechnologySpecificController@index')->name('TechnologySpecific');
+        Route::get('/dashboard/technology-specific/{id}', 'TechnologySpecificController@show')->name('laravel');
 
-        Route::get('/dashboard/NewArrivals/{id}','NAProjectsController@index')->name('PageProject');
-        Route::get('/dashboard/NewArrivals', 'NewArrivalsController@index')->name('NewArrivals');
+        Route::get('/dashboard/new-arrivals/{id}','NAProjectsController@index')->name('PageProject');
+        Route::get('/dashboard/new-arrivals', 'NewArrivalsController@index')->name('NewArrivals');
 
-
-        Route::get('/dashboard/TechnologySpecific/{{ $value->technology_id }}/{{ $value->id }}/download', 'DownloadController@download')->name('PageProject');
-        Route::get('/dashboard/TechnologySpecific/{id}/{project_id}','PageProjectController@index')->name('PageProject');
-
+        Route::get('/dashboard/technology-specific/{id}/{project_id}','PageProjectController@index')->name('PageProject');
 
         Route::get('Laravel', 'LaravelController@index')->name('Laravel');
 
-        Route::get('/dashboard/TechnologySpecific/{id}', 'LaravelController@index')->name('Laravel');
-        Route::get('/dashboard/TechnologySpecific/{id}/{project_id}/download', 'DownloadController@download')->name('Laravel');
+        Route::get('/dashboard/technology-specific/{id}', 'LaravelController@index')->name('Laravel');
+        Route::get('/dashboard/technology-specific/{id}/{project_id}/download', 'DownloadController@download')->name('PageProject2');
 
-
-        
         Route::get('dashboard', 'DashboardController@index')->name('dashboard');
 
         /*

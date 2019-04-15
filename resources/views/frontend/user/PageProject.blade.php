@@ -67,7 +67,7 @@
                             <h5>Project Details : {{$value->project_details}}</h5>
                             <h5>Technology ID : {{$value->technology_id}}</h5>
                             
-                                <a href='/dashboard/TechnologySpecific/{{ $value->technology_id }}/{{ $value->id }}/download'>
+                                <a href='/dashboard/technology-specific/{{ $value->technology_id }}/{{ $value->id }}/download'>
                                     <button type = "submit" class = "button">
                                         Download
                                         <span class = "glyphicon glyphicon-download"></span>
@@ -133,7 +133,6 @@
                                        <th>Projects ID</th>
                                        <th>Projects Name</th>
                                        <th>Projects Details</th>
-                                    
                                 </thead>
                                 <tbody>
                                     @foreach($project as $projects)

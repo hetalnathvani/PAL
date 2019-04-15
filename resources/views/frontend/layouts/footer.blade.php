@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="http://127.0.0.1:8000/" href="cygnet.png" type="image/png" sizes="16x16">
 	<title></title>
 	<style type="text/css">
 		body {

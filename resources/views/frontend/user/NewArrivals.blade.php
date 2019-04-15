@@ -72,9 +72,9 @@
                                         <h5>{{$result->project_details}}</h5>
                                         <h5>Technology ID : {{$result->technology_id}}</h5>
                                           
-                                            <a href='/dashboard/NewArrivals/{{ $result->id }}'>
+                                            <a href='/dashboard/new-arrivals/{{ $result->id }}'>
                                                 <button type = "submit" class = "button">
-                                                    Download
+                                                    Project Page
                                                     <span class = "glyphicon glyphicon-download"></span>
                                                 </button>
                                             </a> 

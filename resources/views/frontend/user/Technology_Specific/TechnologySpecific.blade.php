@@ -7,7 +7,7 @@
         <div class="col-xs-12">
 
             <div class="panel panel-default">
-                <div class="panel-heading">{{ trans('Process Assets Library') }}</div>
+                <div class="panel-heading">{{ trans('Technologies') }}</div>
                     
                 <div class="panel-body">
 
@@ -72,83 +72,13 @@
 
                                     <div class="col">
                                         <div class="imag"><div class="opacity">
-                                        <a href="/dashboard/TechnologySpecific/{{ $project->id }}"><img src="{{asset('/img/frontend/box.png')}}" height="170" width="270"></a></div>
+                                        <a href="/dashboard/technology-specific/{{ $project->id }}"><img src="{{asset('/img/frontend/box.png')}}" height="170" width="270"></a></div>
                                         <div class="centered1"> {{ $project->technology_name }} </div></div>
                                     </div>
-                            
-                                 <!--   <div class="col">
-                                        <div class="imeg">
-                                        <a href="https://accounts.logme.in/login.aspx"><img src="{{asset('/img/frontend/box.png')}}" height="170" width="270"></a>
-                                        <div class="centered1"> {{ $project->technology_name }} </div></div>
-                                    </div>
-
-                                    <div class="col">
-                                        <div class="imag"><div class="opacity">
-                                        <a href="upload"><img src="{{asset('/img/frontend/box.png')}}" height="170" width="270"></a></div>
-                                        <div class="centered1"> {{ $project->technology_name }} </div></div>
-                                    </div>-->
                                     
                                 </div>
                                 @endforeach
-
-                               <!--@foreach($technologies as $project)
-                              <table>
-                               @foreach($technologies as $project)
-                               
-                               <td>{{ $project->technology_name }}</td>
-                               
-                                @endforeach
-                                </table>
-                                @endforeach-->
-
-
-
-                               <!-- <div class="col-container">
-
-                                    <div class="col">
-                                        <div class="imeg">
-                                        <a href="Technology_Specific"><img src="{{asset('/img/frontend/box.png')}}" height="170" width="270"></a>
-                                        <div class="centered1"> {{ $project->technology_name }} </div></div>
-                                    </div>
-
-                                    <div class="col">
-                                        <div class="imag"><div class="opacity">
-                                        <a href="upload"><img src="{{asset('/img/frontend/box.png')}}" height="170" width="270"></a></div>
-                                        <div class="centered1"> {{ $project->technology_name }}</div></div>
-                                    </div>
-
-                                    <div class="col">
-                                        <div class="imeg">
-                                        <a href="upload"><img src="{{asset('/img/frontend/box.png')}}" height="170" width="270"></a>
-                                        <div class="centered1"> {{ $project->technology_name }} </div></div>
-                                    </div>
-                                    
-                                </div>-->
-
-                                
-
-                                <!--<div class="col-container">
-
-                                    <div class="col">
-                                        <div class="imag"><div class="opacity"> 
-                                        <a href="Technology_Specific"><img src="{{asset('/img/frontend/box.png')}}" height="170" width="270"></a></div>
-                                        <div class="centered1">Blockchain</div></div>
-                                    </div>
-
-                                    <div class="col">
-                                        <div class="imeg">
-                                        <a href="upload"><img src="{{asset('/img/frontend/box.png')}}" height="170" width="270"></a>
-                                        <div class="centered1">IOT </div></div>
-                                    </div>
-
-                                    <div class="col">
-                                        <div class="imag"><div class="opacity">
-                                        <a href="upload"><img src="{{asset('/img/frontend/box.png')}}" height="170" width="270"></a></div>
-                                        <div class="centered1">Cloud </div></div>
-                                    </div>
-                                     
-                                </div>-->
-                              
+  
                                     </div><!--panel-->
                                 </div><!--col-md-6-->
 

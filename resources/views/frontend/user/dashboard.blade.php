@@ -58,13 +58,13 @@
 
                                     <div class="col">
                                         <div class="img">
-                                        <a href="dashboard/TechnologySpecific"><img src="{{asset('/img/frontend/box.png')}}" height="340" width="340"></a>
+                                        <a href="dashboard/technology-specific"><img src="{{asset('/img/frontend/box.png')}}" height="340" width="340"></a>
                                         <div class="centered">Technology<br>Specific </div></div>
                                     </div>
 
                                     <div class="col">
                                         <div class="img">
-                                        <a href="dashboard/NewArrivals"><img src="{{asset('/img/frontend/box.png')}}" height="340" width="340"></a>
+                                        <a href="dashboard/new-arrivals"><img src="{{asset('/img/frontend/box.png')}}" height="340" width="340"></a>
                                         <div class="centered">New<br>Arrivals </div></div>
                                     </div>
 
