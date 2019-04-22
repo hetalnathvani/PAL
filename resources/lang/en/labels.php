@@ -10,6 +10,7 @@ return [
 	"buttons" => [
 	"save" => "Save",
 	"update" => "Update",
+	
 	],
 	"hide" => "Hide",
 	"inactive" => "Inactive",
@@ -267,6 +268,8 @@ return [
 	],
 	],
 	"frontend" => [
+			"comment" => "Comment",
+
 	"auth" => [
 	"login_box_title" => "Login",
 	"login_button" => "Login",
@@ -274,6 +277,7 @@ return [
 	"register_box_title" => "Register",
 	"register_button" => "Register",
 	"remember_me" => "Remember Me",
+	"comment" => "Comment",
 	],
 	"passwords" => [
 	"forgot_password" => "Forgot Your Password?",

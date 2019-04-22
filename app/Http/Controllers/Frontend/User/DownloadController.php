@@ -16,8 +16,41 @@ class DownloadController extends Controller
     }
     public function download(LaravelViewRequest $request)
     {
+        
         $url = $request->file;
-        $url = Storage::disk('public')->url("ch1.pdf");
-        return response()->download(storage_path('app/public/ch1.pdf'));
+        $url = Storage::disk('public')->url();
+
+        
+        return response()->download(storage_path('public/'),['flash_success' => trans('alerts.backend.projects.downloaded')]);
+         
+    }
+    public function myNotification($type)
+    {
+        switch ($type) {
+            case 'message':
+                alert()->message('Sweet Alert with message.');
+                break;
+            case 'basic':
+                alert()->basic('Sweet Alert with basic.','Basic');
+                break;
+            case 'info':
+                alert()->info('Sweet Alert with info.');
+                break;
+            case 'success':
+                alert()->success('Sweet Alert with success.','Welcome to ItSolutionStuff.com')->autoclose(3500);
+                break;
+            case 'error':
+                alert()->error('Sweet Alert with error.');
+                break;
+            case 'warning':
+                alert()->warning('Sweet Alert with warning.');
+                break;
+            default:
+                # code...
+                break;
+        }
+
+
+        return view('my-notification');
     }
 }

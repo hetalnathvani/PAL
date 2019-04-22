@@ -45,7 +45,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
                                             <h4>Item</h4>
-                                        </div><!--panel-heading-->
+                                        </div><!-panel-heading-->
 
                                 <!--<div class = "footer">
                                     <h2>Footer</h2>
@@ -68,15 +68,87 @@
                             <h5>Technology ID : {{$value->technology_id}}</h5>
                             
                                 <a href='/dashboard/TechnologySpecific/{{ $value->technology_id }}/{{ $value->id }}/download'>
+                                     @include('sweet::alert')
+                                     swal({
+  title: "Are you sure?",
+  text: "Once deleted, you will not be able to recover this imaginary file!",
+  icon: "warning",
+  buttons: true,
+  dangerMode: true,
+})
+.then((willDelete) => {
+  if (willDelete) {
+    swal("Poof! Your imaginary file has been deleted!", {
+      icon: "success",
+    });
+  } else {
+    swal("Your imaginary file is safe!");
+  }
+});
                                     <button type = "submit" class = "button">
                                         Download
+                                       
                                         <span class = "glyphicon glyphicon-download"></span>
                                     </button>
                                 </a> 
                     @endforeach
                 </div><!--panel body-->
-            
-                <div class="footer">
+        @php $rating = 1.6; @endphp  
+
+            @foreach(range(1,5) as $i)
+                <span class="fa-stack" style="width:1em">
+                    <i class="far fa-star fa-stack-1x"></i>
+
+                    @if($rating >0)
+                        @if($rating >0.5)
+                            <i class="fas fa-star fa-stack-1x"></i>
+                        @else
+                            <i class="fas fa-star-half fa-stack-1x"></i>
+                        @endif
+                    @endif
+                    @php $rating--; @endphp
+                </span>
+            @endforeach
+            </div>
+                                 <div class="box-body"> 
+                <div class="form-group">
+                     {{ Form::label('comment', trans('labels.frontend.comment'), ['class' => 'col-lg-2 control-label required']) }} 
+
+                        <div class="col-lg-10">
+                            <!-- Create Your Input Field Here -->
+                            <!-- Look Below Example for reference -->
+                             {{ Form::text('comment',null, ['class' => 'form-control box-size', 'placeholder' => trans('labels.frontend.comment'), 'required' => 'required','method'=>'post']) }} 
+                        </div><!--col-lg-10-->
+                         <div class="edit-form-btn">
+                        {{-- {{ link_to_route('frontend.user.PageProjectDownload', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }} --}}
+                        {{-- {{ Form::submit(trans('buttons.general.comment'), ['class' => 'btn btn-primary btn-md','method'=>'post']) }} --}}
+                       <a href="/dashboard/TechnologySpecific/{id}/{project_id}/create" > <button>Comment</button></a>
+                       {{Form::close()}}
+                    </div><!--form-group-->
+                    <table>
+                    <thead>
+                        <td></td>
+                    </thead>
+                    @foreach($comment as $comments)
+                        <td>{{$comments->comment}}</td><br>
+                        @endforeach
+                    </table>
+                    {{--  <div class="form-group">
+                     {{ Form::label('comment', trans('labels.frontend.comment'), ['class' => 'col-lg-2 control-label required']) }} 
+
+                        <div class="col-lg-10">
+                            <!-- Create Your Input Field Here -->
+                            Look Below Example for reference
+                             {{ Form::text('comment',$comment->comment,null, ['class' => 'form-control box-size', 'placeholder' => trans('labels.frontend.comment'), 'required' => 'required']) }} 
+                        </div><!--col-lg-10-->
+                    </div><!--form-group--> --}}
+
+                   
+                        <div class="clearfix"></div>
+                    </div><!--edit-form-btn-->
+                </div><!-- form-group -->  
+                                  
+                          <div class="footer">
                     <div class="col-container">
                     <div class="col">
                         <h2>About Us</h2>
@@ -148,3 +220,12 @@
 
     </div><!-- row -->
 @endsection
+<script>
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+</script>

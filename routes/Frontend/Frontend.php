@@ -52,18 +52,21 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/dashboard/TechnologySpecific', 'TechnologySpecificController@index')->name('TechnologySpecific');
         Route::get('/dashboard/TechnologySpecific/{id}', 'TechnologySpecificController@show')->name('laravel');
 
-        Route::get('/dashboard/NewArrivals/{id}','NAProjectsController@index')->name('PageProject');
+        Route::get('/dashboard/NewArrivals/{id}','NAProjectsController@index')->name('NewArrivalPageProject');
         Route::get('/dashboard/NewArrivals', 'NewArrivalsController@index')->name('NewArrivals');
 
 
-        Route::get('/dashboard/TechnologySpecific/{{ $value->technology_id }}/{{ $value->id }}/download', 'DownloadController@download')->name('PageProject');
+        Route::get('/dashboard/TechnologySpecific/{{ $value->technology_id }}/{{ $value->id }}/download', 'DownloadController@download')->name('PageProjectDownload');
+        Route::get('/dashboard/TechnologySpecific/{{ $value->technology_id }}/{{ $value->id }}/download', 'DownloadController@myNotification')->name('PageProjectDownload');
         Route::get('/dashboard/TechnologySpecific/{id}/{project_id}','PageProjectController@index')->name('PageProject');
+        //comment
+             Route::post('/dashboard/TechnologySpecific/{id}/{project_id}/create','PageProjectController@store')->name('StoreComment');
 
 
         Route::get('Laravel', 'LaravelController@index')->name('Laravel');
 
         Route::get('/dashboard/TechnologySpecific/{id}', 'LaravelController@index')->name('Laravel');
-        Route::get('/dashboard/TechnologySpecific/{id}/{project_id}/download', 'DownloadController@download')->name('Laravel');
+        Route::get('/dashboard/TechnologySpecific/{id}/{project_id}/download', 'DownloadController@download')->name('LaravelDownload');
 
 
         

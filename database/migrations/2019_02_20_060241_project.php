@@ -19,6 +19,7 @@ class Project extends Migration
             $table->integer('technology_id')->unsigned()->index('projects_technology_id_foreign');
             $table->string('project_name', 250);
             $table->text('project_details', 250);
+            $table->integer('count');
             $table->string('file', 65535);
             $table->timestamps();
             $table->softDeletes();
