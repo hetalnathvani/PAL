@@ -66,18 +66,34 @@
                                     </div><!--panel-->
                                 </div><!--col-md-6-->
 
-                                                           
-                                @foreach($technologies as $project)
+                                 @foreach($technologies as $project)
+                                
                                 <div class="col-container">
-
-                                    <div class="col">
+                                  <div class="col">
                                         <div class="imag"><div class="opacity">
-                                        <a href="/dashboard/technology-specific/{{ $project->id }}"><img src="{{asset('/img/frontend/box.png')}}" height="170" width="270"></a></div>
+                                        <a href="/dashboard/technology-specific/{{ $project->id }}"><img src="{{asset('/img/frontend/db1.jpg')}}" height="170" width="270"></a></div>
                                         <div class="centered1"> {{ $project->technology_name }} </div></div>
                                     </div>
-                                    
                                 </div>
-                                @endforeach
+                               
+                                @endforeach      
+
+                                    <!-- @php $technologies @endphp
+                                   
+                                    @for ($i = 0; $i < 1; $i++)
+                                        @for ($j = 0; $j <= $i; $j++)
+                                        <div class="col-container">
+                                            <div class="col">
+                                                <div class="imag"><div class="opacity">
+                                                <a href="/dashboard/technology-specific/{{ $project->id }}"><img src="{{asset('/img/frontend/db1.jpg')}}" height="170" width="270"></a></div>
+                                                <div class="centered1">{{ $j }}</div></div>
+                                            </div>
+                                        </div>
+                                        
+                                        @endfor
+                                       
+                                    @endfor
+                                -->
   
                                     </div><!--panel-->
                                 </div><!--col-md-6-->

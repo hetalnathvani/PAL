@@ -57,21 +57,21 @@
                                 <div class="col-container">
 
                                     <div class="col">
-                                        <div class="img">
-                                        <a href="dashboard/technology-specific"><img src="{{asset('/img/frontend/box.png')}}" height="340" width="340"></a>
-                                        <div class="centered">Technology<br>Specific </div></div>
+                                        <div class="img"><div class="opacity">
+                                        <a href="dashboard/technology-specific"><img src="{{asset('/img/frontend/db1.jpg')}}" height="340" width="340"></a>
+                                        <div class="centered"><b>Technology<br>Specific </b></div></div>
+                                    </div></div>
+
+                                    <div class="col">
+                                        <div class="img"><div class="opacity">
+                                        <a href="dashboard/new-arrivals"><img src="{{asset('/img/frontend/db1.jpg')}}" height="340" width="340"></a>
+                                        <div class="centered"><b>New<br>Arrivals</b> </div></div></div>
                                     </div>
 
                                     <div class="col">
-                                        <div class="img">
-                                        <a href="dashboard/new-arrivals"><img src="{{asset('/img/frontend/box.png')}}" height="340" width="340"></a>
-                                        <div class="centered">New<br>Arrivals </div></div>
-                                    </div>
-
-                                    <div class="col">
-                                        <div class="img">
-                                        <a href="upload"><img src="{{asset('/img/frontend/box.png')}}" height="340" width="340"></a>
-                                        <div class="centered">Most<br> Popular </div></div>
+                                        <div class="img"><div class="opacity">
+                                        <a href="upload"><img src="{{asset('/img/frontend/db1.jpg')}}" height="340" width="340"></a>
+                                        <div class="centered"><b>Most<br> Popular </b></div></div></div>
                                     </div>
                                     
                                 </div>

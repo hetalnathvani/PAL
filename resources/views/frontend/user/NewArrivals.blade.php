@@ -69,7 +69,7 @@
                                     
                                     <div class="flip-box-back">
                                         <h2>{{$result->project_name}}</h2>
-                                        <h5>{{$result->project_details}}</h5>
+                                       
                                         <h5>Technology ID : {{$result->technology_id}}</h5>
                                           
                                             <a href='/dashboard/new-arrivals/{{ $result->id }}'>
