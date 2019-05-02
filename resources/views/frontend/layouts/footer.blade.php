@@ -14,7 +14,7 @@
 			color: black;
 		}
 
-		.panel{
+		.bg{
 			background-image: url("/img/frontend/9.jpg");
   			background-color: #cccccc;
 			background-repeat: no-repeat;
@@ -101,6 +101,7 @@
 		.col {
   			flex: 1;
   			padding: 16px;
+			display : inline-block;
 		}
 		.opacity{
 			opacity: 0.7;

@@ -5,10 +5,11 @@
     <div class="row">
 
         <div class="col-xs-12">
-
+           
             <div class="panel panel-default">
-                <div class="panel-heading">{{ trans('navs.frontend.dashboard') }}</div>
-
+            
+                <div class="panel-heading">{{ trans('navs.frontend.user.techspecific') }}</div>
+                <div class="bg">
                 <div class="panel-body">
 
                     <div class="row">
@@ -77,9 +78,9 @@
                         </div><!--col-md-8-->
 
                     </div><!--row-->
-
+                    <div class="row">
                     @foreach($projects as $value) 
-                    <div class="col-container">
+                    <div class="col-md-4">
                         <div class="col">
                             <div class="flip-box">
                                 <div class="flip-box-inner">
@@ -105,7 +106,7 @@
                         </div>    
                     </div>
                     @endforeach
-
+                    </div><!--row-->
                 </div><!--panel body-->
                 <div class="footer">
                     <div class="col-container">
@@ -155,6 +156,7 @@
                         
                     </div>                    
                     </div>
+                    </div><!--   bg -->
             </div><!-- panel -->
 
         </div><!-- col-md-10 -->

@@ -19,7 +19,7 @@ Route::group(['middleware' => 'auth'], function () {
          */
         Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
         //Route::get('PHP_Technology', 'PHP_TechnologyController@index')->name('PHP_Technology');
-        Route::post('/dashboard','FindController@search')->name('search');
+        Route::post('/dashboard/search','FindController@search')->name('search');
         
 
         /*Route::get('Technology_Specific', function () {

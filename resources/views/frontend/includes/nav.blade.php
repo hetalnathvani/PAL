@@ -3,32 +3,35 @@
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#frontend-navbar-collapse">
                 <span class="sr-only">{{ trans('labels.general.toggle_navigation') }}</span>
-                <span class="icon-bar">hmm</span>
-                <span class="icon-bar">jsffjsfdjbsmfjkhkmdffjkajskashdkhdja</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-
-           {{--   @if(settings()->logo)
+            <img src="{{asset('/img/frontend/logo/Cygnet-Infotech-Logo.png')}}" height="72" width="250">
+           <!-- {{--   @if(settings()->logo)
             <a href="{{ route('frontend.index') }}" class="logo"><img height="48" width="226" class="navbar-brand" src="{{route('frontend.index')}}/img/site_logo/{{settings()->logo}}"></a>
 
             @else --}}
             <div>
-               <img src="{{asset('/img/frontend/logo/Cygnet-Infotech-Logo.png')}}" height="82" width="280">
+               <img src="{{asset('/img/frontend/logo/Cygnet-Infotech-Logo.png')}}" height="72" width="250">
            
              {{ link_to_route('frontend.index','', [], ['class' => 'navbar-brand']) }}
 
            {{--  @endif --}}
-           </div>
+          -->
+           <!-- </div> -->
+          
         </div><!--navbar-headersad-->
-
+       
         <div class="collapse navbar-collapse" id="frontend-navbar-collapse">
             {{-- <ul class="nav navbar-nav">
                 <li></li>
             </ul> --}}
+
             <ul class="nav navbar-nav navbar-right">
+          
                 
-                
-                @if (config('locale.status') && count(config('locale.languages')) > 1)
+                <!-- @if (config('locale.status') && count(config('locale.languages')) > 1)
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                             {{ trans('menus.language-picker.language') }}
@@ -37,8 +40,8 @@
                         
                         @include('includes.partials.lang')
                     </li>
-                @endif
-                
+                @endif -->
+          
                 
                 @if ($logged_in_user)
                     <li>{{ link_to_route('frontend.user.dashboard', trans('navs.frontend.dashboard')) }}</li>

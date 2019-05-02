@@ -2,13 +2,15 @@
 @extends('frontend.layouts.footer')
 
 @section('content')
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
     <div class="row">
     
         <div class="col-xs-12">
 
             <div class="panel panel-default">
-                <div class="panel-heading">{{ trans('navs.frontend.dashboard') }}</div>
-               
+                <div class="panel-heading">{{ trans('navs.frontend.user.pageproject') }}</div>
+                <div class="bg">
                 
                 <div class="panel-body"> 
               
@@ -78,16 +80,55 @@
                             <h5>Project Details : {{$value->project_details}}</h5>
                             <h5>Technology ID : {{$value->technology_id}}</h5>
                             
-                                <a href='/dashboard/technology-specific/{{ $value->technology_id }}/{{ $value->id }}/download'>
-                                    <button type = "submit" class = "button">
+                                <!-- <a href='/dashboard/technology-specific/{{ $value->technology_id }}/{{ $value->id }}/download'>
+                                    <button type = "submit" class = "button" onclick="setTimeout()">
                                         Download
                                         <span class = "glyphicon glyphicon-download"></span>
                                     </button>
-                                </a> 
+                                </a>  -->
+                              
+                                <button onclick="download()" class = "button" id="b1">
+                                        Download
+                             
+                                </button>
+
+                                <script>
+                                   function download(){
+                                    swal({
+                                            text: "Do you want to download Project files ?",
+                                            icon: "warning",
+                                            buttons: true,
+                                            dangerMode: true,
+                                            showCancelButton: true,
+                                            confirmButtonColor: " #4CAF50", 
+                                            title: "Are you sure?",
+                                            confirmButtonText: "Yes, save it!",  
+                                            // closeOnConfirm: true 
+                                        },function (isConfirm) { 
+                                                 
+                                            if (isConfirm) {
+                                                swal("Files Downloaded!");
+                                                var canvas = document.getElementById("b1")
+                                                window.location = "/dashboard/technology-specific/{{ $value->technology_id }}/{{ $value->id }}/download"
+                                                canvas.toBlob(function(blob){
+                                                    // Save the file...
+                                                    saveAs(blob, '$pageproject->file')
+                                                }, "app/public/zip/projects/$pageproject->file"); 
+                                            } else {
+                                                // user cancel
+                                            }
+                                            return false; 
+                                        }
+                                      )                          
+                                    };
+                                </script>   
                     @endforeach
                   
                     </center></div></div>
                     </div>
+
+                    <!-- Sweet Alert Script -->
+
                    
                     
                 </div><!--panel body-->
@@ -140,6 +181,7 @@
                         
                     </div>                    
                     </div>
+                    </div><!--bg-->
             </div><!-- panel -->
 
         </div><!-- col-md-10 -->
