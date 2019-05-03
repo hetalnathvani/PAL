@@ -10,6 +10,7 @@ use App\Models\Project\Traits\ProjectRelationship;
 
 class Project extends BaseModel
 {
+
     use ModelTrait,
         ProjectAttribute,
     	ProjectRelationship {
@@ -68,6 +69,7 @@ class Project extends BaseModel
      * Constructor of Model
      * @param array $attributes
      */
+    
     public function __construct(array $attributes = [])
     {
         parent::__construct($attributes);

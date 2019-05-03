@@ -14,7 +14,7 @@
     "bootstrap-sass": "3.3.7",
     "cross-env": "^5.2.0",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.1.1",
+    "jquery": "^3.4.0",
     "laravel-mix": "^2.1.14",
     "lodash": "^4.17.11",
     "vue": "^2.5.17",
@@ -30,6 +30,7 @@
     "node-sass": "^4.11.0",
     "pluralize": "^7.0.0",
     "select2": "^4.0.4",
+    "sweetalert": "^2.1.2",
     "tinymce": "^4.9.3"
   }
 }

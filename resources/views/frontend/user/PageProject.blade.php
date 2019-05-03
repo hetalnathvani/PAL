@@ -3,25 +3,27 @@
 
 @section('content')
     <div class="row">
-
+    
         <div class="col-xs-12">
 
             <div class="panel panel-default">
                 <div class="panel-heading">{{ trans('navs.frontend.dashboard') }}</div>
-
-                <div class="panel-body">
-
+               
+                
+                <div class="panel-body"> 
+              
                     <div class="row">
-
+                    
                         <div class="col-md-4 col-md-push-8">
-
+                      
                             <ul class="media-list">
-                                <li class="media">
+                                <li class="media">  
                                     <div class="media-left">
                                         <img class="media-object" src="{{ $logged_in_user->picture }}" alt="Profile picture">
                                     </div><!--media-left-->
-
-                                    <div class="media-body">
+                                  
+                                    <div class="media-body">  
+                                    
                                         <h4 class="media-heading">
                                             {{ $logged_in_user->name }}<br/>
                                             <small>
@@ -29,13 +31,16 @@
                                                 Joined {{ $logged_in_user->created_at->format('F jS, Y') }}
                                             </small>
                                         </h4>
-
+                                       
                                         {{ link_to_route('frontend.user.account', trans('navs.frontend.user.account'), [], ['class' => 'btn btn-info btn-xs']) }}
 
                                         @permission('view-backend')
                                             {{ link_to_route('admin.dashboard', trans('navs.frontend.user.administration'), [], ['class' => 'btn btn-danger btn-xs']) }}
                                         @endauth
+                                    
                                     </div><!--media-body-->
+                                
+                                    
                                 </li><!--media-->
                             </ul><!--media-list-->
                         
@@ -60,58 +65,78 @@
                     </div><!--row-->
 
                     
+                    <div class = "container1">
+                    <!-- <div class="opacity"> -->
+                    <img src="{{asset('/img/frontend/white.jpg')}}" height="340" width="1110" style="opacity: 0.7;">
+                    <div class="centered2">
+                    <center>
+                    
                     @foreach($pageproject as $value) 
-                            <h1>{{$value->project_name}}</h1>
-                            <h2>Project ID : {{$value->id}}</h2>
+                            <h1 style="color : black;opacity:1"><b>{{$value->project_name}}</b></h1>
+                            <h2 style="opacity : 1.0">Project ID : {{$value->id}}</h2>
                             <h2>Project Name : {{$value->project_name}}</h2>
                             <h5>Project Details : {{$value->project_details}}</h5>
                             <h5>Technology ID : {{$value->technology_id}}</h5>
-                            
-                                <a href='/dashboard/TechnologySpecific/{{ $value->technology_id }}/{{ $value->id }}/download'>
-                                     @include('sweet::alert')
-                                     swal({
-  title: "Are you sure?",
-  text: "Once deleted, you will not be able to recover this imaginary file!",
-  icon: "warning",
-  buttons: true,
-  dangerMode: true,
-})
-.then((willDelete) => {
-  if (willDelete) {
-    swal("Poof! Your imaginary file has been deleted!", {
-      icon: "success",
-    });
-  } else {
-    swal("Your imaginary file is safe!");
-  }
-});
-                                    <button type = "submit" class = "button">
+                            {{-- 
+                                <a href='/dashboard/technology-specific/{{ $value->technology_id }}/{{ $value->id }}/download'> --}}
+                                    <button type = "download" class = "button" id="canvas">
+                                        <script>
+                                           function (isConfirm) {      
+    if (isConfirm) {
+        swal("Saving!");
+
+        var canvas = document.getElementById("canvas")
+
+        // get the canvas as a blob
+        canvas.toBlob(function(blob){
+            // Save the file...
+            saveAs(blob, 'my-image.png')
+        }, "image/png", 0.95); // PNG at 95% quality
+    } else {
+        // user cancel
+    }
+
+    return false; 
+};
+                                            </script>
                                         Download
-                                       
                                         <span class = "glyphicon glyphicon-download"></span>
                                     </button>
                                 </a> 
+                            
+                       {{--  @foreach($project->$projects)
+
+            <td id="Count">{{$projects->count}}</td>
+            @endforeach --}}
                     @endforeach
-                </div><!--panel body-->
-        @php $rating = 1.6; @endphp  
-
-            @foreach(range(1,5) as $i)
-                <span class="fa-stack" style="width:1em">
-                    <i class="far fa-star fa-stack-1x"></i>
-
-                    @if($rating >0)
-                        @if($rating >0.5)
-                            <i class="fas fa-star fa-stack-1x"></i>
-                        @else
-                            <i class="fas fa-star-half fa-stack-1x"></i>
-                        @endif
-                    @endif
-                    @php $rating--; @endphp
-                </span>
-            @endforeach
+     
+                    </center></div></div>
+                    </div>
+                   
+                  <!--for count page-->
+                    {{-- <script type="text/javascript">
+                        let count=document.getElementById('Count').value;
+                        let countplus=parseInt(count)+1;
+                        document.getElementById('Count').value=countplus;
+                    </script>
+                --}} </div><!--panel body-->
+        <table>
+                    <thead>
+                        <td></td>
+                    </thead>
+                    {{-- print_r($comment); --}}
+                  {{--   @foreach($comments as $commentss)
+                        <td>{{$commentss->comment}}</td><br>
+                        @endforeach
+                    </table> --}}
+                   
             </div>
-                                 <div class="box-body"> 
+           <div class="box-body"> 
                 <div class="form-group">
+                    {{-- {!! Form::open(array('class' => 'form-horizontal', 'role' =>'form', 'action'=> 'PageProjectController@store','method'=>'post' )) !!} --}}
+                    @foreach($pageproject as $projects)
+                      {!! Form::open(['url' => '/dashboard/technology-specific/{technology_id}/{id}/create']) !!}
+                    {{-- {{csrf_token()}} --}}
                      {{ Form::label('comment', trans('labels.frontend.comment'), ['class' => 'col-lg-2 control-label required']) }} 
 
                         <div class="col-lg-10">
@@ -120,19 +145,14 @@
                              {{ Form::text('comment',null, ['class' => 'form-control box-size', 'placeholder' => trans('labels.frontend.comment'), 'required' => 'required','method'=>'post']) }} 
                         </div><!--col-lg-10-->
                          <div class="edit-form-btn">
-                        {{-- {{ link_to_route('frontend.user.PageProjectDownload', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }} --}}
+                       {{--  {{ link_to_route('frontend.user.StoreComment ', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }} --}}
                         {{-- {{ Form::submit(trans('buttons.general.comment'), ['class' => 'btn btn-primary btn-md','method'=>'post']) }} --}}
-                       <a href="/dashboard/TechnologySpecific/{id}/{project_id}/create" > <button>Comment</button></a>
+                       <a href="/dashboard/technology-specific/{{$projects->technology_id}}/{{$projects->id}}/create" > <button>Comment</button></a>
+
+                       @endforeach
                        {{Form::close()}}
                     </div><!--form-group-->
-                    <table>
-                    <thead>
-                        <td></td>
-                    </thead>
-                    @foreach($comment as $comments)
-                        <td>{{$comments->comment}}</td><br>
-                        @endforeach
-                    </table>
+
                     {{--  <div class="form-group">
                      {{ Form::label('comment', trans('labels.frontend.comment'), ['class' => 'col-lg-2 control-label required']) }} 
 
@@ -155,19 +175,36 @@
                        <p> PAL is simply Process Assets Library where all projects done by Cygnet Infotech Company is saved here, which is accessible to Cygnet Employees only. The purpose of this website is to provide Secured code to the Cygnetians to save the time and increase the performance. </p>
                        <hr>
                        <h2>Follow Us</h2>
-                       <div class="icon">
-                       <i class="fa fa-facebook"></i>
-                       <i class="fa fa-youtube"></i>
-                       <i class="fa fa-twitter"></i>
-                       <i class="fa fa-linkedin"></i>
+                        <div class="icon">
+                       <a href="https://www.facebook.com/IT.is.about.you/"> <i class="fa fa-facebook"></i>
+                       </a>
+                       <a href="https://www.youtube.com/channel/UC_PsLEn0lSAE0Vs_K5x5IGA">
+                        <i class="fa fa-youtube"></i>
+                       </a>
+                      <a href="https://twitter.com/cygnetinfotech?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+                        <i class="fa fa-twitter"></i>
+                      </a>
+                       <a href="https://in.linkedin.com/company/cygnet-infotech">
+                        <i class="fa fa-linkedin"></i>
+                       </a>
                        <i class="fa fa-googleplus"></i>
                        </div>
                     </div>
 
                     <div class="col">
                     <h2>Technologies</h2>
-                            JAVA<br>Microsoft<br>Blockchain<br>AI<br>
-                            Android<br>IOS<br>SAP<br>PHP<br>Python<br>Bigdata<br>AR<br>VR
+                            <a href="">JAVA</a> <br>
+                            <a href="">Microsoft</a> <br>
+                            <a href="">Blockchain</a> <br>
+                            <a href="">AI</a> <br>
+                            <a href="">Android</a> <br>
+                            <a href="">IOS</a> <br>
+                            <a href="">SAP</a> <br>
+                            <a href="">PHP</a> <br>
+                            <a href="">Python</a> <br>
+                            <a href="">Bigdata</a> <br>
+                            <a href="">AR</a> <br>
+                            <a href="">VR</a>
                     </div>
 
                     <div class="col">
@@ -199,26 +236,7 @@
             </div><!-- panel -->
 
         </div><!-- col-md-10 -->
-        @if(isset($project))
-                               <table class = "table table-striped">
-                                <thead>
-                                       <th>Projects ID</th>
-                                       <th>Projects Name</th>
-                                       <th>Projects Details</th>
-                                    
-                                </thead>
-                                <tbody>
-                                    @foreach($project as $projects)
-                                    <tr>
-                                        <td>{{ $projects->id }} </td>
-                                        <td>{{ $projects->project_name }} </td>
-                                        <td>{{ $projects->project_details }} </td>
-                                    </tr>
-                                    @endforeach
-                                    </tbody>
-        @endif
-
-    </div><!-- row -->
+            </div><!-- row -->
 @endsection
 <script>
 var slider = document.getElementById("myRange");

@@ -7,8 +7,8 @@
         <div class="col-xs-12">
 
             <div class="panel panel-default">
-                <div class="panel-heading">{{ trans('Technologies') }}</div>
-                    
+                <div class="panel-heading">{{ trans('navs.frontend.dashboard') }}</div>
+
                 <div class="panel-body">
 
                     <div class="row">
@@ -20,6 +20,7 @@
                                     <div class="media-left">
                                         <img class="media-object" src="{{ $logged_in_user->picture }}" alt="Profile picture">
                                     </div><!--media-left-->
+
                                     <div class="media-body">
                                         <h4 class="media-heading">
                                             {{ $logged_in_user->name }}<br/>
@@ -27,7 +28,7 @@
                                                 {{ $logged_in_user->email }}<br/>
                                                 Joined {{ $logged_in_user->created_at->format('F jS, Y') }}
                                             </small>
-                                        </h4> 
+                                        </h4>
 
                                         {{ link_to_route('frontend.user.account', trans('navs.frontend.user.account'), [], ['class' => 'btn btn-info btn-xs']) }}
 
@@ -38,87 +39,78 @@
                                 </li><!--media-->
                             </ul><!--media-list-->
 
-                            
-                            <div class="panel panel-default">
-            
-                            </div><!--panel-->
-                            <!-- <label>
-                                Search : <input type="text" placeholder="Search.." autocomplete="off"size="35">
-                            </label>
-                           -->
-                        </div><!--col-md-4-->
-
-
-
-                        <div class="col-md-8 col-md-pull-4">
-                            <div class="row">
-                                <div class="col-xs-12">
+                        
+                         </div><!--col-md-4-->
+                    
+                               <!-- <div class="col-md-6">
                                     <div class="panel panel-default">
-                                      
-                                    </div><!--panel-->
-                                </div><!--col-xs-12-->
-                            </div><!--row-->
+                                        <div class="panel-heading">
+                                            <h4>Item</h4>
+                                        </div><!--panel-heading-->
 
-
- 
-                            <div class="row">
-                             
-                                    </div><!--panel-->
-                                </div><!--col-md-6-->
-
-                                 @foreach($technologies as $project)
+                                <!--<div class = "footer">
+                                    <h2>Footer</h2>
                                 
-                                <div class="col-container">
-                                  <div class="col">
-                                        <div class="imag"><div class="opacity">
-                                        <a href="/dashboard/technology-specific/{{ $project->id }}"><img src="{{asset('/img/frontend/db1.jpg')}}" height="170" width="270"></a></div>
-                                        <div class="centered1"> {{ $project->technology_name }} </div></div>
-                                    </div>
                                 </div>
-                               
-                                @endforeach      
-
-                                    <!-- @php $technologies @endphp
-                                   
-                                    @for ($i = 0; $i < 1; $i++)
-                                        @for ($j = 0; $j <= $i; $j++)
-                                        <div class="col-container">
-                                            <div class="col">
-                                                <div class="imag"><div class="opacity">
-                                                <a href="/dashboard/technology-specific/{{ $project->id }}"><img src="{{asset('/img/frontend/db1.jpg')}}" height="170" width="270"></a></div>
-                                                <div class="centered1">{{ $j }}</div></div>
-                                            </div>
-                                        </div>
-                                        
-                                        @endfor
-                                       
-                                    @endfor
-                                -->
-  
-                                    </div><!--panel-->
-                                </div><!--col-md-6-->
-
+                            </div><--row-->
+                        
                         </div><!--col-md-8-->
 
-                    </div><!--row--> 
-                      
+                    @foreach($results as $result)
+                    <div class="col-container">
+                        <div class="col">
+                            <div class="flip-box">
+                                <div class="flip-box-inner">
+                                    <div class="flip-box-front">
+                                        <h2>{{$result->id}}</h2>
+                                        <h2>{{$result->project_name}}</h2>
+                                    </div>
+                                    
+                                    <div class="flip-box-back">
+                                        <h2>{{$result->project_name}}</h2>
+                                       
+                                        <h5>Technology ID : {{$result->technology_id}}</h5>
+                                          
+                                            <a href='/dashboard/most-popular/{{ $result->id }}'>
+                                                <button type = "submit" class = "button">
+                                                    Project Page
+                                                    <span class = "glyphicon glyphicon-download"></span>
+                                                </button>
+                                            </a> 
+                                           
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                    @endforeach
 
+                    </div><!--row-->
+
+                
                 </div><!--panel body-->
+            
                 <div class="footer">
                     <div class="col-container">
                     <div class="col">
                         <h2>About Us</h2>
-                       <p> PAL is simply Process Assets Library where all projects done by Cygnet Infotech 
-                       Company is saved here, which is accessible to Cygnet Employees only. The purpose of 
-                       this website is to provide Secured code to the Cygnetians to save the time and increase
-                        the performance. </p>
-                       <p class="border"></p>
+                       <p> PAL is simply Process Assets Library where all projects done by Cygnet Infotech Company is saved here, which is accessible to Cygnet Employees only. The purpose of this website is to provide Secured code to the Cygnetians to save the time and increase the performance. </p>
+                       <hr>
                        <h2>Follow Us</h2>
-                        <a href="https://www.facebook.com/IT.is.about.you" class="fa fa-facebook"></a>
-                        <a href="https://twitter.com/cygnetinfotech?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="fa fa-twitter"></a>
-                        <a href="https://www.cygnet-infotech.com/" class="fa fa-google"></a>
-                        <a href="https://in.linkedin.com/company/cygnet-infotech" class="fa fa-linkedin"></a>
-                        <a href="https://www.youtube.com/channel/UC_PsLEn0lSAE0Vs_K5x5IGA" class="fa fa-youtube"></a>
+                       <div class="icon">
+                       <a href="https://www.facebook.com/IT.is.about.you/"> <i class="fa fa-facebook"></i>
+                       </a>
+                       <a href="https://www.youtube.com/channel/UC_PsLEn0lSAE0Vs_K5x5IGA">
+                        <i class="fa fa-youtube"></i>
+                       </a>
+                      <a href="https://twitter.com/cygnetinfotech?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+                        <i class="fa fa-twitter"></i>
+                      </a>
+                       <a href="https://in.linkedin.com/company/cygnet-infotech">
+                        <i class="fa fa-linkedin"></i>
+                       </a>
+                       <i class="fa fa-googleplus"></i>
+                       </div>
                     </div>
 
                     <div class="col">
@@ -138,7 +130,7 @@
                     </div>
 
                     <div class="col">
-                        <h2>Contact Us</h2>
+                    <h2>Contact Us</h2>
                         <table> 
                         <tr>
                             <td><i class="fa fa-map-marker" style="font-size : 24px;color: red;"></i> </td>
@@ -161,11 +153,10 @@
                         </tr>
                         </table>
                         
-                    </div>
+                    </div>                    
                     </div>
             </div><!-- panel -->
 
         </div><!-- col-md-10 -->
-
     </div><!-- row -->
 @endsection

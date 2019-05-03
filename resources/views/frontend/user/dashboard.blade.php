@@ -57,21 +57,21 @@
                                 <div class="col-container">
 
                                     <div class="col">
-                                        <div class="img">
-                                        <a href="dashboard/TechnologySpecific"><img src="{{asset('/img/frontend/box.png')}}" height="340" width="340"></a>
-                                        <div class="centered">Technology<br>Specific </div></div>
+                                        <div class="img"><div class="opacity">
+                                        <a href="dashboard/technology-specific"><img src="{{asset('/img/frontend/db1.jpg')}}" height="340" width="340"></a>
+                                        <div class="centered"><b>Technology<br>Specific </b></div></div>
+                                    </div></div>
+
+                                    <div class="col">
+                                        <div class="img"><div class="opacity">
+                                        <a href="dashboard/new-arrivals"><img src="{{asset('/img/frontend/db1.jpg')}}" height="340" width="340"></a>
+                                        <div class="centered"><b>New<br>Arrivals</b> </div></div></div>
                                     </div>
 
                                     <div class="col">
-                                        <div class="img">
-                                        <a href="dashboard/NewArrivals"><img src="{{asset('/img/frontend/box.png')}}" height="340" width="340"></a>
-                                        <div class="centered">New<br>Arrivals </div></div>
-                                    </div>
-
-                                    <div class="col">
-                                        <div class="img">
-                                        <a href="upload"><img src="{{asset('/img/frontend/box.png')}}" height="340" width="340"></a>
-                                        <div class="centered">Most<br> Popular </div></div>
+                                        <div class="img"><div class="opacity">
+                                        <a href="dashboard/most-popular"><img src="{{asset('/img/frontend/db1.jpg')}}" height="340" width="340"></a>
+                                        <div class="centered"><b>Most<br> Popular </b></div></div></div>
                                     </div>
                                     
                                 </div>
@@ -104,18 +104,35 @@
                        <hr>
                        <h2>Follow Us</h2>
                        <div class="icon">
-                       <i class="fa fa-facebook"></i>
-                       <i class="fa fa-youtube"></i>
-                       <i class="fa fa-twitter"></i>
-                       <i class="fa fa-linkedin"></i>
+                       <a href="https://www.facebook.com/IT.is.about.you/"> <i class="fa fa-facebook"></i>
+                       </a>
+                       <a href="https://www.youtube.com/channel/UC_PsLEn0lSAE0Vs_K5x5IGA">
+                        <i class="fa fa-youtube"></i>
+                       </a>
+                      <a href="https://twitter.com/cygnetinfotech?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+                        <i class="fa fa-twitter"></i>
+                      </a>
+                       <a href="https://in.linkedin.com/company/cygnet-infotech">
+                        <i class="fa fa-linkedin"></i>
+                       </a>
                        <i class="fa fa-googleplus"></i>
                        </div>
                     </div>
 
                     <div class="col">
                     <h2>Technologies</h2>
-                            JAVA<br>Microsoft<br>Blockchain<br>AI<br>
-                            Android<br>IOS<br>SAP<br>PHP<br>Python<br>Bigdata<br>AR<br>VR
+                            <a href="">JAVA</a> <br>
+                            <a href="">Microsoft</a> <br>
+                            <a href="">Blockchain</a> <br>
+                            <a href="">AI</a> <br>
+                            <a href="">Android</a> <br>
+                            <a href="">IOS</a> <br>
+                            <a href="">SAP</a> <br>
+                            <a href="">PHP</a> <br>
+                            <a href="">Python</a> <br>
+                            <a href="">Bigdata</a> <br>
+                            <a href="">AR</a> <br>
+                            <a href="">VR</a>
                     </div>
 
                     <div class="col">

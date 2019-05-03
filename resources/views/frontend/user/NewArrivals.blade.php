@@ -1,4 +1,3 @@
-
 @extends('frontend.layouts.app')
 <!--@extends('frontend.layouts.footer')-->
 
@@ -69,12 +68,12 @@
                                     
                                     <div class="flip-box-back">
                                         <h2>{{$result->project_name}}</h2>
-                                        <h5>{{$result->project_details}}</h5>
+                                       
                                         <h5>Technology ID : {{$result->technology_id}}</h5>
                                           
-                                            <a href='/dashboard/NewArrivals/{{ $result->id }}'>
+                                            <a href='/dashboard/new-arrivals/{{ $result->id }}'>
                                                 <button type = "submit" class = "button">
-                                                    Download
+                                                    Project Page
                                                     <span class = "glyphicon glyphicon-download"></span>
                                                 </button>
                                             </a> 
@@ -98,19 +97,36 @@
                        <p> PAL is simply Process Assets Library where all projects done by Cygnet Infotech Company is saved here, which is accessible to Cygnet Employees only. The purpose of this website is to provide Secured code to the Cygnetians to save the time and increase the performance. </p>
                        <hr>
                        <h2>Follow Us</h2>
-                       <div class="icon">
-                       <i class="fa fa-facebook"></i>
-                       <i class="fa fa-youtube"></i>
-                       <i class="fa fa-twitter"></i>
-                       <i class="fa fa-linkedin"></i>
+                        <div class="icon">
+                       <a href="https://www.facebook.com/IT.is.about.you/"> <i class="fa fa-facebook"></i>
+                       </a>
+                       <a href="https://www.youtube.com/channel/UC_PsLEn0lSAE0Vs_K5x5IGA">
+                        <i class="fa fa-youtube"></i>
+                       </a>
+                      <a href="https://twitter.com/cygnetinfotech?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+                        <i class="fa fa-twitter"></i>
+                      </a>
+                       <a href="https://in.linkedin.com/company/cygnet-infotech">
+                        <i class="fa fa-linkedin"></i>
+                       </a>
                        <i class="fa fa-googleplus"></i>
                        </div>
                     </div>
 
                     <div class="col">
                     <h2>Technologies</h2>
-                            JAVA<br>Microsoft<br>Blockchain<br>AI<br>
-                            Android<br>IOS<br>SAP<br>PHP<br>Python<br>Bigdata<br>AR<br>VR
+                            <a href="">JAVA</a> <br>
+                            <a href="">Microsoft</a> <br>
+                            <a href="">Blockchain</a> <br>
+                            <a href="">AI</a> <br>
+                            <a href="">Android</a> <br>
+                            <a href="">IOS</a> <br>
+                            <a href="">SAP</a> <br>
+                            <a href="">PHP</a> <br>
+                            <a href="">Python</a> <br>
+                            <a href="">Bigdata</a> <br>
+                            <a href="">AR</a> <br>
+                            <a href="">VR</a>
                     </div>
 
                     <div class="col">

@@ -1,17 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="http://127.0.0.1:8000/" href="cygnet.png" type="image/png" sizes="16x16">
 	<title></title>
 	<style type="text/css">
 		body {
 			font-family: Arial, Helvetica, sans-serif;
+			
+		}
+		.container1 {
+			position: relative;
+			text-align: center;
+			color: black;
 		}
 
+		.panel{
+			background-image: url("/img/frontend/9.jpg");
+  			background-color: #cccccc;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.img-block {
+			position: relative;
+			font-family: Arial;
+		}
+		.text-block {
+			position: absolute;
+			bottom: 20px;
+			right: 20px;
+			background-color: black;
+			color: white;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
 		.flip-box {
 			background-color: transparent;
 			width: 300px;
 			height: 200px;
-			border: 1px solid #f1f1f1;
+			/* border: 1px solid #f1f1f1; */
 			perspective: 1000px;
 		}
 
@@ -36,12 +62,14 @@
 		}
 
 		.flip-box-front {
-			background-color: dodgerblue;
+			background-color:  #00264d;
+			opacity : 0.7;
 			color: white;
 		}
 
 		.flip-box-back {
 			background-color: #ADD8E6;
+			/* opacity : 0.7; */
 			color: black;
 			transform: rotateY(180deg);
 		}
@@ -65,6 +93,7 @@
             text-align: center;
             background: black;
             margin-top: 20px;
+            font-color:	white;
 		}
 		.col-container {
   			display: flex;
@@ -75,7 +104,7 @@
   			padding: 16px;
 		}
 		.opacity{
-			opacity: 0.5;
+			opacity: 0.7;
   			filter: alpha(opacity=50)
 		}
 		.border{
@@ -85,13 +114,13 @@
 		.img{
   			position: relative;
   			text-align: center;
- 		 	color: white;
+			  color: white;
  		 	font-size: 30px;
 		}
 		.imag{
 			position: relative;
   			text-align: center;
- 		 	color: 	#0000FF;
+ 		 	color: 	white;
  		 	font-size: 25px;
 		}
 		.imeg{
@@ -130,6 +159,12 @@
     		text-align:center;
     		top: 70px;
     		width: 100%
+		}
+		.centered2 {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
 		}
 		.fa {
 			  padding: 12px;

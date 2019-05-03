@@ -216,17 +216,36 @@
                        <p> PAL is simply Process Assets Library where all projects done by Cygnet Infotech Company is saved here, which is accessible to Cygnet Employees only. The purpose of this website is to provide Secured code to the Cygnetians to save the time and increase the performance. </p>
                        <p class="border"></p>
                        <h2>Follow Us</h2>
-                        <a href="#" class="fa fa-facebook"></a>
-                        <a href="#" class="fa fa-twitter"></a>
-                        <a href="#" class="fa fa-google"></a>
-                        <a href="#" class="fa fa-linkedin"></a>
-                        <a href="#" class="fa fa-youtube"></a>
+                        <div class="icon">
+                       <i class="fa fa-facebook"><a href="https://www.facebook.com/IT.is.about.you/"> </a></i>
+                
+                       <a href="https://www.youtube.com/channel/UC_PsLEn0lSAE0Vs_K5x5IGA">
+                        <i class="fa fa-youtube"></i>
+                       </a>
+                      <a href="https://twitter.com/cygnetinfotech?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+                        <i class="fa fa-twitter"></i>
+                      </a>
+                       <a href="https://in.linkedin.com/company/cygnet-infotech">
+                        <i class="fa fa-linkedin"></i>
+                       </a>
+                       <i class="fa fa-googleplus"></i>
+                       </div>
                     </div>
 
                     <div class="col">
-                        <h2>Technologies</h2>
-                            JAVA<br>Microsoft<br>Blockchain<br>AI<br>
-                            Android<br>IOS<br>SAP<br>PHP<br>Python<br>Bigdata<br>AR<br>VR
+                    <h2>Technologies</h2>
+                            <a href="">JAVA</a> <br>
+                            <a href="">Microsoft</a> <br>
+                            <a href="">Blockchain</a> <br>
+                            <a href="">AI</a> <br>
+                            <a href="">Android</a> <br>
+                            <a href="">IOS</a> <br>
+                            <a href="">SAP</a> <br>
+                            <a href="">PHP</a> <br>
+                            <a href="">Python</a> <br>
+                            <a href="">Bigdata</a> <br>
+                            <a href="">AR</a> <br>
+                            <a href="">VR</a>
                     </div>
 
                     <div class="col">

@@ -4,6 +4,7 @@
  * Frontend Controllers
  * All route names are prefixed with 'frontend.'.
  */
+ // Route::when('*', 'projects.view_throttle');
 Route::get('/', 'FrontendController@index')->name('index');
 Route::post('/get/states', 'FrontendController@getStates')->name('get.states');
 Route::post('/get/cities', 'FrontendController@getCities')->name('get.cities');
@@ -49,27 +50,32 @@ Route::group(['middleware' => 'auth'], function () {
         /*
          * User Dashboard Specific
          */
-        Route::get('/dashboard/TechnologySpecific', 'TechnologySpecificController@index')->name('TechnologySpecific');
-        Route::get('/dashboard/TechnologySpecific/{id}', 'TechnologySpecificController@show')->name('laravel');
+       
+        // Route::filter('projects.view_throttle', 'Filters\ViewThrottleFilter');
+        Route::get('/dashboard/technology-specific', 'TechnologySpecificController@index')->name('TechnologySpecific');
+        Route::get('/dashboard/technology-specific/{id}', 'TechnologySpecificController@show')->name('laravel');
 
-        Route::get('/dashboard/NewArrivals/{id}','NAProjectsController@index')->name('NewArrivalPageProject');
-        Route::get('/dashboard/NewArrivals', 'NewArrivalsController@index')->name('NewArrivals');
+        Route::get('/dashboard/technology-specific/{id}/{project_id}','PageProjectController@index')->name('PageProject');
 
-
-        Route::get('/dashboard/TechnologySpecific/{{ $value->technology_id }}/{{ $value->id }}/download', 'DownloadController@download')->name('PageProjectDownload');
-        Route::get('/dashboard/TechnologySpecific/{{ $value->technology_id }}/{{ $value->id }}/download', 'DownloadController@myNotification')->name('PageProjectDownload');
-        Route::get('/dashboard/TechnologySpecific/{id}/{project_id}','PageProjectController@index')->name('PageProject');
         //comment
-             Route::post('/dashboard/TechnologySpecific/{id}/{project_id}/create','PageProjectController@store')->name('StoreComment');
-
+        Route::post('/dashboard/technology-specific/{technology_id}/{id}/create','PageProjectController@store')->name('StoreComment');
+        Route::get('/dashboard/new-arrivals/{id}','NAProjectsController@index')->name('PageProject');
+        Route::get('/dashboard/new-arrivals', 'NewArrivalsController@index')->name('NewArrivals');
+        //most popular
+        Route::get('/dashboard/most-popular', 'MostPopularController@index')->name('MostPopular');
+         Route::get('/dashboard/most-popular/{id}', 'MPopularsController@index')->name('MostPopularindex');
 
         Route::get('Laravel', 'LaravelController@index')->name('Laravel');
 
         Route::get('/dashboard/TechnologySpecific/{id}', 'LaravelController@index')->name('Laravel');
-        Route::get('/dashboard/TechnologySpecific/{id}/{project_id}/download', 'DownloadController@download')->name('LaravelDownload');
+
+        //Download functionality
+        Route::get('/dashboard/technology-specific/{id}/{project_id}/download', 'DownloadController@download')->name('PageProject2');
 
 
-        
+        Route::get('/dashboard/technology-specific/{id}', 'LaravelController@index')->name('Laravel');
+
+
         Route::get('dashboard', 'DashboardController@index')->name('dashboard');
 
         /*

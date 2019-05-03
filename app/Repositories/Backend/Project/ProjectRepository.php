@@ -11,7 +11,6 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use App\Repositories\Backend\Project\ProjectRepository;
 use Illuminate\Contracts\Filesystem\Filesystem;
-//use App\Repositories\Backend\Project\Storage;
 
 /**
  * Class ProjectRepository.
@@ -34,7 +33,7 @@ class ProjectRepository extends BaseRepository
 
     public function __construct()
     {
-        $this->upload_path = 'file'.DIRECTORY_SEPARATOR.'projects'.DIRECTORY_SEPARATOR;
+        $this->upload_path = 'zip'.DIRECTORY_SEPARATOR.'projects'.DIRECTORY_SEPARATOR;
         $this->storage = Storage::disk('public');
     }
     
