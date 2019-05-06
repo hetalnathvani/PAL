@@ -22,7 +22,8 @@
            <!-- </div> -->
           
         </div><!--navbar-headersad-->
-       
+        
+
         <div class="collapse navbar-collapse" id="frontend-navbar-collapse">
             {{-- <ul class="nav navbar-nav">
                 <li></li>
@@ -30,8 +31,8 @@
 
             <ul class="nav navbar-nav navbar-right">
           
-                
-                <!-- @if (config('locale.status') && count(config('locale.languages')) > 1)
+               
+                 <!-- @if (config('locale.status') && count(config('locale.languages')) > 1)
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                             {{ trans('menus.language-picker.language') }}
@@ -40,23 +41,23 @@
                         
                         @include('includes.partials.lang')
                     </li>
-                @endif -->
-          
+                @endif 
+           -->
                 
                 @if ($logged_in_user)
                     <li>{{ link_to_route('frontend.user.dashboard', trans('navs.frontend.dashboard')) }}</li>
+                    
                 @endif
                 @if (! $logged_in_user)
                     <li>{{ link_to_route('frontend.auth.login', trans('navs.frontend.login')) }}</li>
-
+                   
                     @if (config('access.users.registration'))
                         <li>{{ link_to_route('frontend.auth.register', trans('navs.frontend.register')) }}</li>
                     @endif
                 @else
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            {{ $logged_in_user->name }} <span class="caret"></span>
-                           
+                            {{ $logged_in_user->name }} <span class="caret"></span> 
                             
                         </a>
 
@@ -71,6 +72,7 @@
                     </li>
                 @endif
             </ul>
+
         </div><!--navbar-collapse-->
     </div><!--container-->
 </nav>

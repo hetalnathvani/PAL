@@ -4,90 +4,7 @@
 <link rel="http://127.0.0.1:8000/" href="cygnet.png" type="image/png" sizes="16x16">
 	<title></title>
 	<style type="text/css">
-		body {
-			font-family: Arial, Helvetica, sans-serif;
-			
-		}
-		.container1 {
-			position: relative;
-			text-align: center;
-			color: black;
-		}
-
-		.bg{
-			background-image: url("/img/frontend/9.jpg");
-  			background-color: #cccccc;
-			background-repeat: no-repeat;
-			background-size: cover;
-		}
-		.img-block {
-			position: relative;
-			font-family: Arial;
-		}
-		.text-block {
-			position: absolute;
-			bottom: 20px;
-			right: 20px;
-			background-color: black;
-			color: white;
-			padding-left: 20px;
-			padding-right: 20px;
-		}
-		.flip-box {
-			background-color: transparent;
-			width: 300px;
-			height: 200px;
-			/* border: 1px solid #f1f1f1; */
-			perspective: 1000px;
-		}
-
-		.flip-box-inner {
-			position: relative;
-			width: 100%;
-			height: 100%;
-			text-align: center;
-			transition: transform 0.8s;
-			transform-style: preserve-3d;
-		}
-
-		.flip-box:hover .flip-box-inner {
-			transform: rotateY(180deg);
-		}
-
-		.flip-box-front, .flip-box-back {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			backface-visibility: hidden;
-		}
-
-		.flip-box-front {
-			background-color:  #00264d;
-			opacity : 0.7;
-			color: white;
-		}
-
-		.flip-box-back {
-			background-color: #ADD8E6;
-			/* opacity : 0.7; */
-			color: black;
-			transform: rotateY(180deg);
-		}
-		.button {
-			background-color: #4CAF50; /* Green */
-			border: none;
-			color: white;
-			padding: 15px 32px;
-			text-align: center;
-			text-decoration: none;
-			display: inline-block;
-			font-size: 20px;
-			margin: 4px 2px;
-			cursor: pointer;
-		}
-		.button:hover {
-  			box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-		}
+		
 		.footer{
 			padding: 20px;
             text-align: center;
@@ -102,69 +19,6 @@
   			flex: 1;
   			padding: 16px;
 			display : inline-block;
-		}
-		.opacity{
-			opacity: 0.7;
-  			filter: alpha(opacity=50)
-		}
-		.border{
-			border-bottom:2px solid white;
-		}
-		
-		.img{
-  			position: relative;
-  			text-align: center;
-			  color: white;
- 		 	font-size: 30px;
-		}
-		.imag{
-			position: relative;
-  			text-align: center;
- 		 	color: 	white;
- 		 	font-size: 25px;
-		}
-		.imeg{
-			position: relative;
-  			text-align: center;
- 		 	color: 	white;
- 		 	font-size: 25px;
-		}
-		.overlay {
-  			position: absolute;
-  			top: 0;
-  			bottom: 0;
-  			left: 0;
-  			right: 0;
-  			height: 100%;
-  			width: 100%;
-  			opacity: 0;
-  			transition: .5s ease;
-  			background-color: #008CBA;
-		}
-
-		.container:hover .overlay {
-  			opacity: 1;
-		}
-		.centered {
-  			position: absolute;
-  			left: 0;
-    		text-align:center;
-    		padding-bottom: 250px;
-    		top: 130px;
-    		width: 100%
-		}
-		.centered1 {
-  			position: absolute;
-  			left: 0;
-    		text-align:center;
-    		top: 70px;
-    		width: 100%
-		}
-		.centered2 {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
 		}
 		.fa {
 			  padding: 12px;
@@ -230,5 +84,54 @@
 	</style>
 </head>
 <body>
+<div class="footer">
+                    <div class="col-container">
+                    <div class="col">
+                        <h2>About Us</h2>
+                       <p> PAL is simply Process Assets Library where all projects done by Cygnet Infotech Company is saved here, which is accessible to Cygnet Employees only. The purpose of this website is to provide Secured code to the Cygnetians to save the time and increase the performance. </p>
+                       <hr>
+                       <h2>Follow Us</h2>
+                       <div class="icon">
+                       <i class="fa fa-facebook"></i>
+                       <i class="fa fa-youtube"></i>
+                       <i class="fa fa-twitter"></i>
+                       <i class="fa fa-linkedin"></i>
+                       <i class="fa fa-googleplus"></i>
+                       </div>
+                    </div>
+
+                    <div class="col">
+                    <h2>Technologies</h2>
+                            JAVA<br>Microsoft<br>Blockchain<br>AI<br>
+                            Android<br>IOS<br>SAP<br>PHP<br>Python<br>Bigdata<br>AR<br>VR
+                    </div>
+
+                    <div class="col">
+                    <h2>Contact Us</h2>
+                        <table> 
+                        <tr>
+                            <td><i class="fa fa-map-marker" style="font-size : 24px;color: red;"></i> </td>
+                            <td>
+                            <div class="address">
+                            Cygnet Infotech Pvt. Ltd.<br>
+                            16-Swastik Society,<br>
+                            Nr. AMCO Bank, Stadium Circle,<br>
+                            Navrangpura, Ahmedabad 380009    
+                            </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-phone"style="font-size : 24px;"></td>
+                            <td><div class="address">+91-79-67124000</div></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-envelope"style="font-size: 24px;padding-top: -25px"></td>
+                            <td><div class="address"style="padding-top: -100px">inquiry@cygnetinfotech.com</div></td>
+                        </tr>
+                        </table>
+                        
+                    </div><!--col-->                    
+                    </div><!--col-container-->
+                 </div> 
 </body>
 </html>

@@ -1,5 +1,4 @@
 @extends('frontend.layouts.app')
-<!--@extends('frontend.layouts.footer')-->
 
 @section('content')
     <div class="row">
@@ -9,10 +8,13 @@
             <div class="panel panel-default">
                 <div class="panel-heading">{{ trans('navs.frontend.dashboard') }}</div>
                 <div class="bg">
+
+                
                 <div class="panel-body">
+                
 
                     <div class="row">
-
+                    
                         <div class="col-md-4 col-md-push-8">
 
                             <ul class="media-list">
@@ -38,8 +40,9 @@
                                     </div><!--media-body-->
                                 </li><!--media-->
                             </ul><!--media-list-->
-
+                            
                          <div class="pannel-body">
+                         
                             <form action = "dashboard/search" method="POST" role="search">
                             {{ csrf_field() }}
                             <div class="input-group">
@@ -53,7 +56,7 @@
                             </form>
                          </div>
                          </div><!--col-md-4-->
-                    
+                 
                                 <div class="col-container">
 
                                     <div class="col">
@@ -64,91 +67,38 @@
 
                                     <div class="col">
                                         <div class="img"><div class="opacity">
-                                        <a href="dashboard/new-arrivals"><img src="{{asset('/img/frontend/db1.jpg')}}" height="340" width="340"></a>
+                                        <a href="dashboard/new-arrivals"><img src="{{asset('/img/frontend/white.jpg')}}" height="340" width="340"></a>
                                         <div class="centered"><b>New<br>Arrivals</b> </div></div></div>
                                     </div>
 
                                     <div class="col">
                                         <div class="img"><div class="opacity">
-                                        <a href="upload"><img src="{{asset('/img/frontend/db1.jpg')}}" height="340" width="340"></a>
+                                        <a href="upload"><img src="{{asset('/img/frontend/white.jpg')}}" height="340" width="340"></a>
                                         <div class="centered"><b>Most<br> Popular </b></div></div></div>
                                     </div>
                                     
-                                </div>
-                               <!-- <div class="col-md-6">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h4>Item</h4>
-                                        </div><!--panel-heading-->
-
-                                <!--<div class = "footer">
-                                    <h2>Footer</h2>
-                                
-                                </div>
-                            </div><--row-->
+                                </div> 
                         
-                        </div><!--col-md-8-->
+                            <div class="row">
+                                <div class="col-md-4">
 
+                                </div>
+                            </div>
+                        </div><!--col-md-8-->
+                   
                     
 
                     </div><!--row-->
-
                 
                 </div><!--panel body-->
-            
-                <div class="footer">
-                    <div class="col-container">
-                    <div class="col">
-                        <h2>About Us</h2>
-                       <p> PAL is simply Process Assets Library where all projects done by Cygnet Infotech Company is saved here, which is accessible to Cygnet Employees only. The purpose of this website is to provide Secured code to the Cygnetians to save the time and increase the performance. </p>
-                       <hr>
-                       <h2>Follow Us</h2>
-                       <div class="icon">
-                       <i class="fa fa-facebook"></i>
-                       <i class="fa fa-youtube"></i>
-                       <i class="fa fa-twitter"></i>
-                       <i class="fa fa-linkedin"></i>
-                       <i class="fa fa-googleplus"></i>
-                       </div>
-                    </div>
+                         
 
-                    <div class="col">
-                    <h2>Technologies</h2>
-                            JAVA<br>Microsoft<br>Blockchain<br>AI<br>
-                            Android<br>IOS<br>SAP<br>PHP<br>Python<br>Bigdata<br>AR<br>VR
-                    </div>
-
-                    <div class="col">
-                    <h2>Contact Us</h2>
-                        <table> 
-                        <tr>
-                            <td><i class="fa fa-map-marker" style="font-size : 24px;color: red;"></i> </td>
-                            <td>
-                            <div class="address">
-                            Cygnet Infotech Pvt. Ltd.<br>
-                            16-Swastik Society,<br>
-                            Nr. AMCO Bank, Stadium Circle,<br>
-                            Navrangpura, Ahmedabad 380009    
-                            </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa fa-phone"style="font-size : 24px;"></td>
-                            <td><div class="address">+91-79-67124000</div></td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa fa-envelope"style="font-size: 24px;padding-top: -25px"></td>
-                            <td><div class="address"style="padding-top: -100px">inquiry@cygnetinfotech.com</div></td>
-                        </tr>
-                        </table>
-                        
-                    </div>                    
-                    </div>
-                    </div><!--bg-->
+                </div><!--bg-->
+           
             </div><!-- panel -->
 
         </div><!-- col-md-10 -->
-        @if(isset($project))
+                 @if(isset($project))
                                <table class = "table table-striped">
                                 <thead>
                                        <th>Projects ID</th>
@@ -168,4 +118,10 @@
         @endif
 
     </div><!-- row -->
+@endsection
+
+@section('after-scripts')
+
+@include('frontend.layouts.footer')
+
 @endsection
