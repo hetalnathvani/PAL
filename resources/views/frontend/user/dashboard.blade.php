@@ -8,7 +8,7 @@
 
             <div class="panel panel-default">
                 <div class="panel-heading">{{ trans('navs.frontend.dashboard') }}</div>
-
+                <div class="bg">
                 <div class="panel-body">
 
                     <div class="row">
@@ -40,7 +40,7 @@
                             </ul><!--media-list-->
 
                          <div class="pannel-body">
-                            <form action = "dashboard" method="POST" role="search">
+                            <form action = "dashboard/search" method="POST" role="search">
                             {{ csrf_field() }}
                             <div class="input-group">
                                 <input type = "text" class="form-control" name="q" placeholder="Search Projects">
@@ -161,6 +161,7 @@
                         
                     </div>                    
                     </div>
+                    </div><!--bg-->
             </div><!-- panel -->
 
         </div><!-- col-md-10 -->

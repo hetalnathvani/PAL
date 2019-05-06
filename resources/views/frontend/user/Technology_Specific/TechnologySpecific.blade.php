@@ -8,8 +8,8 @@
 
             <div class="panel panel-default">
                 <div class="panel-heading">{{ trans('Technologies') }}</div>
-                    
-                <div class="panel-body">
+                <div class="bg">   
+                    <div class="panel-body">
 
                     <div class="row">
 
@@ -52,7 +52,7 @@
 
                         <div class="col-md-8 col-md-pull-4">
                             <div class="row">
-                                <div class="col-xs-12">
+                                <div class="col-md-10">
                                     <div class="panel panel-default">
                                       
                                     </div><!--panel-->
@@ -61,47 +61,26 @@
 
 
  
-                            <div class="row">
+                            <div class="row"></div>
                              
                                     </div><!--panel-->
                                 </div><!--col-md-6-->
-
-                                 @foreach($technologies as $project)
                                 
-                                <div class="col-container">
+                                <div class="row">
+                                @foreach($technologies as $project)
+                                <div class="col-md-4">
                                   <div class="col">
                                         <div class="imag"><div class="opacity">
                                         <a href="/dashboard/technology-specific/{{ $project->id }}"><img src="{{asset('/img/frontend/db1.jpg')}}" height="170" width="270"></a></div>
                                         <div class="centered1"> {{ $project->technology_name }} </div></div>
                                     </div>
                                 </div>
-                               
-                                @endforeach      
-
-                                    <!-- @php $technologies @endphp
+                                @endforeach   
+                                </div>                                
                                    
-                                    @for ($i = 0; $i < 1; $i++)
-                                        @for ($j = 0; $j <= $i; $j++)
-                                        <div class="col-container">
-                                            <div class="col">
-                                                <div class="imag"><div class="opacity">
-                                                <a href="/dashboard/technology-specific/{{ $project->id }}"><img src="{{asset('/img/frontend/db1.jpg')}}" height="170" width="270"></a></div>
-                                                <div class="centered1">{{ $j }}</div></div>
-                                            </div>
-                                        </div>
-                                        
-                                        @endfor
-                                       
-                                    @endfor
-                                -->
-  
-                                    </div><!--panel-->
                                 </div><!--col-md-6-->
 
                         </div><!--col-md-8-->
-
-                    </div><!--row--> 
-                      
 
                 </div><!--panel body-->
                 <div class="footer">
@@ -161,10 +140,11 @@
                         </tr>
                         </table>
                         
+                    </div>  
                     </div>
-                    </div>
+                </div>
             </div><!-- panel -->
-
+           
         </div><!-- col-md-10 -->
 
     </div><!-- row -->

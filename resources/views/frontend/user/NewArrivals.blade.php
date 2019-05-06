@@ -1,5 +1,5 @@
 @extends('frontend.layouts.app')
-<!--@extends('frontend.layouts.footer')-->
+@extends('frontend.layouts.footer')
 
 @section('content')
     <div class="row">
@@ -7,8 +7,8 @@
         <div class="col-xs-12">
 
             <div class="panel panel-default">
-                <div class="panel-heading">{{ trans('navs.frontend.dashboard') }}</div>
-
+                <div class="panel-heading">{{ trans('navs.frontend.user.newarrivals') }}</div>
+                <div class="bg">
                 <div class="panel-body">
 
                     <div class="row">
@@ -41,24 +41,14 @@
 
                         
                          </div><!--col-md-4-->
-                    
-                               <!-- <div class="col-md-6">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h4>Item</h4>
-                                        </div><!--panel-heading-->
-
-                                <!--<div class = "footer">
-                                    <h2>Footer</h2>
-                                
-                                </div>
-                            </div><--row-->
+                
                         
                         </div><!--col-md-8-->
-
+                <div class="row">
                     @foreach($results as $result)
+                    <div class="col-md-4">
                     <div class="col-container">
-                        <div class="col">
+                        <div class="col" >
                             <div class="flip-box">
                                 <div class="flip-box-inner">
                                     <div class="flip-box-front">
@@ -76,18 +66,17 @@
                                                     Project Page
                                                     <span class = "glyphicon glyphicon-download"></span>
                                                 </button>
-                                            </a> 
-                                           
+                                            </a>  
                                     </div>
                                 </div>
                             </div>
-                        </div>    
+                        </div>   
                     </div>
+                    </div><!--col-md-4-->
                     @endforeach
-
-                    </div><!--row-->
-
-                
+                </div><!--row for boxes-->
+                </div><!--row-->
+                </div>
                 </div><!--panel body-->
             
                 <div class="footer">
@@ -155,6 +144,7 @@
                         
                     </div>                    
                     </div>
+                    </div><!--bg-->
             </div><!-- panel -->
 
         </div><!-- col-md-10 -->

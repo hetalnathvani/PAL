@@ -81,7 +81,9 @@ class TechnologiesController extends Controller
      */
     public function edit(Technology $technology, EditTechnologyRequest $request)
     {
+        // dd($technology);
         return new EditResponse($technology);
+
     }
     /**
      * Update the specified resource in storage.

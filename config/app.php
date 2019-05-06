@@ -173,8 +173,12 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+<<<<<<< HEAD
          willvincent\Rateable\RateableServiceProvider::class,
          UxWeb\SweetAlert\SweetAlertServiceProvider::class,
+=======
+        UxWeb\SweetAlert\SweetAlertServiceProvider::class,
+>>>>>>> bb28cf0156a7d08fab6afefdeaa7b4703ce6ab3e
 
         /*
          * Package Service Providers...

@@ -23,6 +23,7 @@ return [
         'login'     => 'Login',
         'macros'    => 'Macros',
         'register'  => 'Register',
+        'home'            => 'Home',
 
         'user' => [
             'account'         => 'My Account',
@@ -30,6 +31,15 @@ return [
             'change_password' => 'Change Password',
             'my_information'  => 'My Information',
             'profile'         => 'Profile',
+            'search'          => 'Search',
+            'pageproject'     => 'Project Page',
+            'techspecific'    => 'Technology Specific',
+            'newarrivals'     => 'New Arrivals',
+            'project'         => 'Add Project',
+            'list'            => 'Project List',
+            'technology'      => 'Add Technology',
+            'listtechnology'  => 'Technology List',
+            
         ],
     ],
 

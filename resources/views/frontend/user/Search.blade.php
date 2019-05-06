@@ -5,10 +5,9 @@
     <div class="row">
 
         <div class="col-xs-12">
-           
+
             <div class="panel panel-default">
-            
-                <div class="panel-heading">{{ trans('navs.frontend.user.techspecific') }}</div>
+                <div class="panel-heading">{{ trans('navs.frontend.user.search') }}</div>
                 <div class="bg">
                 <div class="panel-body">
 
@@ -39,75 +38,42 @@
                                     </div><!--media-body-->
                                 </li><!--media-->
                             </ul><!--media-list-->
-
-                        </div><!--col-md-4-->
-                     
-                              <!--  <div class="col-container">
-
-                                    <div class="col">
-                                        <div class="img">
-                                        <a href="Technology_Specific"><img src="{{asset('/img/frontend/box.png')}}" height="340" width="340"></a>
-                                        <div class="centered">Technology<br>Specific </div></div>
-                                    </div>
-
-                                    <div class="col">
-                                        <div class="img">
-                                        <a href="upload"><img src="{{asset('/img/frontend/box.png')}}" height="340" width="340"></a>
-                                        <div class="centered">New<br>Arrivals </div></div>
-                                    </div>
-
-                                    <div class="col">
-                                        <div class="img">
-                                        <a href="upload"><img src="{{asset('/img/frontend/box.png')}}" height="340" width="340"></a>
-                                        <div class="centered">Most<br> Popular </div></div>
-                                    </div>
-                                    
-                                </div>-->
-                               <!-- <div class="col-md-6">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h4>Item</h4>
-                                        </div><!--panel-heading-->
-
-                                <!--<div class = "footer">
-                                    <h2>Footer</h2>
-                                
-                                </div>
-                            </div><--row-->
-
+                        
                         </div><!--col-md-8-->
-
-                    </div><!--row-->
-                    <div class="row">
-                    @foreach($projects as $value) 
-                    <div class="col-md-4">
-                        <div class="col">
-                            <div class="flip-box">
-                                <div class="flip-box-inner">
-                                    <div class="flip-box-front">
-                                        <h2>{{$value->id}}</h2>
-                                        <h2>{{$value->project_name}}</h2>
+                        <div class="row">
+                        @if(isset($project))                
+                            @foreach($project as $projects)
+                            <div class="col-md-3">
+                            <div class="col-container">
+                                <div class="col">
+                                    <div class="flip-box">
+                                        <div class="flip-box-inner">
+                                            <div class="flip-box-front">
+                                                <h2>{{$projects->id}}</h2>
+                                                <h2>{{$projects->project_name}}</h2>
+                                            </div>
+                                            <div class="flip-box-back">
+                                                        <h2>{{$projects->project_name}}</h2>
+                                                        <h5>Technology ID : {{$projects->technology_id}}</h5>
+                                                        
+                                                            <a href='/dashboard/new-arrivals/{{ $projects->id }}'>
+                                                                <button type = "submit" class = "button">
+                                                                    Project Page
+                                                                    <span class = "glyphicon glyphicon-download"></span>
+                                                                </button>
+                                                            </a>   
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>    
                                     </div>
-                                    
-                                    <div class="flip-box-back">
-                                        <h2>{{$value->project_name}}</h2>
-                                        <h5>Technology ID : {{$value->technology_id}}</h5>
-                                          
-                                            <a href='/dashboard/technology-specific/{{ $value->technology_id }}/{{ $value->id }}'>
-                                                <button type = "submit" class = "button">
-                                                    Page Project
-                                                    <span class = "glyphicon glyphicon-download"></span>
-                                                </button>
-                                            </a> 
-                                           
-                                    </div>
-                                </div>
+                                @endforeach  
                             </div>
-                        </div>    
-                    </div>
-                    @endforeach
+                        @endif
+                        </div>
                     </div><!--row-->
                 </div><!--panel body-->
+            
                 <div class="footer">
                     <div class="col-container">
                     <div class="col">
@@ -156,7 +122,7 @@
                         
                     </div>                    
                     </div>
-                    </div><!--   bg -->
+                    </div><!--bg-->
             </div><!-- panel -->
 
         </div><!-- col-md-10 -->

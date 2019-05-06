@@ -13,7 +13,7 @@ class FindController extends Controller
     //
     public function index(DashboardViewRequest $request)
     {
-        return view('frontend.user.dashboard');
+        return view('frontend.user.search');
     }
 
     public function search()
@@ -22,8 +22,8 @@ class FindController extends Controller
         $project = Project::where('project_name', 'LIKE', '%'.$q.'%')->get();
         if(count($project) > 0)
             //return view('frontend.user.dashboard')->withDetails($project)->withQuery($q);
-            return view('frontend.user.dashboard', array('project'=> $project));
+            return view('frontend.user.search', array('project'=> $project));
         else
-            return view('frontend.user.dashboard')->withMessage('No Details Found.'); 
+            return view('frontend.user.search')->withMessage('No Details Found.'); 
     }
 }

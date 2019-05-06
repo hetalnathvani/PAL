@@ -24,6 +24,14 @@
             <div class="box-body">
                 <div class="form-group">
                     {{-- Including Form blade file --}}
+                    {{ Form::label('technology_name', trans('labels.backend.technologies.technology_name'), ['class' => 'col-lg-2 control-label required']) }} 
+
+                        <div class="col-lg-10">
+                            <!-- Create Your Input Field Here -->
+                            <!-- Look Below Example for reference -->
+                             {{ Form::text('technology_name',null, ['class' => 'form-control box-size', 'placeholder' => trans('labels.backend.technologies.technology_name'), 'required' => 'required']) }} 
+                        </div><!--col-lg-10-->
+                    </div><!--form-group-->
                     @include("backend.technologies.form")
                     <div class="edit-form-btn">
                         {{ link_to_route('admin.technologies.index', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }}
@@ -31,6 +39,10 @@
                         <div class="clearfix"></div>
                     </div><!--edit-form-btn-->
                 </div><!-- form-group -->
+                 <div class="box-body"> 
+                <div class="form-group">
+                     
+
             </div><!--box-body-->
         </div><!--box box-success-->
     {{ Form::close() }}

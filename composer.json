@@ -31,8 +31,11 @@
         "tymon/jwt-auth": "1.0.0-rc.3",
         "unisharp/laravel-filemanager": "~1.8",
         "uxweb/sweet-alert": "^2.0",
+<<<<<<< HEAD
         "weboap/visitor": "^2.0",
         "willvincent/laravel-rateable": "^1.07",
+=======
+>>>>>>> bb28cf0156a7d08fab6afefdeaa7b4703ce6ab3e
         "yajra/laravel-datatables-oracle": "~8.0"
     },
     "require-dev": {
