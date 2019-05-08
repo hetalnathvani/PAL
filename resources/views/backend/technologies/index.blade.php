@@ -22,6 +22,8 @@
                     <thead>
                         <tr>
                             <th>{{ trans('labels.backend.technologies.table.id') }}</th>
+                             <th>{{ trans('labels.backend.technologies.table.technology_name') }}</th>
+
                             <th>{{ trans('labels.backend.technologies.table.createdat') }}</th>
                             <th>{{ trans('labels.general.actions') }}</th>
                         </tr>
@@ -55,6 +57,8 @@
                 },
                 columns: [
                     {data: 'id', name: '{{config('module.technologies.table')}}.id'},
+                    {data: 'technology_name', name: '{{config('module.technologies.table')}}.technology_name'},
+
                     {data: 'created_at', name: '{{config('module.technologies.table')}}.created_at'},
                     {data: 'actions', name: 'actions', searchable: false, sortable: false}
                 ],

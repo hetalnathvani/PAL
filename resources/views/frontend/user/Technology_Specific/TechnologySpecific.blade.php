@@ -69,9 +69,15 @@
                                 @foreach($technologies as $project)
                                 <div class="col-md-3">
                                   <div class="col">
-                                        <div class="imag"><div class="opacity">
-                                        <a href="/dashboard/technology-specific/{{ $project->id }}"><img src="{{asset('/img/frontend/db1.jpg')}}" height="170" width="270"></a></div>
-                                        <div class="centered1"> {{ $project->technology_name }} </div></div>
+                                        <div class="imag">
+                                            <img src="{{asset('/img/frontend/11.jpg')}}" height="180" width="320" >
+                                            <div class="centered1"> 
+                                                <div class="mesh">
+                                                    <b>{{ $project->technology_name }}</b><br>
+                                                    <a href="/dashboard/technology-specific/{{ $project->id }}"><div class="exp">Explore >></div></a>
+                                                </div> 
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 @endforeach   
@@ -83,6 +89,7 @@
 
                 </div><!--panel body-->
             
+                  
             </div><!-- panel -->
            
         </div><!-- col-md-10 -->

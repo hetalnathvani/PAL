@@ -10,8 +10,7 @@
 @endsection
 
 @section('content')
-    {{ Form::model($technology, ['route' => ['admin.technologies.update', $technology], 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'PATCH', 'id' => 'edit-technology']) }}
-
+    {{ Form::model($technologies, ['route' => ['admin.technologies.update', $technologies], 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'PATCH', 'id' => 'edit-technology']) }}
         <div class="box box-info">
             <div class="box-header with-border">
                 <h3 class="box-title">{{ trans('labels.backend.technologies.edit') }}</h3>
@@ -24,6 +23,13 @@
             <div class="box-body">
                 <div class="form-group">
                     {{-- Including Form blade file --}}
+                      {{-- Including Form blade file --}}
+                    {{ Form::label('technology_name', trans('labels.backend.technologies.technology_name'), ['class' => 'col-lg-2 control-label required']) }} 
+
+                        <div class="col-lg-10">
+                            <!-- Create Your Input Field Here -->
+                            <!-- Look Below Example for reference -->
+                             {{ Form::text('technology_name',null, ['class' => 'form-control box-size', 'placeholder' => trans('labels.backend.technologies.technology_name'), 'required' => 'required']) }} 
                     @include("backend.technologies.form")
                     <div class="edit-form-btn">
                         {{ link_to_route('admin.technologies.index', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }}

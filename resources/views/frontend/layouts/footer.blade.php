@@ -10,6 +10,7 @@
             text-align: center;
             background: black;
             margin-top: 20px;
+            color:	white;
 		}
 		.col-container {
   			display: flex;
@@ -23,7 +24,7 @@
 		.fa {
 			  padding: 12px;
 			  font-size: 42px;
-			  width: 35px;
+			  width: 65px;
 			  text-align: center;
 			  text-decoration: no;
 			  margin: 5px 5px;
@@ -81,6 +82,46 @@
 			text-align: left;
 			padding-left: 45px;
 		}
+/*slider rate*/
+		.slidecontainer {
+		  width: 25%;
+		}
+		.slider {
+		  -webkit-appearance: none;
+		  width: 50%;
+		  height: 15px;
+		  border-radius: 5px;
+		  background: grey;
+		  outline: none;
+		  opacity: 0.7;
+		  -webkit-transition: .2s;
+		  transition: opacity .2s;
+		}
+
+		.slider:hover {
+		  opacity: 1;
+		}
+
+		.slider::-webkit-slider-thumb {
+		  -webkit-appearance: none;
+		  appearance: none;
+		  width: 25px;
+		  height: 25px;
+		  border-radius: 50%;
+		  background: #4CAF50;
+		  cursor: pointer;
+		}
+
+		.slider::-moz-range-thumb {
+		  width: 25px;
+		  height: 25px;
+		  border-radius: 50%;
+		  background: #4CAF50;
+		  cursor: pointer;
+		}
+		#foter{
+			color:white;
+		}
 	</style>
 </head>
 <body>
@@ -88,26 +129,39 @@
                     <div class="col-container">
                     <div class="col">
                         <h2>About Us</h2>
-                       <p> PAL is simply Process Assets Library where all projects done by Cygnet Infotech Company is saved here, which is accessible to Cygnet Employees only. The purpose of this website is to provide Secured code to the Cygnetians to save the time and increase the performance. </p>
-                       <hr>
+                       <p> PAL is simply Process Assets Library where all projects done by Cygnet Infotech 
+                       Company is saved here, which is accessible to Cygnet Employees only. The purpose of 
+                       this website is to provide Secured code to the Cygnetians to save the time and increase
+                        the performance. </p>
+                       <p class="border"></p>
                        <h2>Follow Us</h2>
-                       <div class="icon">
-                       <i class="fa fa-facebook"></i>
-                       <i class="fa fa-youtube"></i>
-                       <i class="fa fa-twitter"></i>
-                       <i class="fa fa-linkedin"></i>
-                       <i class="fa fa-googleplus"></i>
-                       </div>
+                        <a href="https://www.facebook.com/IT.is.about.you" class="fa fa-facebook"></a>
+                        <a href="https://twitter.com/cygnetinfotech?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="fa fa-twitter"></a>
+                        <a href="https://www.cygnet-infotech.com/" class="fa fa-google"></a>
+                        <a href="https://in.linkedin.com/company/cygnet-infotech" class="fa fa-linkedin"></a>
+                        <a href="https://www.youtube.com/channel/UC_PsLEn0lSAE0Vs_K5x5IGA" class="fa fa-youtube"></a>
+                    </div>
+
+                    <div class="col" id="foter">
+										<h2>Technologies</h2>
+										<div id="foter">
+                            <a href="" style="color:white;">JAVA</a> <br>
+                            <a href="" style="color:white;">Microsoft</a> <br>
+                            <a href="" style="color:white;">Blockchain</a> <br>
+                            <a href="" style="color:white;">AI</a> <br>
+                            <a href="" style="color:white;">Android</a> <br>
+                            <a href="" style="color:white;">IOS</a> <br>
+                            <a href="" style="color:white;">SAP</a> <br>
+                            <a href="" style="color:white;">PHP</a> <br>
+                            <a href="" style="color:white;">Python</a> <br>
+                            <a href="" style="color:white;">Bigdata</a> <br>
+                            <a href="" style="color:white;">AR</a> <br>
+														<a href="" style="color:white;">VR</a>
+	</div>
                     </div>
 
                     <div class="col">
-                    <h2>Technologies</h2>
-                            JAVA<br>Microsoft<br>Blockchain<br>AI<br>
-                            Android<br>IOS<br>SAP<br>PHP<br>Python<br>Bigdata<br>AR<br>VR
-                    </div>
-
-                    <div class="col">
-                    <h2>Contact Us</h2>
+                        <h2>Contact Us</h2>
                         <table> 
                         <tr>
                             <td><i class="fa fa-map-marker" style="font-size : 24px;color: red;"></i> </td>
@@ -130,8 +184,7 @@
                         </tr>
                         </table>
                         
-                    </div><!--col-->                    
-                    </div><!--col-container-->
-                 </div> 
-</body>
+                    </div>
+									</div>
+								</body>
 </html>

@@ -51,7 +51,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
                                             <h4>Item</h4>
-                                        </div><!--panel-heading-->
+                                        </div><!-panel-heading-->
 
                                 <!--<div class = "footer">
                                     <h2>Footer</h2>
@@ -64,17 +64,17 @@
                     
 
                     </div><!--row-->
-
+<br>
                     
                     <div class = "container1">
                     <!-- <div class="opacity"> -->
-                    <img src="{{asset('/img/frontend/white.jpg')}}" height="340" width="1110" style="opacity: 0.7;">
+                    <img src="{{asset('/img/frontend/download.png')}}" height="460" width="1210" style="opacity: 0.7;">
                     <div class="centered2">
                     <center>
                     
                     @foreach($pageproject as $value) 
                             <h1 style="color : black;opacity:1"><b>{{$value->project_name}}</b></h1>
-                            <h2 style="opacity : 1.0">Project ID : {{$value->id}}</h2>
+                            <h2>Project ID : {{$value->id}}</h2>
                             <h2>Project Name : {{$value->project_name}}</h2>
                             <h5>Project Details : {{$value->project_details}}</h5>
                             <h5>Technology ID : {{$value->technology_id}}</h5>
@@ -88,7 +88,6 @@
                               
                                 <button onclick="download()" class = "button" id="b1">
                                         Download
-                             
                                 </button>
 
                                 <script>
@@ -122,42 +121,52 @@
                                     };
                                 </script>   
                     @endforeach
-                  
-                    </center></div></div>
+                                </center>
+                                </div>
                     </div>
-
+                    <br>
                     <!-- Sweet Alert Script -->
-
-                   
-                    
                 </div><!--panel body-->
             
                     </div><!--bg-->
             </div><!-- panel -->
 
         </div><!-- col-md-10 -->
-        @if(isset($project))
-                               <table class = "table table-striped">
-                                <thead>
-                                       <th>Projects ID</th>
-                                       <th>Projects Name</th>
-                                       <th>Projects Details</th>
-                                </thead>
-                                <tbody>
-                                    @foreach($project as $projects)
-                                    <tr>
-                                        <td>{{ $projects->id }} </td>
-                                        <td>{{ $projects->project_name }} </td>
-                                        <td>{{ $projects->project_details }} </td>
-                                    </tr>
-                                    @endforeach
-                                    </tbody>
-        @endif
 
     </div><!-- row -->
 @endsection
-@section('after-scripts')
+                  <!--for count page-->
+                    {{-- <script type="text/javascript">
+                        let count=document.getElementById('Count').value;
+                        let countplus=parseInt(count)+1;
+                        document.getElementById('Count').value=countplus;
+                    </script>
+                --}} </div><!--panel body-->
+                    <table>
+                    <thead>
+                        <td></td>
+                    </thead>
+                    {{-- print_r($comment); --}}
+                  {{--   @foreach($comments as $commentss)
+                        <td>{{$commentss->comment}}</td><br>
+                        @endforeach
+                    </table> --}}
+                   
+            </div>
+                                  
+          </div><!-- panel -->
 
-@include('frontend.layouts.footer')
+        </div><!-- col-md-10 -->
+            </div><!-- row -->
 
-@endsection
+
+        <script>
+        var slider = document.getElementById("myRange");
+        var output = document.getElementById("demo");
+        output.innerHTML = slider.value;
+
+        slider.oninput = function() {
+        output.innerHTML = this.value;
+        }
+        </script>
+

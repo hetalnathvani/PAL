@@ -10,6 +10,7 @@ return [
 	"buttons" => [
 	"save" => "Save",
 	"update" => "Update",
+	
 	],
 	"hide" => "Hide",
 	"inactive" => "Inactive",
@@ -260,13 +261,18 @@ return [
 	"edit" => "Edit Technology",
 	"management" => "Technology Management",
 	"title" => "Technologies",
+	
+	"technology_name" => "Technology Name",
 	"table" => [
 	"id" => "Id",
+	"technology_name" => "Technology Name",
 	"createdat" => "Created At",
 	],
 	],
 	],
 	"frontend" => [
+			"comment" => "Comment",
+
 	"auth" => [
 	"login_box_title" => "Login",
 	"login_button" => "Login",
@@ -274,6 +280,7 @@ return [
 	"register_box_title" => "Register",
 	"register_button" => "Register",
 	"remember_me" => "Remember Me",
+	"comment" => "Comment",
 	],
 	"passwords" => [
 	"forgot_password" => "Forgot Your Password?",

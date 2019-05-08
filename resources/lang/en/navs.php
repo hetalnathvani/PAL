@@ -35,6 +35,10 @@ return [
             'pageproject'     => 'Project Page',
             'techspecific'    => 'Technology Specific',
             'newarrivals'     => 'New Arrivals',
+            'project'         => 'Add Project',
+            'list'            => 'Project List',
+            'technology'      => 'Add Technology',
+            'listtechnology'  => 'Technology List',
             
         ],
     ],

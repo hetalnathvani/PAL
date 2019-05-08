@@ -4,10 +4,9 @@
     <div class="row">
 
         <div class="col-xs-12">
-           
+
             <div class="panel panel-default">
-            
-                <div class="panel-heading">{{ trans('navs.frontend.user.techspecific') }}</div>
+                <div class="panel-heading">{{ trans('navs.frontend.dashboard') }}</div>
                 <div class="bg">
                 <div class="panel-body">
 
@@ -39,31 +38,45 @@
                                 </li><!--media-->
                             </ul><!--media-list-->
 
-                        </div><!--col-md-4-->
+                        
+                         </div><!--col-md-4-->
                     
-                        </div><!--col-md-8-->
+                               <!-- <div class="col-md-6">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4>Item</h4>
+                                        </div><!--panel-heading-->
 
-                    </div><!--row-->
+                                <!--<div class = "footer">
+                                    <h2>Footer</h2>
+                                
+                                </div>
+                            </div><--row-->
+                        
+                        </div><!--col-md-8-->
                     <div class="row">
-                    @foreach($projects as $value) 
+                
+                    @foreach($results as $result)
                     <div class="col-md-3">
+                    <div class="col-container">
                         <div class="col">
                             <div class="flip-box">
                                 <div class="flip-box-inner">
                                     <div class="flip-box-front">
                                         <div class="mesh-flip">
-                                        <h2>{{$value->id}}</h2>
-                                        <h2>{{$value->project_name}}</h2>
-                                        </div>
+                                        <h2>{{$result->id}}</h2>
+                                        <h2>{{$result->project_name}}</h2>
+</div>
                                     </div>
                                     
                                     <div class="flip-box-back">
-                                        <h2>{{$value->project_name}}</h2>
-                                        <h5>Technology ID : {{$value->technology_id}}</h5>
+                                        <h2>{{$result->project_name}}</h2>
+                                       
+                                        <h5>Technology ID : {{$result->technology_id}}</h5>
                                           
-                                            <a href='/dashboard/technology-specific/{{ $value->technology_id }}/{{ $value->id }}'>
+                                            <a href='/dashboard/most-popular/{{ $result->id }}'>
                                                 <button type = "submit" class = "button">
-                                                    Page Project
+                                                    Project Page
                                                     <span class = "glyphicon glyphicon-download"></span>
                                                 </button>
                                             </a> 
@@ -73,16 +86,21 @@
                             </div>
                         </div>    
                     </div>
+                    </div><!--col-md-3-->
                     @endforeach
+                    
+                    </div><!--row for boxes-->
                     </div><!--row-->
+
+                
                 </div><!--panel body-->
-                    </div><!--   bg -->
+</div>
             </div><!-- panel -->
 
         </div><!-- col-md-10 -->
-
     </div><!-- row -->
 @endsection
+
 @section('after-scripts')
 
 @include('frontend.layouts.footer')

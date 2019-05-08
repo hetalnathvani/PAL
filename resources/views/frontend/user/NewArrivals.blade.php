@@ -1,4 +1,3 @@
-
 @extends('frontend.layouts.app')
 
 
@@ -47,14 +46,16 @@
                         </div><!--col-md-8-->
                 <div class="row">
                     @foreach($results as $result)
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                     <div class="col-container">
                         <div class="col" >
                             <div class="flip-box">
                                 <div class="flip-box-inner">
                                     <div class="flip-box-front">
+                                        <div class="mesh-flip">
                                         <h2>{{$result->id}}</h2>
                                         <h2>{{$result->project_name}}</h2>
+</div>
                                     </div>
                                     
                                     <div class="flip-box-back">
@@ -79,7 +80,6 @@
                 </div><!--row-->
                 </div>
                 </div><!--panel body-->
-            
                     </div><!--bg-->
             </div><!-- panel -->
 

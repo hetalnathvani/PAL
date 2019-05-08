@@ -8,7 +8,6 @@
             <div class="panel panel-default">
                 <div class="panel-heading">{{ trans('navs.frontend.dashboard') }}</div>
                 <div class="bg">
-
                 
                 <div class="panel-body">
                 
@@ -56,45 +55,43 @@
                             </form>
                          </div>
                          </div><!--col-md-4-->
-                 
-                                <div class="col-container">
-
-                                    <div class="col">
-                                        <div class="img"><div class="opacity">
-                                        <a href="dashboard/technology-specific"><img src="{{asset('/img/frontend/db1.jpg')}}" height="340" width="340"></a>
-                                        <div class="centered"><b>Technology<br>Specific </b></div></div>
-                                    </div></div>
-
-                                    <div class="col">
-                                        <div class="img"><div class="opacity">
-                                        <a href="dashboard/new-arrivals"><img src="{{asset('/img/frontend/white.jpg')}}" height="340" width="340"></a>
-                                        <div class="centered"><b>New<br>Arrivals</b> </div></div></div>
-                                    </div>
-
-                                    <div class="col">
-                                        <div class="img"><div class="opacity">
-                                        <a href="upload"><img src="{{asset('/img/frontend/white.jpg')}}" height="340" width="340"></a>
-                                        <div class="centered"><b>Most<br> Popular </b></div></div></div>
-                                    </div>
-                                    
-                                </div> 
-                        
-                            <div class="row">
-                                <div class="col-md-4">
-
+                
+                                </div><!--col-md-8-->
+                                <br><br>
+                        <div class = "row"><!--3-Categories-->
+                            <div class= "col-md-4"><!--Tech-Specific-->
+                            <div class="card">
+                                <img src="/img/frontend/tech1.jpg" alt="John" style="width:400px; height:200px">
+                                <h1>Technology Specific</h1>
+                                <p class="title">This section comprises all technologies in which projects are available.</p>
+                                <a href="dashboard/technology-specific"><input type="button" class="project" value="Technology Specific"></a>
                                 </div>
-                            </div>
-                        </div><!--col-md-8-->
-                   
-                    
+                            </div><!--Tech-Specific-->
+
+                            <div class= "col-md-4"><!--Tech-Specific-->
+                            <div class="card">
+                                <img src="/img/frontend/newarrival.png" alt="John" style="width:400px; height:200px">
+                                <h1>New <br> Arrivals</h1>
+                                <p class="title">This section comprises the latest uploaded projects available.</p>
+                                <a href="dashboard/new-arrivals"><input type="button" class="project" value="New Arrivals"></a>
+                                </div>
+                            </div><!--Tech-Specific-->
+
+                            <div class= "col-md-4"><!--Tech-Specific-->
+                            <div class="card">
+                                <img src="/img/frontend/mostpopular.png" alt="John" style="width:400px; height:200px">
+                                <h1>Most <br> Popular</h1>
+                                <p class="title">This section comprises the most popular i.e.<br> most visited projects.</p>
+                                <a href="dashboard/most-popular"><input type="button" class="project" value="Most Popular"></a>
+                                </div>
+                            </div><!--Tech-Specific-->
+                        </div><!--3-Categories-->
+<br><br>
 
                     </div><!--row-->
                 
                 </div><!--panel body-->
-                         
-
-                </div><!--bg-->
-           
+                </div><!--   bg -->
             </div><!-- panel -->
 
         </div><!-- col-md-10 -->

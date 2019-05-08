@@ -39,6 +39,7 @@ return [
         'cancel'   => 'Cancel',
         'continue' => 'Continue',
         'preview'  => 'Preview',
+        'comment'  => 'Comment',
 
         'crud' => [
             'create' => 'Create',

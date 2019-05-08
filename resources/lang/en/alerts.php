@@ -58,6 +58,7 @@ return [
 	"created" => "The Project was successfully created.",
 	"deleted" => "The Project was successfully deleted.",
 	"updated" => "The Project was successfully updated.",
+	"downloaded"=>"The Project was successfully deleted.",
 	],
 	"technologies" => [
 	"created" => "The Technology was successfully created.",

@@ -22,6 +22,7 @@ trait ProjectRelationship
     public function technologies()
     {
         return $this->belongsToMany(config('access.technology'), config('access.technologies'), 'id', 'technology_id');
+        return $this->hasMany('comments');
     }
 
 }

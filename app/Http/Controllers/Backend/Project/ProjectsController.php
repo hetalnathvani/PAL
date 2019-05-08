@@ -54,6 +54,7 @@ class ProjectsController extends Controller
      */
     public function index(ManageProjectRequest $request)
     {
+
         return new ViewResponse('backend.projects.index');
     }
     /**
