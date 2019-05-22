@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Frontend\User\TechnologySpecificViewRequest;
 
 /**
- * Class DashboardController.
+ * Class TechnologySpecificController.
  */
 class TechnologySpecificController extends Controller
 {
@@ -28,11 +28,4 @@ class TechnologySpecificController extends Controller
     {
         return view('frontend.user.Technology_Specific.laravel')->with('project',$project);
     }
-    /*public function get()
-    {
-        
-        $projects = DB::select('select * from projects');
-
-        return view('frontend.user.Technology_Specific',['projects'=>$projects]);
-    }*/
 } 

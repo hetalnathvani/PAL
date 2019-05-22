@@ -74,12 +74,7 @@
                         <div class="col-lg-10">
                             <!-- Create Your Input Field Here -->
                             <!-- Look Below Example for reference -->
-                              <!-- {{ Form::text('file', null, ['class' => 'form-control box-size', 'placeholder' => trans('labels.backend.projects.link'), 'required' => 'required']) }}  -->
-                                <!-- <input type="file" name="file[]" value=""><br><br>
-                                <input type="hidden" name="_token" value="{{ csrf_token()}}">
-                                <input type="submit" value="upload"/>
-                               --> 
-
+                             
                              <div class="custom-file-input">
                                 {{ Form::file('file',array('class'=>'form-control inputfile inputfile-1'))}}
                                 <label for="file">

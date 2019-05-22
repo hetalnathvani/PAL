@@ -7,18 +7,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <img src="{{asset('/img/frontend/logo/Cygnet-Infotech-Logo.png')}}" height="72" width="250">
-           <!-- {{--   @if(settings()->logo)
-            <a href="{{ route('frontend.index') }}" class="logo"><img height="48" width="226" class="navbar-brand" src="{{route('frontend.index')}}/img/site_logo/{{settings()->logo}}"></a>
-            @else --}}
-            <div>
-               <img src="{{asset('/img/frontend/logo/Cygnet-Infotech-Logo.png')}}" height="72" width="250">
-           
-             {{ link_to_route('frontend.index','', [], ['class' => 'navbar-brand']) }}
-           {{--  @endif --}}
-          -->
-           <!-- </div> -->
-          
+            <img src="{{asset('/img/frontend/logo/Cygnet-Infotech-Logo.png')}}" height="72" width="250">     
         </div><!--navbar-headersad-->
        
         <div class="collapse navbar-collapse" id="frontend-navbar-collapse">
@@ -27,19 +16,6 @@
             </ul> --}}
 
             <ul class="nav navbar-nav navbar-right" id="effect">
-          
-                
-                <!-- @if (config('locale.status') && count(config('locale.languages')) > 1)
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            {{ trans('menus.language-picker.language') }}
-                            <span class="caret"></span>
-                        </a>
-                        
-                        @include('includes.partials.lang')
-                    </li>
-                @endif -->
-
           <li class="dropdown">
           </li>
                 
@@ -92,11 +68,12 @@
                         </ul>
                     </li>
 
-                    
                 @endif
+
+                <!-- Search Bar -->
                 <li class="search">
                      <div class="pannel-body">
-                            <form action = "search" method="POST" role="search">
+                            <form action = "/search" method="POST" role="search">
                             {{ csrf_field() }}
                             <div class="input-group">
                                 <input type = "text" class="form-control" name="q" placeholder="Search Projects">

@@ -11,15 +11,12 @@ use DB;
 
 class MostPopularController extends Controller
 {
+    //MostPopularController
+    
     protected $results;
     public function index(MostPopularViewRequest $request)
     {
-
-        $results = Project::orderBy('count', 'desc')->take(10)->get();
-     //     $id = $request->id;
-     //    // $pid = $request->project_id;
-    	// // dd($pid);
-    	// $project=Project::where('id', $id)->update(['count' => DB::raw('count + 1')]);
+       $results = Project::orderBy('count', 'desc')->take(10)->get();
        return view('frontend.user.MostPopular',array('results'=>$results));
     }
 }

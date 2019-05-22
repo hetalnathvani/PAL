@@ -11,6 +11,7 @@ use DB;
 
 class MPopularsController extends Controller
 {
+    // MPopularController for Count 
     protected $results; 
     public function index(MostPopularViewRequest $request)
     {

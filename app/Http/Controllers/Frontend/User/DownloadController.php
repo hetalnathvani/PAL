@@ -14,7 +14,7 @@ use App\Http\Controllers\Frontend\User\DownloadController;
 
 class DownloadController extends Controller
 {
-    //
+    // DownloadController
     public function index(LaravelViewRequest $request)
     {
         return view('frontend.user.Technology_Specific.Laravel');

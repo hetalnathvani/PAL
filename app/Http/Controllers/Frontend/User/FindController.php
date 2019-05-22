@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 namespace App\Http\Controllers\frontend\User;
 
+use Redirect;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Input;
@@ -21,9 +22,8 @@ class FindController extends Controller
         $q = Input::get('q');
         $project = Project::where('project_name', 'LIKE', '%'.$q.'%')->get();
         if(count($project) > 0)
-            //return view('frontend.user.dashboard')->withDetails($project)->withQuery($q);
             return view('frontend.user.search', array('project'=> $project));
         else
-            return view('frontend.user.search')->withMessage('No Details Found.'); 
+            return Redirect::back()->withInput()->withErrors(array('Sorry', 'No Project Found.')); 
     }
 }

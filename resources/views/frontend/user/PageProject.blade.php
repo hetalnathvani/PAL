@@ -43,25 +43,8 @@
                                 
                                     
                                 </li><!--media-->
-                            </ul><!--media-list-->
-                        
-
-                    
-                               <!-- <div class="col-md-6">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h4>Item</h4>
-                                        </div><!-panel-heading-->
-
-                                <!--<div class = "footer">
-                                    <h2>Footer</h2>
-                                
-                                </div>
-                            </div><--row-->
-                        
+                            </ul><!--media-list-->                        
                         </div><!--col-md-8-->
-
-                    
 
                     </div><!--row-->
 <br>
@@ -78,13 +61,6 @@
                             <h2>Project Name : {{$value->project_name}}</h2>
                             <h5>Project Details : {{$value->project_details}}</h5>
                             <h5>Technology ID : {{$value->technology_id}}</h5>
-                            
-                                <!-- <a href='/dashboard/technology-specific/{{ $value->technology_id }}/{{ $value->id }}/download'>
-                                    <button type = "submit" class = "button" onclick="setTimeout()">
-                                        Download
-                                        <span class = "glyphicon glyphicon-download"></span>
-                                    </button>
-                                </a>  -->
                               
                                 <button onclick="download()" class = "button" id="b1">
                                         Download

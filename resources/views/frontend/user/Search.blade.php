@@ -52,10 +52,11 @@
                             <div class="flip-box">
                                 <div class="flip-box-inner">
                                     <div class="flip-box-front">
-                                    <h2>{{$projects->id}}</h2>
+                                            <div class="mesh-flip">
+                                                <h2>{{$projects->id}}</h2>
                                                 <h2>{{$projects->project_name}}</h2>
                                             </div>
-                                    
+                                            </div>
                                     
                                         <div class="flip-box-back">
                                                         <h2>{{$projects->project_name}}</h2>

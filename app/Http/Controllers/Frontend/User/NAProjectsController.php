@@ -16,8 +16,6 @@ class NAProjectsController extends Controller
     public function index(NewArrivalsViewRequest $request)
     {
         $id = $request->id;
-        // $pid = $request->project_id;
-    	// dd($pid);
     	$project=Project::where('id', $id)->update(['count' => DB::raw('count + 1')]);
         $pageproject = Project::latest('created_at')->where('id','=' ,$id)->get();
         return view('frontend.user.PageProject',array('pageproject'=>$pageproject));

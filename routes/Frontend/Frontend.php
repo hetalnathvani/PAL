@@ -4,7 +4,6 @@
  * Frontend Controllers
  * All route names are prefixed with 'frontend.'.
  */
- // Route::when('*', 'projects.view_throttle');
 Route::get('/', 'FrontendController@index')->name('index');
 Route::post('/get/states', 'FrontendController@getStates')->name('get.states');
 Route::post('/get/cities', 'FrontendController@getCities')->name('get.cities');
@@ -19,20 +18,13 @@ Route::group(['middleware' => 'auth'], function () {
          * User Dashboard Specific
          */
         Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
-        //Route::get('PHP_Technology', 'PHP_TechnologyController@index')->name('PHP_Technology');
+     
+        // Search Functionality
         Route::post('/dashboard/search','FindController@search')->name('search');
         Route::post('/dashboard/technology-specific/search','FindController@search')->name('search-tech');
         Route::post('/dashboard/technology-specific/{id}/search','FindController@search')->name('search-tech-id');
         Route::post('/dashboard/technology-specific/{id}/{project_id}/search','FindController@search')->name('search-tech-id-');
         Route::post('/search','FindController@search')->name('search');
-
-
-        /*Route::get('Technology_Specific', function () {
-            $users = DB::table('projects')->select('id','technology_id','project_name','project_details','file')->get();
-            return view('frontend.user.Technology_Specific')->with('projects', $projects);
-
-        });*/
-
 
         /*
          * User Account Specific

@@ -55,7 +55,7 @@
                                         <div class="mesh-flip">
                                         <h2>{{$result->id}}</h2>
                                         <h2>{{$result->project_name}}</h2>
-</div>
+                                    </div>
                                     </div>
                                     
                                     <div class="flip-box-back">

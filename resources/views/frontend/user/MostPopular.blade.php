@@ -37,21 +37,7 @@
                                     </div><!--media-body-->
                                 </li><!--media-->
                             </ul><!--media-list-->
-
-                        
                          </div><!--col-md-4-->
-                    
-                               <!-- <div class="col-md-6">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h4>Item</h4>
-                                        </div><!--panel-heading-->
-
-                                <!--<div class = "footer">
-                                    <h2>Footer</h2>
-                                
-                                </div>
-                            </div><--row-->
                         
                         </div><!--col-md-8-->
                     <div class="row">
@@ -66,7 +52,7 @@
                                         <div class="mesh-flip">
                                         <h2>{{$result->id}}</h2>
                                         <h2>{{$result->project_name}}</h2>
-</div>
+                                        </div>
                                     </div>
                                     
                                     <div class="flip-box-back">
@@ -94,7 +80,7 @@
 
                 
                 </div><!--panel body-->
-</div>
+                </div>
             </div><!-- panel -->
 
         </div><!-- col-md-10 -->
